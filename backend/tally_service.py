@@ -144,26 +144,35 @@ def create_payment_voucher(vendor_name: str, amount: float, bank_ledger: str = N
         }
 
 def get_tally_payments() -> dict:
-    """Fetch payment register from Tally Prime"""
-    xml_request = """<ENVELOPE>
+    """Fetch payment register from Tally Prime with date bounds"""
+    today_str = datetime.now().strftime("%Y%m%d")
+    start_str = f"{int(datetime.now().strftime('%Y')) - 1}0401" # From start of previous financial year
+    xml_request = f"""<ENVELOPE>
       <HEADER><TALLYREQUEST>Export Data</TALLYREQUEST></HEADER>
       <BODY>
         <EXPORTDATA>
           <REQUESTDESC>
-            <REPORTNAME>Voucher Register</REPORTNAME>
+            <REPORTNAME>Day Book</REPORTNAME>
             <STATICVARIABLES>
               <SVEXPORTFORMAT>$$SysName:XML</SVEXPORTFORMAT>
-              <VOUCHERTYPENAME>Payment</VOUCHERTYPENAME>
+              <SVFROMDATE>{start_str}</SVFROMDATE>
+              <SVTODATE>{today_str}</SVTODATE>
             </STATICVARIABLES>
           </REQUESTDESC>
         </EXPORTDATA>
       </BODY>
     </ENVELOPE>"""
     try:
-        res = _send_xml(xml_request)
+        res = _send_xml(xml_request, timeout=4)
         vouchers = re.findall(r'<VOUCHER[^>]*>([\s\S]*?)</VOUCHER>', res, re.IGNORECASE)
         payments = []
         for v in vouchers:
+            # Only process Payment vouchers
+            vch_type_m = re.search(r'<VOUCHERTYPENAME[^>]*>(.*?)</VOUCHERTYPENAME>', v, re.IGNORECASE)
+            vtype = vch_type_m.group(1).lower() if vch_type_m else ""
+            if "payment" not in vtype:
+                continue
+
             date_m = re.search(r'<DATE[^>]*>(.*?)</DATE>', v, re.IGNORECASE)
             party_m = re.search(r'<PARTYLEDGERNAME[^>]*>(.*?)</PARTYLEDGERNAME>', v, re.IGNORECASE)
             num_m = re.search(r'<VOUCHERNUMBER[^>]*>(.*?)</VOUCHERNUMBER>', v, re.IGNORECASE)
@@ -176,7 +185,7 @@ def get_tally_payments() -> dict:
             payments.append({
                 "date": fmt_d,
                 "voucher_number": num_m.group(1) if num_m else "N/A",
-                "party_name": party_m.group(1).replace('&amp;', '&') if party_m else "Unknown",
+                "party_name": party_m.group(1).replace('&amp;', '&') if party_m else "Vendor / Party",
                 "amount": abs(float(amt_m.group(1))) if amt_m else 0.0,
                 "narration": narr_m.group(1).replace('&amp;', '&') if narr_m else ""
             })
