@@ -21,11 +21,22 @@ from backend.exporter import export_to_csv, export_to_xlsx, export_to_pdf
 from backend.scheduler import start_scheduler, check_payment_calendar_job
 from backend.seed_data import seed_database_if_empty
 
+import tempfile
+
 # App directories
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FRONTEND_DIR = os.path.join(BASE_DIR, "frontend")
-UPLOADS_DIR = os.path.join(BASE_DIR, "uploads")
-os.makedirs(UPLOADS_DIR, exist_ok=True)
+
+if os.getenv("VERCEL") or os.getenv("AWS_LAMBDA_FUNCTION_NAME"):
+    UPLOADS_DIR = os.path.join(tempfile.gettempdir(), "gateflow_uploads")
+else:
+    UPLOADS_DIR = os.path.join(BASE_DIR, "uploads")
+
+try:
+    os.makedirs(UPLOADS_DIR, exist_ok=True)
+except Exception:
+    UPLOADS_DIR = os.path.join(tempfile.gettempdir(), "gateflow_uploads")
+    os.makedirs(UPLOADS_DIR, exist_ok=True)
 
 # Initialize MongoDB Atlas database & seed data
 try:

@@ -2,16 +2,28 @@ import json
 import os
 from datetime import datetime
 
-DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
-os.makedirs(DATA_DIR, exist_ok=True)
+import tempfile
+
+if os.getenv("VERCEL") or os.getenv("AWS_LAMBDA_FUNCTION_NAME"):
+    DATA_DIR = os.path.join(tempfile.gettempdir(), "gateflow_data")
+else:
+    DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
+
+try:
+    os.makedirs(DATA_DIR, exist_ok=True)
+except Exception:
+    DATA_DIR = os.path.join(tempfile.gettempdir(), "gateflow_data")
+    os.makedirs(DATA_DIR, exist_ok=True)
 
 class PersistentStore:
     def __init__(self, name: str, seed_list=None):
+        self.name = name
         self.file_path = os.path.join(DATA_DIR, f"{name}.json")
         self.data = {}
         self.load(seed_list)
 
     def load(self, seed_list=None):
+        pkg_data_file = os.path.join(os.path.dirname(__file__), "data", f"{self.name}.json")
         if os.path.exists(self.file_path):
             try:
                 with open(self.file_path, "r", encoding="utf-8") as f:
@@ -19,7 +31,15 @@ class PersistentStore:
                 return
             except Exception as e:
                 print(f"Error loading {self.file_path}: {e}")
-        
+
+        if os.path.exists(pkg_data_file):
+            try:
+                with open(pkg_data_file, "r", encoding="utf-8") as f:
+                    self.data = json.load(f)
+                return
+            except Exception as e:
+                print(f"Error loading package data {pkg_data_file}: {e}")
+
         self.data = {}
         if seed_list:
             for item in seed_list:
@@ -33,7 +53,7 @@ class PersistentStore:
             with open(self.file_path, "w", encoding="utf-8") as f:
                 json.dump(self.data, f, indent=2, ensure_ascii=False)
         except Exception as e:
-            print(f"Error saving {self.file_path}: {e}")
+            print(f"Warning: Unable to write to {self.file_path} (operating in memory mode): {e}")
 
     def get_all(self, sort_key="created_at", reverse=True):
         items = list(self.data.values())
