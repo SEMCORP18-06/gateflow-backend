@@ -4,8 +4,14 @@ from pymongo import MongoClient
 
 logger = logging.getLogger("GateFlowDatabase")
 
-MONGO_URI = "mongodb+srv://enquiry_db_user:FJND34ouaoPsNCby@cluster0.rr0husv.mongodb.net/?retryWrites=true&w=majority"
-DB_NAME = "gateflow_db"
+MONGO_URI = os.getenv(
+    "MONGO_URI",
+    os.getenv(
+        "MONGODB_URI",
+        "mongodb+srv://enquiry_db_user:FJND34ouaoPsNCby@cluster0.rr0husv.mongodb.net/?retryWrites=true&w=majority"
+    )
+)
+DB_NAME = os.getenv("DB_NAME", "gateflow_db")
 
 client = None
 db = None
