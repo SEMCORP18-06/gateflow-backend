@@ -1,0 +1,431 @@
+{
+  "notif_20260811_124431_56ba": {
+    "id": "notif_20260811_124431_56ba",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Project Files Package Saved",
+    "message_body": "Project Engineer package 'abc ' (Project Ref: PRJ 992) with 1 categorized file(s) logged into repository.",
+    "section": "PROJECT_ENGINEER",
+    "sent_at": "2026-08-11 12:44:31",
+    "created_at": "2026-08-11T12:44:31.450998"
+  },
+  "notif_20260811_124841_df65": {
+    "id": "notif_20260811_124841_df65",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Project Files Package Saved",
+    "message_body": "Project Engineer package 'Turbine Technical Drawings & MTC Package' (Project Ref: PRJ-SEM-2026-101) with 0 categorized file(s) logged into repository.",
+    "section": "PROJECT_ENGINEER",
+    "sent_at": "2026-08-11 12:48:41",
+    "created_at": "2026-08-11T12:48:41.814783"
+  },
+  "notif_20260811_124950_3e2b": {
+    "id": "notif_20260811_124950_3e2b",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Project Package Logged & Sent to QC Desk",
+    "message_body": "Project Engineer package 'Turbine Technical Drawings & MTC Package' (Project Ref: PRJ-SEM-2026-101) logged with 0 file(s) and sent for approval to QC Gate Desk.",
+    "section": "PROJECT_ENGINEER",
+    "sent_at": "2026-08-11 12:49:50",
+    "created_at": "2026-08-11T12:49:50.195205"
+  },
+  "notif_20260811_124950_128e": {
+    "id": "notif_20260811_124950_128e",
+    "recipient": "engineer@semco.com",
+    "subject": "Engineering Package QC Approved (OK for Dispatch)",
+    "message_body": "QC Approval complete for Package 'Turbine Technical Drawings & MTC Package' (Project Ref: PRJ-SEM-2026-101). Technical drawings and MTCs are now OK for Dispatch.",
+    "section": "QC_ADMIN",
+    "sent_at": "2026-08-11 12:49:50",
+    "created_at": "2026-08-11T12:49:50.218738"
+  },
+  "1805d9e2-3c9b-4f60-9e63-4a5535d40d99": {
+    "_id": "1805d9e2-3c9b-4f60-9e63-4a5535d40d99",
+    "id": "1805d9e2-3c9b-4f60-9e63-4a5535d40d99",
+    "type": "EMAIL",
+    "section": "RECEIVING",
+    "recipient": "engineer@semco.com",
+    "subject": "[QC APPROVED — OK FOR DISPATCH] Project Package 'Turbine Technical Drawings & MTC Package' Verified",
+    "message_body": "Your package 'Turbine Technical Drawings & MTC Package' has been verified and approved by the QC Desk. It is now cleared OK for Dispatch. Comments: Approved by QC Desk — OK for Dispatch",
+    "status": "SENT",
+    "sent_at": "2026-08-11T07:19:50.252062",
+    "created_at": "2026-08-11T07:19:50.252072"
+  },
+  "notif_20260811_125809_d67e": {
+    "id": "notif_20260811_125809_d67e",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Package Sent to QC Desk for Approval",
+    "message_body": "Package 'abc ' (Project Ref: PRJ 992) submitted to QC Desk for verification.",
+    "section": "PROJECT_ENGINEER",
+    "sent_at": "2026-08-11 12:58:09",
+    "created_at": "2026-08-11T12:58:09.200149"
+  },
+  "notif_20260811_132010_44fc": {
+    "id": "notif_20260811_132010_44fc",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Project Package Logged & Sent to QC Desk",
+    "message_body": "Project Engineer package 'High Pressure Steam Valve Assembly' (Project Ref: PRJ-SEM-2026-909) logged with 0 file(s) and sent for approval to QC Gate Desk.",
+    "section": "PROJECT_ENGINEER",
+    "sent_at": "2026-08-11 13:20:10",
+    "created_at": "2026-08-11T13:20:10.402273"
+  },
+  "notif_20260811_132010_9411": {
+    "id": "notif_20260811_132010_9411",
+    "recipient": "engineer@semco.com",
+    "subject": "Engineering Package QC Approved (OK for Dispatch)",
+    "message_body": "QC Approval complete for Package 'High Pressure Steam Valve Assembly' (Project Ref: PRJ-SEM-2026-909). \nCustom QC Details:\n• QAP Certificate No.: QAP/SEM/2026/8841\n• FAT Clearance ID: FAT-PASSED-9921\n• Hydro Test Rating: 250 PSI / 4 Hours OK\n• Inspection Agency: TUV Nord India Pvt Ltd",
+    "section": "QC_ADMIN",
+    "sent_at": "2026-08-11 13:20:10",
+    "created_at": "2026-08-11T13:20:10.429117"
+  },
+  "f2b8dab9-28b6-4720-b75b-24ff32f7c405": {
+    "_id": "f2b8dab9-28b6-4720-b75b-24ff32f7c405",
+    "id": "f2b8dab9-28b6-4720-b75b-24ff32f7c405",
+    "type": "EMAIL",
+    "section": "RECEIVING",
+    "recipient": "engineer@semco.com",
+    "subject": "[QC APPROVED — OK FOR DISPATCH] Project Package 'High Pressure Steam Valve Assembly' Verified",
+    "message_body": "Your package 'High Pressure Steam Valve Assembly' has been verified and approved by the QC Desk. It is now cleared OK for Dispatch. Comments: Verified and cleared against ASME & QAP standards.\nCustom QC Details:\n• QAP Certificate No.: QAP/SEM/2026/8841\n• FAT Clearance ID: FAT-PASSED-9921\n• Hydro Test Rating: 250 PSI / 4 Hours OK\n• Inspection Agency: TUV Nord India Pvt Ltd",
+    "status": "SENT",
+    "sent_at": "2026-08-11T07:50:10.441360",
+    "created_at": "2026-08-11T07:50:10.441374"
+  },
+  "notif_20260811_133554_12b4": {
+    "id": "notif_20260811_133554_12b4",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Project Package Logged & Sent to QC Desk",
+    "message_body": "Project Engineer package 'QC Flow Test Package' (Project Ref: PRJ-TEST-2026-QC01) logged with 0 file(s) and sent for approval to QC Gate Desk.",
+    "section": "PROJECT_ENGINEER",
+    "sent_at": "2026-08-11 13:35:54",
+    "created_at": "2026-08-11T13:35:54.967851"
+  },
+  "notif_20260811_133555_3ba3": {
+    "id": "notif_20260811_133555_3ba3",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Package Sent to QC Desk for Approval",
+    "message_body": "Package 'QC Flow Test Package' (Project Ref: PRJ-TEST-2026-QC01) submitted to QC Desk for verification.",
+    "section": "PROJECT_ENGINEER",
+    "sent_at": "2026-08-11 13:35:55",
+    "created_at": "2026-08-11T13:35:55.011345"
+  },
+  "notif_20260811_133555_e9ba": {
+    "id": "notif_20260811_133555_e9ba",
+    "recipient": "engineer@semco.com",
+    "subject": "Engineering Package QC Approved (OK for Dispatch)",
+    "message_body": "QC Approval complete for Package 'QC Flow Test Package' (Project Ref: PRJ-TEST-2026-QC01). \nCustom QC Details:\n• QAP Certificate No.: QAP-2026-TEST-001\n• FAT Report ID: FAT-R-2026-0045\n• MTC Verification: Verified against ASME B31.3",
+    "section": "QC_ADMIN",
+    "sent_at": "2026-08-11 13:35:55",
+    "created_at": "2026-08-11T13:35:55.038203"
+  },
+  "e10d1011-7e57-4001-a732-8a51876bda42": {
+    "_id": "e10d1011-7e57-4001-a732-8a51876bda42",
+    "id": "e10d1011-7e57-4001-a732-8a51876bda42",
+    "type": "EMAIL",
+    "section": "RECEIVING",
+    "recipient": "engineer@semco.com",
+    "subject": "[QC APPROVED — OK FOR DISPATCH] Project Package 'QC Flow Test Package' Verified",
+    "message_body": "Your package 'QC Flow Test Package' has been verified and approved by the QC Desk. It is now cleared OK for Dispatch. Comments: Approved by QC Manager after full inspection\nCustom QC Details:\n• QAP Certificate No.: QAP-2026-TEST-001\n• FAT Report ID: FAT-R-2026-0045\n• MTC Verification: Verified against ASME B31.3",
+    "status": "SENT",
+    "sent_at": "2026-08-11T08:05:55.050094",
+    "created_at": "2026-08-11T08:05:55.050102"
+  },
+  "notif_20260811_133555_c22a": {
+    "id": "notif_20260811_133555_c22a",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Project Package Logged & Sent to QC Desk",
+    "message_body": "Project Engineer package 'QC Rejection Test Package' (Project Ref: PRJ-TEST-2026-REJ01) logged with 0 file(s) and sent for approval to QC Gate Desk.",
+    "section": "PROJECT_ENGINEER",
+    "sent_at": "2026-08-11 13:35:55",
+    "created_at": "2026-08-11T13:35:55.091533"
+  },
+  "notif_20260811_133555_d981": {
+    "id": "notif_20260811_133555_d981",
+    "recipient": "engineer@semco.com",
+    "subject": "Project Package Needs Revision",
+    "message_body": "Package 'QC Rejection Test Package' (Project Ref: PRJ-TEST-2026-REJ01) returned for revision by QC Desk.",
+    "section": "QC_ADMIN",
+    "sent_at": "2026-08-11 13:35:55",
+    "created_at": "2026-08-11T13:35:55.134438"
+  },
+  "notif_20260811_133555_0ad8": {
+    "id": "notif_20260811_133555_0ad8",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Package Sent to QC Desk for Approval",
+    "message_body": "Package 'QC Rejection Test Package' (Project Ref: PRJ-TEST-2026-REJ01) submitted to QC Desk for verification.",
+    "section": "PROJECT_ENGINEER",
+    "sent_at": "2026-08-11 13:35:55",
+    "created_at": "2026-08-11T13:35:55.170211"
+  },
+  "notif_20260811_133555_4230": {
+    "id": "notif_20260811_133555_4230",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Project Package Deleted",
+    "message_body": "Project Engineer package 'QC Flow Test Package' deleted.",
+    "section": "PROJECT_ENGINEER",
+    "sent_at": "2026-08-11 13:35:55",
+    "created_at": "2026-08-11T13:35:55.193769"
+  },
+  "notif_20260811_133555_949e": {
+    "id": "notif_20260811_133555_949e",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Project Package Deleted",
+    "message_body": "Project Engineer package 'QC Rejection Test Package' deleted.",
+    "section": "PROJECT_ENGINEER",
+    "sent_at": "2026-08-11 13:35:55",
+    "created_at": "2026-08-11T13:35:55.219190"
+  },
+  "notif_20260811_142444_5e4b": {
+    "id": "notif_20260811_142444_5e4b",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Project Package Logged & Sent to QC Desk",
+    "message_body": "Project Engineer package 'Steam Valve Assembly Drawings' (Project Ref: PRJ-DISPATCH-TEST-001) logged with 0 file(s) and sent for approval to QC Gate Desk.",
+    "section": "PROJECT_ENGINEER",
+    "sent_at": "2026-08-11 14:24:44",
+    "created_at": "2026-08-11T14:24:44.740979"
+  },
+  "notif_20260811_142444_b0ce": {
+    "id": "notif_20260811_142444_b0ce",
+    "recipient": "engineer@semco.com",
+    "subject": "Engineering Package QC Approved (OK for Dispatch)",
+    "message_body": "QC Approval complete for Package 'Steam Valve Assembly Drawings' (Project Ref: PRJ-DISPATCH-TEST-001). \nCustom QC Details:\n• QAP Cert: QAP-2026-101\n• MTC Ref: MTC-V-2026-045",
+    "section": "QC_ADMIN",
+    "sent_at": "2026-08-11 14:24:44",
+    "created_at": "2026-08-11T14:24:44.772699"
+  },
+  "e7b25a7e-2115-4aa7-ac12-e1fcbb3100f7": {
+    "_id": "e7b25a7e-2115-4aa7-ac12-e1fcbb3100f7",
+    "id": "e7b25a7e-2115-4aa7-ac12-e1fcbb3100f7",
+    "type": "EMAIL",
+    "section": "RECEIVING",
+    "recipient": "engineer@semco.com",
+    "subject": "[QC APPROVED — OK FOR DISPATCH] Project Package 'Steam Valve Assembly Drawings' Verified",
+    "message_body": "Your package 'Steam Valve Assembly Drawings' has been verified and approved by the QC Desk. It is now cleared OK for Dispatch. Comments: All drawings verified - OK for dispatch\nCustom QC Details:\n• QAP Cert: QAP-2026-101\n• MTC Ref: MTC-V-2026-045",
+    "status": "SENT",
+    "sent_at": "2026-08-11T08:54:44.784720",
+    "created_at": "2026-08-11T08:54:44.784734"
+  },
+  "notif_20260811_142444_9ce7": {
+    "id": "notif_20260811_142444_9ce7",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Project Package Deleted",
+    "message_body": "Project Engineer package 'Steam Valve Assembly Drawings' deleted.",
+    "section": "PROJECT_ENGINEER",
+    "sent_at": "2026-08-11 14:24:44",
+    "created_at": "2026-08-11T14:24:44.857621"
+  },
+  "notif_20260811_143235_d3bf": {
+    "id": "notif_20260811_143235_d3bf",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Project Package Logged & Sent to QC Desk",
+    "message_body": "Project Engineer package 'Boiler Assembly MTC Package' (Project Ref: PRJ-BOILER-2026) logged with 0 file(s) and sent for approval to QC Gate Desk.",
+    "section": "PROJECT_ENGINEER",
+    "sent_at": "2026-08-11 14:32:35",
+    "created_at": "2026-08-11T14:32:35.995374"
+  },
+  "notif_20260811_143236_b24a": {
+    "id": "notif_20260811_143236_b24a",
+    "recipient": "engineer@semco.com",
+    "subject": "Engineering Package QC Approved (OK for Dispatch)",
+    "message_body": "QC Approval complete for Package 'Boiler Assembly MTC Package' (Project Ref: PRJ-BOILER-2026). \nCustom QC Details:\n• QAP Cert: QAP-BLR-001\n• Hydro Test: HT-2026-045",
+    "section": "QC_ADMIN",
+    "sent_at": "2026-08-11 14:32:36",
+    "created_at": "2026-08-11T14:32:36.021635"
+  },
+  "a845fb52-c6c5-4e63-a292-ce8a077b83d1": {
+    "_id": "a845fb52-c6c5-4e63-a292-ce8a077b83d1",
+    "id": "a845fb52-c6c5-4e63-a292-ce8a077b83d1",
+    "type": "EMAIL",
+    "section": "RECEIVING",
+    "recipient": "engineer@semco.com",
+    "subject": "[QC APPROVED — OK FOR DISPATCH] Project Package 'Boiler Assembly MTC Package' Verified",
+    "message_body": "Your package 'Boiler Assembly MTC Package' has been verified and approved by the QC Desk. It is now cleared OK for Dispatch. Comments: All MTC verified\nCustom QC Details:\n• QAP Cert: QAP-BLR-001\n• Hydro Test: HT-2026-045",
+    "status": "SENT",
+    "sent_at": "2026-08-11T09:02:36.036441",
+    "created_at": "2026-08-11T09:02:36.036456"
+  },
+  "notif_20260811_143236_6da2": {
+    "id": "notif_20260811_143236_6da2",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Project Package Deleted",
+    "message_body": "Project Engineer package 'Boiler Assembly MTC Package' deleted.",
+    "section": "PROJECT_ENGINEER",
+    "sent_at": "2026-08-11 14:32:36",
+    "created_at": "2026-08-11T14:32:36.091385"
+  },
+  "notif_20260811_145654_d709": {
+    "id": "notif_20260811_145654_d709",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Inward Invoice Saved",
+    "message_body": "Invoice #TEST-DIRECT-100 from vendor 'Direct Vendor' (Amount: ₹7,500.00) logged into Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-08-11 14:56:54",
+    "created_at": "2026-08-11T14:56:54.067647"
+  },
+  "notif_20260811_145654_7935": {
+    "id": "notif_20260811_145654_7935",
+    "recipient": "dispatch@semco.com",
+    "subject": "QC Inspection Approved",
+    "message_body": "Dispatch Bundle #DISP-20260811145654 passed QC Gate Inspection. Sent to Dispatch Desk for final vehicle release & clearance.",
+    "section": "QC_ADMIN",
+    "sent_at": "2026-08-11 14:56:54",
+    "created_at": "2026-08-11T14:56:54.142146"
+  },
+  "90c6bf2c-4fb2-447f-aa1c-b805dc2fb154": {
+    "_id": "90c6bf2c-4fb2-447f-aa1c-b805dc2fb154",
+    "id": "90c6bf2c-4fb2-447f-aa1c-b805dc2fb154",
+    "type": "EMAIL",
+    "section": "RECEIVING",
+    "recipient": "dispatch@semco.com",
+    "subject": "[QC APPROVED] Dispatch Bundle #DISP-20260811145654 Ready for Final Clearance",
+    "message_body": "QC Gate Inspection approved for Bundle #DISP-20260811145654. Please grant final dispatch clearance in the Dispatch Module to release the vehicle.",
+    "status": "SENT",
+    "sent_at": "2026-08-11T09:26:54.153971",
+    "created_at": "2026-08-11T09:26:54.153985"
+  },
+  "e45b0b49-85c9-4f54-ba70-1529249164a8": {
+    "_id": "e45b0b49-85c9-4f54-ba70-1529249164a8",
+    "id": "e45b0b49-85c9-4f54-ba70-1529249164a8",
+    "type": "EMAIL",
+    "section": "RECEIVING",
+    "recipient": "admin@semco.com",
+    "subject": "[FINANCIAL CALENDAR AUDIT] 2 Actionable Items Needing Attention",
+    "message_body": "GateFlow Financial Calendar Summary (2026-08-11):\n\n💳 VENDOR PAYABLES (Receiving):\n- Overdue Payables (1):\n  • TEST-DIRECT-100 (Direct Vendor) - Amount: ₹7,500.00 - Due: 2026-08-01\n- Upcoming Payables (0):\n\n💰 CLIENT COLLECTIONS (Dispatch):\n- Overdue Collections (1):\n  • DISP-20260811145654 (Testing Dynamic Client) - Amount: ₹85,000.00 - Due: 2026-08-10\n- Upcoming Collections (0):\n",
+    "status": "SENT",
+    "sent_at": "2026-08-11T09:26:54.182777",
+    "created_at": "2026-08-11T09:26:54.182791"
+  },
+  "notif_audit_20260811_145654": {
+    "id": "notif_audit_20260811_145654",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Automated Financial Audit",
+    "message_body": "Daily audit completed: 1 overdue invoice(s), 0 upcoming invoice(s) in 7 days.",
+    "section": "RECEIVING",
+    "sent_at": "2026-08-11 14:56:54",
+    "created_at": "2026-08-11T14:56:54.195908"
+  },
+  "notif_20260811_145654_b9da": {
+    "id": "notif_20260811_145654_b9da",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Project Package Logged & Sent to QC Desk",
+    "message_body": "Project Engineer package 'Test Engineering Package' (Project Ref: PRJ-TEST-100) logged with 0 file(s) and sent for approval to QC Gate Desk.",
+    "section": "PROJECT_ENGINEER",
+    "sent_at": "2026-08-11 14:56:54",
+    "created_at": "2026-08-11T14:56:54.669771"
+  },
+  "notif_20260811_145654_4ec9": {
+    "id": "notif_20260811_145654_4ec9",
+    "recipient": "engineer@semco.com",
+    "subject": "Engineering Package QC Approved (OK for Dispatch)",
+    "message_body": "QC Approval complete for Package 'Test Engineering Package' (Project Ref: PRJ-TEST-100). ",
+    "section": "QC_ADMIN",
+    "sent_at": "2026-08-11 14:56:54",
+    "created_at": "2026-08-11T14:56:54.697986"
+  },
+  "5903e48f-e5d2-466f-a893-4cc2d590d70d": {
+    "_id": "5903e48f-e5d2-466f-a893-4cc2d590d70d",
+    "id": "5903e48f-e5d2-466f-a893-4cc2d590d70d",
+    "type": "EMAIL",
+    "section": "RECEIVING",
+    "recipient": "engineer@semco.com",
+    "subject": "[QC APPROVED — OK FOR DISPATCH] Project Package 'Test Engineering Package' Verified",
+    "message_body": "Your package 'Test Engineering Package' has been verified and approved by the QC Desk. It is now cleared OK for Dispatch. Comments: Verified by QC Test",
+    "status": "SENT",
+    "sent_at": "2026-08-11T09:26:54.709238",
+    "created_at": "2026-08-11T09:26:54.709247"
+  },
+  "notif_20260811_145800_e4ac": {
+    "id": "notif_20260811_145800_e4ac",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Inward Invoice Saved",
+    "message_body": "Invoice #TEST-DIRECT-100 from vendor 'Direct Vendor' (Amount: ₹7,500.00) logged into Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-08-11 14:58:00",
+    "created_at": "2026-08-11T14:58:00.961505"
+  },
+  "notif_20260811_145801_013c": {
+    "id": "notif_20260811_145801_013c",
+    "recipient": "dispatch@semco.com",
+    "subject": "QC Inspection Approved",
+    "message_body": "Dispatch Bundle #DISP-20260811145801 passed QC Gate Inspection. Sent to Dispatch Desk for final vehicle release & clearance.",
+    "section": "QC_ADMIN",
+    "sent_at": "2026-08-11 14:58:01",
+    "created_at": "2026-08-11T14:58:01.060764"
+  },
+  "d0db0afe-eb9f-4358-af0f-faf628451f17": {
+    "_id": "d0db0afe-eb9f-4358-af0f-faf628451f17",
+    "id": "d0db0afe-eb9f-4358-af0f-faf628451f17",
+    "type": "EMAIL",
+    "section": "RECEIVING",
+    "recipient": "dispatch@semco.com",
+    "subject": "[QC APPROVED] Dispatch Bundle #DISP-20260811145801 Ready for Final Clearance",
+    "message_body": "QC Gate Inspection approved for Bundle #DISP-20260811145801. Please grant final dispatch clearance in the Dispatch Module to release the vehicle.",
+    "status": "SENT",
+    "sent_at": "2026-08-11T09:28:01.075406",
+    "created_at": "2026-08-11T09:28:01.075422"
+  },
+  "notif_20260811_145801_d9af": {
+    "id": "notif_20260811_145801_d9af",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Client Collection (Collected)",
+    "message_body": "Client Collection for Dispatch #DISP-20260811145801 recorded: ₹85,000.00 (Collected). Remaining balance: ₹0.00.",
+    "section": "DISPATCH",
+    "sent_at": "2026-08-11 14:58:01",
+    "created_at": "2026-08-11T14:58:01.109973"
+  },
+  "40976580-1e34-4bc0-8487-c934f5e42b81": {
+    "_id": "40976580-1e34-4bc0-8487-c934f5e42b81",
+    "id": "40976580-1e34-4bc0-8487-c934f5e42b81",
+    "type": "EMAIL",
+    "section": "RECEIVING",
+    "recipient": "admin@semco.com",
+    "subject": "[FINANCIAL CALENDAR AUDIT] 3 Actionable Items Needing Attention",
+    "message_body": "GateFlow Financial Calendar Summary (2026-08-11):\n\n💳 VENDOR PAYABLES (Receiving):\n- Overdue Payables (2):\n  • TEST-DIRECT-100 (Direct Vendor) - Amount: ₹7,500.00 - Due: 2026-08-01\n  • TEST-DIRECT-100 (Direct Vendor) - Amount: ₹7,500.00 - Due: 2026-08-01\n- Upcoming Payables (0):\n\n💰 CLIENT COLLECTIONS (Dispatch):\n- Overdue Collections (1):\n  • DISP-20260811145654 (Testing Dynamic Client) - Amount: ₹85,000.00 - Due: 2026-08-10\n- Upcoming Collections (0):\n",
+    "status": "SENT",
+    "sent_at": "2026-08-11T09:28:01.207297",
+    "created_at": "2026-08-11T09:28:01.207305"
+  },
+  "notif_audit_20260811_145801": {
+    "id": "notif_audit_20260811_145801",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Automated Financial Audit",
+    "message_body": "Daily audit completed: 2 overdue invoice(s), 0 upcoming invoice(s) in 7 days.",
+    "section": "RECEIVING",
+    "sent_at": "2026-08-11 14:58:01",
+    "created_at": "2026-08-11T14:58:01.228625"
+  },
+  "notif_20260811_145801_48ff": {
+    "id": "notif_20260811_145801_48ff",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Project Package Logged & Sent to QC Desk",
+    "message_body": "Project Engineer package 'Test Engineering Package' (Project Ref: PRJ-TEST-100) logged with 0 file(s) and sent for approval to QC Gate Desk.",
+    "section": "PROJECT_ENGINEER",
+    "sent_at": "2026-08-11 14:58:01",
+    "created_at": "2026-08-11T14:58:01.617264"
+  },
+  "notif_20260811_145801_162e": {
+    "id": "notif_20260811_145801_162e",
+    "recipient": "engineer@semco.com",
+    "subject": "Engineering Package QC Approved (OK for Dispatch)",
+    "message_body": "QC Approval complete for Package 'Test Engineering Package' (Project Ref: PRJ-TEST-100). ",
+    "section": "QC_ADMIN",
+    "sent_at": "2026-08-11 14:58:01",
+    "created_at": "2026-08-11T14:58:01.655784"
+  },
+  "03ab2043-52f9-406d-96a3-e254cf1bb49b": {
+    "_id": "03ab2043-52f9-406d-96a3-e254cf1bb49b",
+    "id": "03ab2043-52f9-406d-96a3-e254cf1bb49b",
+    "type": "EMAIL",
+    "section": "RECEIVING",
+    "recipient": "engineer@semco.com",
+    "subject": "[QC APPROVED — OK FOR DISPATCH] Project Package 'Test Engineering Package' Verified",
+    "message_body": "Your package 'Test Engineering Package' has been verified and approved by the QC Desk. It is now cleared OK for Dispatch. Comments: Verified by QC Test",
+    "status": "SENT",
+    "sent_at": "2026-08-11T09:28:01.668156",
+    "created_at": "2026-08-11T09:28:01.668165"
+  },
+  "notif_20260811_145801_d599": {
+    "id": "notif_20260811_145801_d599",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Project Package Deleted",
+    "message_body": "Project Engineer package 'Test Engineering Package' deleted.",
+    "section": "PROJECT_ENGINEER",
+    "sent_at": "2026-08-11 14:58:01",
+    "created_at": "2026-08-11T14:58:01.748457"
+  }
+}

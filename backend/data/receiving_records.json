@@ -1,0 +1,40 @@
+{
+  "rec_20260811_145654_45c2": {
+    "id": "rec_20260811_145654_45c2",
+    "invoice_number": "TEST-DIRECT-100",
+    "vendor_name": "Direct Vendor",
+    "invoice_date": "2026-07-22",
+    "due_date": "2026-08-01",
+    "total_amount": 7500.0,
+    "po_number": "",
+    "challan_number": "",
+    "challan_doc_path": "",
+    "document_path": "",
+    "packing_list_doc": "",
+    "qc_comments": "Verified on Receival",
+    "extracted_fields": {
+      "Heading 1": "Details 1"
+    },
+    "status": "Verified",
+    "created_at": "2026-08-11T14:56:54.066763"
+  },
+  "rec_20260811_145800_50bc": {
+    "id": "rec_20260811_145800_50bc",
+    "invoice_number": "TEST-DIRECT-100",
+    "vendor_name": "Direct Vendor",
+    "invoice_date": "2026-07-22",
+    "due_date": "2026-08-01",
+    "total_amount": 7500.0,
+    "po_number": "",
+    "challan_number": "",
+    "challan_doc_path": "",
+    "document_path": "",
+    "packing_list_doc": "",
+    "qc_comments": "Verified on Receival",
+    "extracted_fields": {
+      "Heading 1": "Details 1"
+    },
+    "status": "Verified",
+    "created_at": "2026-08-11T14:58:00.960087"
+  }
+}
