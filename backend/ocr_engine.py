@@ -1,7 +1,14 @@
 import re
 import os
-import cv2
-import numpy as np
+try:
+    import cv2
+except Exception as e:
+    cv2 = None
+
+try:
+    import numpy as np
+except Exception as e:
+    np = None
 from datetime import datetime, timedelta
 from PIL import Image
 
@@ -26,6 +33,8 @@ def prepare_image_for_ocr(input_path: str) -> str:
     without destructive Otsu thresholding. Upscales small camera photos to >1600px width.
     """
     try:
+        if cv2 is None:
+            return input_path
         img = cv2.imread(input_path)
         if img is None:
             return input_path
