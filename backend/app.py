@@ -1533,6 +1533,38 @@ async def record_vendor_payable(request: Request):
     return format_doc(pay_doc)
 
 
+@app.get("/api/payments/receivables")
+def get_customer_receivables():
+    """Retrieves all Customer Inward Receivables records including live Tally Prime entries."""
+    local_receivables = customer_receivables_store.get_all(sort_key="created_at", reverse=True)
+    
+    # Fetch live receipt register from Tally Prime (Computer B: 192.168.1.27:9000)
+    try:
+        tally_res = tally_service.get_tally_receipts()
+        if tally_res.get("success"):
+            tally_receipts = tally_res.get("receipts", [])
+            for tr in tally_receipts:
+                local_receivables.append({
+                    "id": f"tally_rec_{tr['voucher_number']}",
+                    "invoice_number": "TALLY-REC",
+                    "customer_name": tr["party_name"],
+                    "total_value": tr["amount"],
+                    "amount_received": tr["amount"],
+                    "balance_outstanding": 0.0,
+                    "receipt_date": tr["date"],
+                    "payment_mode": "Tally Prime Receipt",
+                    "transaction_ref": tr["voucher_number"],
+                    "status": "Fully Collected",
+                    "notes": tr["narration"] or "Receipt fetched directly from Tally Prime (192.168.1.27:9000)",
+                    "is_tally": True,
+                    "created_at": tr["date"]
+                })
+    except Exception as e:
+        print(f"Tally fetch error in get_customer_receivables: {e}")
+
+    return local_receivables
+
+
 @app.post("/api/payments/record-receivable")
 async def record_customer_receivable(request: Request):
     """Records a Customer Inward Collection (Receiving) and syncs Dispatch / Sales Invoice in real time."""
@@ -1552,6 +1584,22 @@ async def record_customer_receivable(request: Request):
     status = "Fully Collected" if balance_outstanding == 0 else ("Partially Collected" if amount_received > 0 else "Pending")
 
     rid = f"rec_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{str(uuid.uuid4())[:4]}"
+    
+    # Auto-Sync Receipt to Tally Prime on 192.168.1.27:9000 if amount_received > 0
+    tally_sync_info = None
+    if amount_received > 0 and customer_name:
+        try:
+            tally_sync_info = tally_service.create_receipt_voucher(
+                customer_name=customer_name,
+                amount=amount_received,
+                bank_ledger="HDFC Bank",
+                ref_no=transaction_ref or rid,
+                narration=notes or f"Customer collection recorded via GateFlow Desk for Invoice {inv_no}",
+                payment_date=receipt_date
+            )
+        except Exception as te:
+            print(f"Tally Auto Sync Receipt warning: {te}")
+
     rec_doc = {
         "id": rid,
         "invoice_number": inv_no,
@@ -1566,6 +1614,7 @@ async def record_customer_receivable(request: Request):
         "due_date": due_date,
         "status": status,
         "notes": notes,
+        "tally_sync": tally_sync_info,
         "created_at": datetime.now().isoformat()
     }
 

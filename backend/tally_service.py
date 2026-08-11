@@ -192,3 +192,132 @@ def get_tally_payments() -> dict:
         return {"success": True, "count": len(payments), "payments": payments}
     except Exception as e:
         return {"success": False, "error": str(e), "payments": []}
+
+
+def create_receipt_voucher(customer_name: str, amount: float, bank_ledger: str = None, ref_no: str = None, narration: str = "Customer Collection via GateFlow Desk", payment_date: str = None) -> dict:
+    """Create a Receipt Voucher in Tally Prime (Customer Inward Collections)"""
+    if not bank_ledger:
+        bank_ledger = DEFAULT_BANK_LEDGER
+    if not ref_no:
+        ref_no = f"REC-{int(datetime.now().timestamp())}"
+    
+    date_str = datetime.now().strftime("%Y%m%d")
+    if payment_date:
+        try:
+            d = datetime.strptime(payment_date[:10], "%Y-%m-%d")
+            date_str = d.strftime("%Y%m%d")
+        except Exception:
+            pass
+
+    safe_customer = customer_name.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+    safe_bank = bank_ledger.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+    safe_ref = ref_no.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+    safe_narr = narration.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+
+    xml_payload = f"""<ENVELOPE>
+  <HEADER><TALLYREQUEST>Import Data</TALLYREQUEST></HEADER>
+  <BODY>
+    <IMPORTDATA>
+      <REQUESTDESC>
+        <REPORTNAME>Vouchers</REPORTNAME>
+      </REQUESTDESC>
+      <REQUESTDATA>
+        <TALLYMESSAGE xmlns:UDF="TallyUDF">
+          <VOUCHER VCHTYPE="Receipt" ACTION="Create" OBJVIEW="Accounting Voucher View">
+            <DATE>{date_str}</DATE>
+            <VOUCHERTYPENAME>Receipt</VOUCHERTYPENAME>
+            <VOUCHERNUMBER>{safe_ref}</VOUCHERNUMBER>
+            <REFERENCE>{safe_ref}</REFERENCE>
+            <NARRATION>{safe_narr}</NARRATION>
+
+            <ALLLEDGERENTRIES.LIST>
+              <LEDGERNAME>{safe_bank}</LEDGERNAME>
+              <ISDEEMEDPOSITIVE>YES</ISDEEMEDPOSITIVE>
+              <AMOUNT>-{amount:.2f}</AMOUNT>
+            </ALLLEDGERENTRIES.LIST>
+
+            <ALLLEDGERENTRIES.LIST>
+              <LEDGERNAME>{safe_customer}</LEDGERNAME>
+              <ISDEEMEDPOSITIVE>NO</ISDEEMEDPOSITIVE>
+              <AMOUNT>{amount:.2f}</AMOUNT>
+            </ALLLEDGERENTRIES.LIST>
+          </VOUCHER>
+        </TALLYMESSAGE>
+      </REQUESTDATA>
+    </IMPORTDATA>
+  </BODY>
+</ENVELOPE>"""
+
+    try:
+        res = _send_xml(xml_payload)
+        is_created = "<CREATED>1</CREATED>" in res or "<UPDATED>1</UPDATED>" in res
+        err_match = re.search(r'<LINEERROR>(.*?)</LINEERROR>', res, re.IGNORECASE)
+        
+        if is_created:
+            return {
+                "success": True,
+                "ref_no": ref_no,
+                "message": f"Receipt voucher of ₹{amount} for '{customer_name}' successfully created in Tally Prime."
+            }
+        else:
+            return {
+                "success": False,
+                "ref_no": ref_no,
+                "error": err_match.group(1) if err_match else "Tally Prime rejected the receipt creation."
+            }
+    except Exception as e:
+        return {
+            "success": False,
+            "ref_no": ref_no,
+            "error": f"Failed to reach Tally Prime server: {str(e)}"
+        }
+
+
+def get_tally_receipts() -> dict:
+    """Fetch receipt register from Tally Prime with date bounds"""
+    today_str = datetime.now().strftime("%Y%m%d")
+    start_str = f"{int(datetime.now().strftime('%Y')) - 1}0401"
+    xml_request = f"""<ENVELOPE>
+      <HEADER><TALLYREQUEST>Export Data</TALLYREQUEST></HEADER>
+      <BODY>
+        <EXPORTDATA>
+          <REQUESTDESC>
+            <REPORTNAME>Day Book</REPORTNAME>
+            <STATICVARIABLES>
+              <SVEXPORTFORMAT>$$SysName:XML</SVEXPORTFORMAT>
+              <SVFROMDATE>{start_str}</SVFROMDATE>
+              <SVTODATE>{today_str}</SVTODATE>
+            </STATICVARIABLES>
+          </REQUESTDESC>
+        </EXPORTDATA>
+      </BODY>
+    </ENVELOPE>"""
+    try:
+        res = _send_xml(xml_request, timeout=4)
+        vouchers = re.findall(r'<VOUCHER[^>]*>([\s\S]*?)</VOUCHER>', res, re.IGNORECASE)
+        receipts = []
+        for v in vouchers:
+            vch_type_m = re.search(r'<VOUCHERTYPENAME[^>]*>(.*?)</VOUCHERTYPENAME>', v, re.IGNORECASE)
+            vtype = vch_type_m.group(1).lower() if vch_type_m else ""
+            if "receipt" not in vtype:
+                continue
+
+            date_m = re.search(r'<DATE[^>]*>(.*?)</DATE>', v, re.IGNORECASE)
+            party_m = re.search(r'<PARTYLEDGERNAME[^>]*>(.*?)</PARTYLEDGERNAME>', v, re.IGNORECASE)
+            num_m = re.search(r'<VOUCHERNUMBER[^>]*>(.*?)</VOUCHERNUMBER>', v, re.IGNORECASE)
+            amt_m = re.search(r'<AMOUNT[^>]*>(.*?)</AMOUNT>', v, re.IGNORECASE)
+            narr_m = re.search(r'<NARRATION[^>]*>(.*?)</NARRATION>', v, re.IGNORECASE)
+
+            raw_d = date_m.group(1) if date_m else ""
+            fmt_d = f"{raw_d[:4]}-{raw_d[4:6]}-{raw_d[6:8]}" if len(raw_d) == 8 else raw_d
+
+            receipts.append({
+                "date": fmt_d,
+                "voucher_number": num_m.group(1) if num_m else "N/A",
+                "party_name": party_m.group(1).replace('&amp;', '&') if party_m else "Customer / Party",
+                "amount": abs(float(amt_m.group(1))) if amt_m else 0.0,
+                "narration": narr_m.group(1).replace('&amp;', '&') if narr_m else ""
+            })
+        return {"success": True, "count": len(receipts), "receipts": receipts}
+    except Exception as e:
+        return {"success": False, "error": str(e), "receipts": []}
