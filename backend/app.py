@@ -1425,8 +1425,34 @@ def get_payments_summary():
 
 @app.get("/api/payments/payables")
 def get_vendor_payables():
-    """Retrieves all Vendor Outward Payables records."""
-    return vendor_payments_store.get_all(sort_key="created_at", reverse=True)
+    """Retrieves all Vendor Outward Payables records including live Tally Prime entries."""
+    local_payables = vendor_payments_store.get_all(sort_key="created_at", reverse=True)
+    
+    # Fetch live payment register from Tally Prime (Computer B: 192.168.1.27:9000)
+    try:
+        tally_res = tally_service.get_tally_payments()
+        if tally_res.get("success"):
+            tally_payments = tally_res.get("payments", [])
+            for tp in tally_payments:
+                local_payables.append({
+                    "id": f"tally_{tp['voucher_number']}",
+                    "po_number": "TALLY-VCH",
+                    "vendor_name": tp["party_name"],
+                    "bill_amount": tp["amount"],
+                    "amount_paid": tp["amount"],
+                    "balance_due": 0.0,
+                    "payment_date": tp["date"],
+                    "payment_mode": "Tally Prime Sync",
+                    "transaction_ref": tp["voucher_number"],
+                    "status": "Fully Paid",
+                    "notes": tp["narration"] or "Fetched directly from Tally Prime (192.168.1.27:9000)",
+                    "is_tally": True,
+                    "created_at": tp["date"]
+                })
+    except Exception as e:
+        print(f"Tally fetch error in get_vendor_payables: {e}")
+
+    return local_payables
 
 
 @app.get("/api/payments/receivables")
@@ -1453,6 +1479,22 @@ async def record_vendor_payable(request: Request):
     status = "Fully Paid" if balance_due == 0 else ("Partially Paid" if amount_paid > 0 else "Unpaid")
 
     pid = f"pay_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{str(uuid.uuid4())[:4]}"
+    
+    # Auto-Sync Payment to Tally Prime on 192.168.1.27:9000 if amount_paid > 0
+    tally_sync_info = None
+    if amount_paid > 0 and vendor_name:
+        try:
+            tally_sync_info = tally_service.create_payment_voucher(
+                vendor_name=vendor_name,
+                amount=amount_paid,
+                bank_ledger="HDFC Bank",
+                ref_no=transaction_ref or pid,
+                narration=notes or f"Payment recorded via GateFlow Desk for PO {po_no}",
+                payment_date=payment_date
+            )
+        except Exception as te:
+            print(f"Tally Auto Sync warning: {te}")
+
     pay_doc = {
         "id": pid,
         "po_number": po_no,
@@ -1466,6 +1508,7 @@ async def record_vendor_payable(request: Request):
         "bank_account": bank_account,
         "status": status,
         "notes": notes,
+        "tally_sync": tally_sync_info,
         "created_at": datetime.now().isoformat()
     }
 
