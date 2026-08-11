@@ -1867,6 +1867,45 @@ def get_master_admin_dashboard_summary():
     }
 
 
+# ═══════════════════════════════════════════════════════════
+# TALLY PRIME INTEGRATION ENDPOINTS (Computer B: 192.168.1.27:9000)
+# ═══════════════════════════════════════════════════════════
+from backend import tally_service
+
+@app.get("/api/tally/status")
+def get_tally_status():
+    return tally_service.test_tally_connection()
+
+@app.get("/api/tally/ledgers")
+def get_tally_ledgers():
+    ledgers = tally_service.get_tally_ledgers()
+    return {"success": True, "count": len(ledgers), "ledgers": ledgers}
+
+@app.get("/api/tally/payments")
+def get_tally_payments():
+    return tally_service.get_tally_payments()
+
+@app.post("/api/tally/sync-payment")
+async def sync_payment_to_tally(req: Request):
+    data = await req.json()
+    vendor_name = data.get("vendorName") or data.get("vendor_name")
+    amount = float(data.get("amount", 0))
+    bank_ledger = data.get("bankLedger") or data.get("bank_ledger")
+    ref_no = data.get("refNo") or data.get("ref_no")
+    narration = data.get("narration", "Payment via GateFlow Payments Desk")
+    payment_date = data.get("date") or data.get("payment_date")
+
+    result = tally_service.create_payment_voucher(
+        vendor_name=vendor_name,
+        amount=amount,
+        bank_ledger=bank_ledger,
+        ref_no=ref_no,
+        narration=narration,
+        payment_date=payment_date
+    )
+    return result
+
+
 # Mount Uploaded Files
 app.mount("/uploads", StaticFiles(directory=UPLOADS_DIR), name="uploads")
 
