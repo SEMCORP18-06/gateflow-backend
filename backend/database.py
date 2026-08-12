@@ -26,7 +26,7 @@ class DummyCollection:
     def create_index(self, *args, **kwargs): pass
 
 try:
-    client = MongoClient(MONGO_URI, serverSelectionTimeoutMS=300, connectTimeoutMS=300)
+    client = MongoClient(MONGO_URI, serverSelectionTimeoutMS=5000, connectTimeoutMS=5000)
     db = client[DB_NAME]
     receiving_collection = db["receiving_records"]
     challans_collection = db["receiving_challans"]
@@ -35,6 +35,9 @@ try:
     users_collection = db["users"]
     pos_collection = db["purchase_orders"]
     project_engineer_collection = db["project_engineer_records"]
+    vendor_payments_collection = db["vendor_payments"]
+    customer_receivables_collection = db["customer_receivables"]
+    file_uploads_collection = db["file_uploads"]
 except Exception as e:
     logger.warning(f"MongoDB Atlas initialization skipped (Offline/Persistent Store Mode): {e}")
     db = None
@@ -45,6 +48,9 @@ except Exception as e:
     users_collection = DummyCollection()
     pos_collection = DummyCollection()
     project_engineer_collection = DummyCollection()
+    vendor_payments_collection = DummyCollection()
+    customer_receivables_collection = DummyCollection()
+    file_uploads_collection = DummyCollection()
 
 
 def format_doc(doc: dict) -> dict:
@@ -66,8 +72,11 @@ def init_db():
     try:
         client.admin.command('ping')
         receiving_collection.create_index("invoice_number")
-        dispatch_collection.create_index("dispatch_number", unique=True)
+        dispatch_collection.create_index("dispatch_number")
         notification_collection.create_index("sent_at")
+        project_engineer_collection.create_index("id")
+        file_uploads_collection.create_index("id")
+        pos_collection.create_index("id")
         logger.info("Connected to MongoDB Atlas cluster0. Indices initialized.")
     except Exception as e:
         logger.warning(f"MongoDB Connection Warning: {e}")
