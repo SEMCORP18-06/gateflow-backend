@@ -2056,12 +2056,6 @@ def serve_uploaded_file(filename: str):
 </html>"""
     return Response(content=fallback_html, media_type="text/html")
 
-# Mount Uploaded Files Directory
-try:
-    app.mount("/uploads", StaticFiles(directory=UPLOADS_DIR), name="uploads")
-except Exception:
-    pass
-
 # Serve Frontend Static Files
 if os.path.exists(FRONTEND_DIR):
     app.mount("/static", StaticFiles(directory=FRONTEND_DIR), name="static")
