@@ -2,6 +2,7 @@ import os
 import shutil
 import json
 import uuid
+import base64
 from datetime import datetime, timedelta
 from typing import Optional, List
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException, Response, Query, Request
@@ -13,7 +14,7 @@ from backend.database import (
     init_db, format_doc, receiving_collection, challans_collection, dispatch_collection, notification_collection, users_collection, pos_collection, project_engineer_collection
 )
 from backend.persistent_store import (
-    receiving_store, challans_store, dispatch_store, notifications_store, pos_store, project_engineer_store, vendor_payments_store, customer_receivables_store
+    receiving_store, challans_store, dispatch_store, notifications_store, pos_store, project_engineer_store, vendor_payments_store, customer_receivables_store, PersistentStore
 )
 from backend.ocr_engine import extract_metadata_from_image
 from backend.notifications import send_email, send_sms
@@ -22,6 +23,9 @@ from backend.scheduler import start_scheduler, check_payment_calendar_job
 from backend.seed_data import seed_database_if_empty
 
 import tempfile
+
+# Initialize Persistent Store for Uploaded Files (Base64 Ephemeral Fallback for Vercel Serverless)
+uploads_store = PersistentStore("file_uploads", [])
 
 # App directories
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -37,6 +41,44 @@ try:
 except Exception:
     UPLOADS_DIR = os.path.join(tempfile.gettempdir(), "gateflow_uploads")
     os.makedirs(UPLOADS_DIR, exist_ok=True)
+
+def save_uploaded_file_persistently(uploaded_file: UploadFile, prefix: str) -> dict:
+    """Saves file to local UPLOADS_DIR and persists Base64 in uploads_store for Vercel serverless persistence."""
+    safe_filename = f"{prefix}_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{uploaded_file.filename}"
+    file_path = os.path.join(UPLOADS_DIR, safe_filename)
+    
+    file_bytes = uploaded_file.file.read()
+    try:
+        uploaded_file.file.seek(0)
+    except Exception:
+        pass
+
+    try:
+        with open(file_path, "wb") as buffer:
+            buffer.write(file_bytes)
+    except Exception as e:
+        print(f"Disk write warning: {e}")
+
+    b64_content = base64.b64encode(file_bytes).decode("utf-8")
+    content_type = uploaded_file.content_type or "application/octet-stream"
+
+    file_doc = {
+        "id": safe_filename,
+        "filename": safe_filename,
+        "original_name": uploaded_file.filename,
+        "content_type": content_type,
+        "b64": b64_content,
+        "created_at": datetime.now().isoformat()
+    }
+    try:
+        uploads_store.insert(safe_filename, file_doc)
+    except Exception as e:
+        print(f"Warning saving file to persistent store: {e}")
+
+    return {
+        "filename": safe_filename,
+        "document_path": f"/uploads/{safe_filename}"
+    }
 
 # Initialize MongoDB Atlas database & seed data
 try:
@@ -271,11 +313,8 @@ async def save_receiving_record(
 
     packing_list_doc_path = ""
     if packing_list_file and packing_list_file.filename:
-        filename = f"rec_packlist_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{packing_list_file.filename}"
-        path = os.path.join(UPLOADS_DIR, filename)
-        with open(path, "wb") as b:
-            shutil.copyfileobj(packing_list_file.file, b)
-        packing_list_doc_path = f"/uploads/{filename}"
+        file_meta = save_uploaded_file_persistently(packing_list_file, "rec_packlist")
+        packing_list_doc_path = file_meta["document_path"]
 
     doc_id = id or f"rec_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{str(uuid.uuid4())[:4]}"
     update_data = {
@@ -483,11 +522,8 @@ async def save_delivery_challan(
     """Logs a new inward delivery challan with instant persistent storage."""
     doc_path = document_path or ""
     if challan_file and challan_file.filename:
-        filename = f"challan_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{challan_file.filename}"
-        path = os.path.join(UPLOADS_DIR, filename)
-        with open(path, "wb") as b:
-            shutil.copyfileobj(challan_file.file, b)
-        doc_path = f"/uploads/{filename}"
+        file_meta = save_uploaded_file_persistently(challan_file, "challan")
+        doc_path = file_meta["document_path"]
 
     custom_fields = {}
     try:
@@ -552,10 +588,8 @@ def delete_delivery_challan(challan_id: str):
 @app.post("/api/receiving/ocr-upload")
 async def process_ocr_upload(file: UploadFile = File(...)):
     """Receives invoice image upload (PDF, JPEG, JPG, PNG, WEBP), runs Image Preparation & OCR Engine."""
-    filename = f"ocr_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{file.filename}"
-    file_path = os.path.join(UPLOADS_DIR, filename)
-    with open(file_path, "wb") as buffer:
-        shutil.copyfileobj(file.file, buffer)
+    file_meta = save_uploaded_file_persistently(file, "ocr")
+    file_path = os.path.join(UPLOADS_DIR, file_meta["filename"])
 
     extracted = extract_metadata_from_image(file_path)
     fields = extracted.get("extracted_fields", {})
@@ -569,7 +603,7 @@ async def process_ocr_upload(file: UploadFile = File(...)):
         "invoice_date": fields.get("Invoice Date", datetime.now().strftime("%Y-%m-%d")),
         "due_date": fields.get("Due Date", (datetime.now() + timedelta(days=30)).strftime("%Y-%m-%d")),
         "total_amount": fields.get("Total Amount", "0.00"),
-        "document_path": f"/uploads/{filename}"
+        "document_path": file_meta["document_path"]
     }
 
 
@@ -580,11 +614,8 @@ async def process_ocr_upload(file: UploadFile = File(...)):
 @app.post("/api/receiving/upload-file")
 async def upload_receiving_file(file: UploadFile = File(...)):
     """Saves an uploaded invoice file without running OCR. Used for manual entry."""
-    filename = f"manual_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{file.filename}"
-    file_path = os.path.join(UPLOADS_DIR, filename)
-    with open(file_path, "wb") as buffer:
-        shutil.copyfileobj(file.file, buffer)
-    return {"document_path": f"/uploads/{filename}", "filename": filename}
+    file_meta = save_uploaded_file_persistently(file, "manual")
+    return {"document_path": file_meta["document_path"], "filename": file_meta["filename"]}
 
 
 # ----------------------------------------------------
@@ -624,38 +655,26 @@ async def create_dispatch(
 
     invoice_doc_path = ""
     if supplier_invoice_file and supplier_invoice_file.filename:
-        filename = f"sinv_{datetime.now().strftime('%H%M%S')}_{supplier_invoice_file.filename}"
-        path = os.path.join(UPLOADS_DIR, filename)
-        with open(path, "wb") as b:
-            shutil.copyfileobj(supplier_invoice_file.file, b)
-        invoice_doc_path = f"/uploads/{filename}"
+        file_meta = save_uploaded_file_persistently(supplier_invoice_file, "sinv")
+        invoice_doc_path = file_meta["document_path"]
 
     challan_doc_path = ""
     if supplier_challan_file and supplier_challan_file.filename:
-        filename = f"schallan_{datetime.now().strftime('%H%M%S')}_{supplier_challan_file.filename}"
-        path = os.path.join(UPLOADS_DIR, filename)
-        with open(path, "wb") as b:
-            shutil.copyfileobj(supplier_challan_file.file, b)
-        challan_doc_path = f"/uploads/{filename}"
+        file_meta = save_uploaded_file_persistently(supplier_challan_file, "schallan")
+        challan_doc_path = file_meta["document_path"]
 
     # Legacy: still accept packing list if sent (backward compat)
     packing_list_doc_path = ""
     if supplier_packing_list_file and supplier_packing_list_file.filename:
-        filename = f"spacklist_{datetime.now().strftime('%H%M%S')}_{supplier_packing_list_file.filename}"
-        path = os.path.join(UPLOADS_DIR, filename)
-        with open(path, "wb") as b:
-            shutil.copyfileobj(supplier_packing_list_file.file, b)
-        packing_list_doc_path = f"/uploads/{filename}"
+        file_meta = save_uploaded_file_persistently(supplier_packing_list_file, "spacklist")
+        packing_list_doc_path = file_meta["document_path"]
 
     # Legacy: still accept material pictures if sent (backward compat)
     pics_paths = []
     for pic in material_pictures:
         if pic and pic.filename:
-            filename = f"mat_{datetime.now().strftime('%H%M%S')}_{pic.filename}"
-            path = os.path.join(UPLOADS_DIR, filename)
-            with open(path, "wb") as b:
-                shutil.copyfileobj(pic.file, b)
-            pics_paths.append(f"/uploads/{filename}")
+            file_meta = save_uploaded_file_persistently(pic, "mat")
+            pics_paths.append(file_meta["document_path"])
 
     # --- Auto-link QC-approved documents from Project Engineer packages ---
     qc_package_ids = []
@@ -684,13 +703,10 @@ async def create_dispatch(
     additional_files_meta = []
     for af in additional_files:
         if af and af.filename:
-            safe_name = f"addl_{datetime.now().strftime('%H%M%S')}_{af.filename}"
-            path = os.path.join(UPLOADS_DIR, safe_name)
-            with open(path, "wb") as b:
-                shutil.copyfileobj(af.file, b)
+            file_meta = save_uploaded_file_persistently(af, "addl")
             additional_files_meta.append({
                 "file_name": af.filename,
-                "document_path": f"/uploads/{safe_name}"
+                "document_path": file_meta["document_path"]
             })
 
     dispatch_doc = {
@@ -1695,17 +1711,13 @@ async def save_project_engineer_package(
     uploaded_files_meta = []
     for idx, uploaded_file in enumerate(files):
         if uploaded_file and uploaded_file.filename:
-            safe_filename = f"pe_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{uploaded_file.filename}"
-            file_path = os.path.join(UPLOADS_DIR, safe_filename)
-            with open(file_path, "wb") as buffer:
-                shutil.copyfileobj(uploaded_file.file, buffer)
-            
+            file_meta = save_uploaded_file_persistently(uploaded_file, "pe")
             category = cat_list[idx] if idx < len(cat_list) and cat_list[idx] else "General Document"
             file_note = notes_list[idx] if idx < len(notes_list) and notes_list[idx] else ""
 
             uploaded_files_meta.append({
                 "file_name": uploaded_file.filename,
-                "document_path": f"/uploads/{safe_filename}",
+                "document_path": file_meta["document_path"],
                 "category": category,
                 "notes": file_note
             })
@@ -1786,14 +1798,11 @@ def approve_project_engineer_qc(
     qc_uploaded_files = []
     for idx, qc_file in enumerate(qc_files):
         if qc_file and qc_file.filename:
-            safe_name = f"qc_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{qc_file.filename}"
-            file_path = os.path.join(UPLOADS_DIR, safe_name)
-            with open(file_path, "wb") as buffer:
-                shutil.copyfileobj(qc_file.file, buffer)
+            file_meta = save_uploaded_file_persistently(qc_file, "qc")
             category = file_categories[idx] if idx < len(file_categories) else "QC Document"
             qc_uploaded_files.append({
                 "file_name": qc_file.filename,
-                "document_path": f"/uploads/{safe_name}",
+                "document_path": file_meta["document_path"],
                 "category": category,
                 "notes": "Uploaded by QC Desk during approval"
             })
@@ -1998,8 +2007,30 @@ async def sync_payment_to_tally(req: Request):
     return result
 
 
-# Mount Uploaded Files
-app.mount("/uploads", StaticFiles(directory=UPLOADS_DIR), name="uploads")
+# Dedicated Fallback Uploaded File Server (Serves from disk or Persistent Base64 Store)
+@app.get("/uploads/{filename}")
+@app.get("/api/uploads/{filename}")
+def serve_uploaded_file(filename: str):
+    disk_path = os.path.join(UPLOADS_DIR, filename)
+    if os.path.exists(disk_path):
+        return FileResponse(disk_path)
+    
+    rec = uploads_store.get(filename)
+    if rec and rec.get("b64"):
+        try:
+            file_bytes = base64.b64decode(rec["b64"])
+            content_type = rec.get("content_type", "application/octet-stream")
+            return Response(content=file_bytes, media_type=content_type)
+        except Exception as e:
+            print(f"Error decoding base64 file {filename}: {e}")
+
+    raise HTTPException(status_code=404, detail="Uploaded file not found")
+
+# Mount Uploaded Files Directory
+try:
+    app.mount("/uploads", StaticFiles(directory=UPLOADS_DIR), name="uploads")
+except Exception:
+    pass
 
 # Serve Frontend Static Files
 if os.path.exists(FRONTEND_DIR):
