@@ -387,11 +387,12 @@ def submit_receiving_qc(record_id: str):
 
 
 @app.post("/api/receiving/{record_id}/approve-qc")
-def approve_receiving_qc(record_id: str, qc_comments: Optional[str] = Form("Approved by QC")):
+def approve_receiving_qc(record_id: str, qc_comments: Optional[str] = Form("Approved by QC"), qc_approved_by: Optional[str] = Form(None)):
     """QC Admin approves record -> Verified."""
-    rec = receiving_store.update(record_id, {"status": "Verified", "qc_comments": qc_comments})
+    approver = qc_approved_by or "QC Inspector"
+    rec = receiving_store.update(record_id, {"status": "Verified", "qc_comments": qc_comments, "qc_approved_by": approver, "qc_approved_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S")})
     try:
-        receiving_collection.update_one({"_id": record_id}, {"$set": {"status": "Verified", "qc_comments": qc_comments}})
+        receiving_collection.update_one({"_id": record_id}, {"$set": {"status": "Verified", "qc_comments": qc_comments, "qc_approved_by": approver, "qc_approved_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S")}})
     except Exception:
         pass
 
@@ -399,12 +400,12 @@ def approve_receiving_qc(record_id: str, qc_comments: Optional[str] = Form("Appr
         log_audit_action(
             section="RECEIVING",
             subject="Invoice Verified by QC",
-            message_body=f"QC Approval complete for Invoice #{rec.get('invoice_number')} ({rec.get('vendor_name')})."
+            message_body=f"QC Approval complete for Invoice #{rec.get('invoice_number')} ({rec.get('vendor_name')}) by {approver}."
         )
         send_email(
             recipient="receiving-desk@gateflow-scm.com",
             subject=f"[QC APPROVED] Invoice #{rec.get('invoice_number')} Verified",
-            message_body=f"QC Approval complete for Invoice #{rec.get('invoice_number')} ({rec.get('vendor_name')})."
+            message_body=f"QC Approval complete for Invoice #{rec.get('invoice_number')} ({rec.get('vendor_name')}) by {approver}."
         )
     return rec or {"id": record_id, "status": "Verified"}
 
@@ -768,15 +769,23 @@ def submit_dispatch_qc(dispatch_id: str):
 
 
 @app.post("/api/dispatch/{dispatch_id}/approve")
-def approve_dispatch_qc(dispatch_id: str):
+async def approve_dispatch_qc(dispatch_id: str, request: Request):
     """QC Admin approves dispatch -> QC Approved. Awaits final clearance from Dispatch Module."""
+    data = {}
+    try:
+        data = await request.json()
+    except Exception:
+        pass
+    qc_approved_by = data.get("qc_approved_by") or "QC Inspector"
+
     now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     rec = dispatch_store.update(dispatch_id, {
         "status": "QC Approved",
-        "qc_approved_at": now_str
+        "qc_approved_at": now_str,
+        "qc_approved_by": qc_approved_by
     })
     try:
-        dispatch_collection.update_one({"_id": dispatch_id}, {"$set": {"status": "QC Approved", "qc_approved_at": now_str}})
+        dispatch_collection.update_one({"_id": dispatch_id}, {"$set": {"status": "QC Approved", "qc_approved_at": now_str, "qc_approved_by": qc_approved_by}})
     except Exception:
         pass
 
@@ -785,13 +794,13 @@ def approve_dispatch_qc(dispatch_id: str):
         log_audit_action(
             section="QC_ADMIN",
             subject="QC Inspection Approved",
-            message_body=f"Dispatch Bundle #{disp_num} passed QC Gate Inspection. Sent to Dispatch Desk for final vehicle release & clearance.",
+            message_body=f"Dispatch Bundle #{disp_num} passed QC Gate Inspection by {qc_approved_by}. Sent to Dispatch Desk for final vehicle release & clearance.",
             recipient="dispatch@semco.com"
         )
         send_email(
             recipient="dispatch@semco.com",
             subject=f"[QC APPROVED] Dispatch Bundle #{disp_num} Ready for Final Clearance",
-            message_body=f"QC Gate Inspection approved for Bundle #{disp_num}. Please grant final dispatch clearance in the Dispatch Module to release the vehicle."
+            message_body=f"QC Gate Inspection approved for Bundle #{disp_num} by {qc_approved_by}. Please grant final dispatch clearance in the Dispatch Module to release the vehicle."
         )
 
     return rec or {"id": dispatch_id, "status": "QC Approved"}
@@ -1831,7 +1840,8 @@ def approve_project_engineer_qc(
     qc_comments: Optional[str] = Form("Approved by QC Desk — OK for Dispatch"),
     custom_fields_json: Optional[str] = Form("{}"),
     qc_file_categories_json: Optional[str] = Form("[]"),
-    qc_files: List[UploadFile] = File([])
+    qc_files: List[UploadFile] = File([]),
+    qc_approved_by: Optional[str] = Form(None)
 ):
     """QC Admin approves Project Engineer package with dynamic custom QC fields, certificates & file uploads."""
     custom_fields = {}
@@ -1871,7 +1881,9 @@ def approve_project_engineer_qc(
         "status": "QC Approved",
         "qc_comments": qc_comments or "Approved by QC Desk — OK for Dispatch",
         "custom_qc_fields": custom_fields,
-        "files": merged_files
+        "files": merged_files,
+        "qc_approved_by": qc_approved_by or "QC Inspector",
+        "qc_approved_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     }
 
     rec = project_engineer_store.update(record_id, rec_updates)
@@ -1887,17 +1899,19 @@ def approve_project_engineer_qc(
         files_summary = ""
         if qc_uploaded_files:
             files_summary = f"\nQC Files Uploaded: {len(qc_uploaded_files)} file(s)"
+            
+        approver = qc_approved_by or "QC Inspector"
 
         log_audit_action(
             section="QC_ADMIN",
             subject="Engineering Package QC Approved (OK for Dispatch)",
-            message_body=f"QC Approval complete for Package '{rec.get('package_name')}' (Project Ref: {rec.get('project_ref')}). {fields_summary}{files_summary}",
+            message_body=f"QC Approval complete for Package '{rec.get('package_name')}' (Project Ref: {rec.get('project_ref')}) by {approver}. {fields_summary}{files_summary}",
             recipient="engineer@semco.com"
         )
         send_email(
             recipient="engineer@semco.com",
             subject=f"[QC APPROVED — OK FOR DISPATCH] Project Package '{rec.get('package_name')}' Verified",
-            message_body=f"Your package '{rec.get('package_name')}' has been verified and approved by the QC Desk. It is now cleared OK for Dispatch. Comments: {qc_comments}{fields_summary}{files_summary}"
+            message_body=f"Your package '{rec.get('package_name')}' has been verified and approved by the QC Desk ({approver}). It is now cleared OK for Dispatch. Comments: {qc_comments}{fields_summary}{files_summary}"
         )
     return rec or {"id": record_id, "status": "QC Approved", "custom_qc_fields": custom_fields}
 
@@ -1941,6 +1955,76 @@ def delete_project_engineer_package(record_id: str):
         message_body=f"Project Engineer package '{pname}' deleted."
     )
     return {"status": "deleted", "id": record_id}
+
+
+@app.get("/api/admin/qc-approval-log")
+def get_qc_approval_log():
+    """Returns all QC approval records across all modules. Admin only."""
+    approval_log = []
+    
+    # Receiving QC approvals
+    try:
+        all_rec = list(receiving_collection.find({"status": "Verified"}))
+        if not all_rec:
+            all_rec = [r for r in receiving_store.get_all() if r.get("status") == "Verified"]
+        for r in all_rec:
+            r = format_doc(r) if "_id" in r else r
+            approval_log.append({
+                "module": "Receiving",
+                "record_id": r.get("id"),
+                "reference": f"Invoice #{r.get('invoice_number', 'N/A')}",
+                "vendor": r.get("vendor_name", ""),
+                "approved_by": r.get("qc_approved_by", "N/A"),
+                "qc_comments": r.get("qc_comments", ""),
+                "approved_at": r.get("qc_approved_at", r.get("updated_at", "")),
+                "status": r.get("status")
+            })
+    except Exception:
+        pass
+    
+    # Project Engineer QC approvals
+    try:
+        all_pe = list(project_engineer_collection.find({"status": "QC Approved"}))
+        if not all_pe:
+            all_pe = [p for p in project_engineer_store.get_all() if p.get("status") == "QC Approved"]
+        for p in all_pe:
+            p = format_doc(p) if "_id" in p else p
+            approval_log.append({
+                "module": "Project Engineer",
+                "record_id": p.get("id"),
+                "reference": p.get("package_name", p.get("project_ref", "N/A")),
+                "vendor": p.get("engineer_name", ""),
+                "approved_by": p.get("qc_approved_by", "N/A"),
+                "qc_comments": p.get("qc_comments", ""),
+                "approved_at": p.get("qc_approved_at", p.get("updated_at", "")),
+                "status": p.get("status")
+            })
+    except Exception:
+        pass
+    
+    # Dispatch QC approvals
+    try:
+        all_disp = list(dispatch_collection.find({"status": "QC Approved"}))
+        if not all_disp:
+            all_disp = [d for d in dispatch_store.get_all() if d.get("status") == "QC Approved"]
+        for d in all_disp:
+            d = format_doc(d) if "_id" in d else d
+            approval_log.append({
+                "module": "Dispatch",
+                "record_id": d.get("id"),
+                "reference": f"Bundle #{d.get('dispatch_number', 'N/A')}",
+                "vendor": d.get("client_name", ""),
+                "approved_by": d.get("qc_approved_by", "N/A"),
+                "qc_comments": d.get("qc_comments", ""),
+                "approved_at": d.get("qc_approved_at", ""),
+                "status": d.get("status")
+            })
+    except Exception:
+        pass
+    
+    # Sort by approved_at descending
+    approval_log.sort(key=lambda x: x.get("approved_at", ""), reverse=True)
+    return approval_log
 
 
 @app.get("/api/admin/dashboard-summary")
