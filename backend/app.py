@@ -1080,14 +1080,34 @@ def get_external_portal_projects():
 
 @app.get("/api/pos")
 def get_purchase_orders():
-    """Fetches all Purchase Orders."""
+    """Fetches all Purchase Orders, deduplicated by po_number (keeps latest)."""
+    all_pos = []
     try:
         docs = list(pos_collection.find())
         if docs:
-            return [format_doc(d) for d in docs]
+            all_pos = [format_doc(d) for d in docs]
     except Exception:
         pass
-    return pos_store.get_all(sort_key="created_at", reverse=True)
+    if not all_pos:
+        all_pos = pos_store.get_all(sort_key="created_at", reverse=True)
+
+    # Deduplicate by po_number — keep the one with latest created_at or APPROVED status
+    seen = {}
+    for po in all_pos:
+        pn = (po.get("po_number") or "").strip()
+        if not pn:
+            continue
+        if pn in seen:
+            existing = seen[pn]
+            # Prefer APPROVED status, then latest created_at
+            if po.get("status") == "APPROVED" and existing.get("status") != "APPROVED":
+                seen[pn] = po
+            elif po.get("status") == existing.get("status"):
+                if (po.get("created_at") or "") > (existing.get("created_at") or ""):
+                    seen[pn] = po
+        else:
+            seen[pn] = po
+    return list(seen.values())
 
 
 @app.get("/api/pos/lookup/{po_number}")
@@ -1179,10 +1199,26 @@ async def save_po_builder(request: Request):
     if not po_number:
         raise HTTPException(status_code=400, detail="PO Number is required.")
 
-    # Check if existing PO by po_number or id
+    # Check if existing PO by id or po_number before creating a new one
     po_id = data.get("id")
     if not po_id:
-        po_id = f"po_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{str(uuid.uuid4())[:4]}"
+        # Look up existing PO by po_number to avoid creating duplicates
+        existing_po = None
+        try:
+            existing_po = pos_collection.find_one({"po_number": po_number})
+            if existing_po:
+                existing_po = format_doc(existing_po)
+        except Exception:
+            pass
+        if not existing_po:
+            for item in pos_store.get_all():
+                if (item.get("po_number") or "").strip() == po_number:
+                    existing_po = item
+                    break
+        if existing_po:
+            po_id = existing_po.get("id")
+        if not po_id:
+            po_id = f"po_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{str(uuid.uuid4())[:4]}"
 
     status = data.get("status") or "DRAFT"
     action = data.get("action")  # "SUBMIT", "SAVE_DRAFT", or "SAVE_AND_APPROVE"
@@ -1334,7 +1370,26 @@ async def approve_purchase_order(po_id: str, request: Request):
         q = [{"id": target_id}, {"po_number": po.get("po_number")}]
         if ObjectId.is_valid(target_id):
             q.append({"_id": ObjectId(target_id)})
-        pos_collection.update_one({"$or": q}, {"$set": {"status": "APPROVED", "approved_by": po["approved_by"]}})
+        # Also match by original _id if po_id (URL param) is a valid ObjectId
+        if ObjectId.is_valid(po_id) and po_id != target_id:
+            q.append({"_id": ObjectId(po_id)})
+        update_fields = {"status": "APPROVED", "approved_by": po["approved_by"]}
+        result = pos_collection.update_one({"$or": q}, {"$set": update_fields})
+        # If update didn't match, try a broader search by po_number and update all matching
+        if result.matched_count == 0:
+            pos_collection.update_many(
+                {"po_number": po.get("po_number")},
+                {"$set": update_fields}
+            )
+        # Clean up: remove any duplicate documents for this po_number, keep only one
+        po_num = po.get("po_number")
+        if po_num:
+            all_matches = list(pos_collection.find({"po_number": po_num}))
+            if len(all_matches) > 1:
+                # Keep the first one, delete the rest
+                keep_id = all_matches[0]["_id"]
+                for extra in all_matches[1:]:
+                    pos_collection.delete_one({"_id": extra["_id"]})
     except Exception:
         pass
 

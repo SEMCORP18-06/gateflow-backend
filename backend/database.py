@@ -54,12 +54,15 @@ except Exception as e:
 
 
 def format_doc(doc: dict) -> dict:
-    """Helper to convert MongoDB document _id to id string."""
+    """Helper to convert MongoDB document _id to id string.
+    Preserves existing 'id' field if present (e.g. custom PO IDs),
+    only falls back to str(_id) when no 'id' exists."""
     if not doc:
         return doc
     doc_copy = doc.copy()
     if "_id" in doc_copy:
-        doc_copy["id"] = str(doc_copy["_id"])
+        if "id" not in doc_copy or not doc_copy["id"]:
+            doc_copy["id"] = str(doc_copy["_id"])
         del doc_copy["_id"]
     return doc_copy
 
