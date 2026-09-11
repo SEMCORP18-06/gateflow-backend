@@ -3,6 +3,8 @@ import shutil
 import json
 import uuid
 import base64
+import mimetypes
+import urllib.parse
 from datetime import datetime, timedelta
 from typing import Optional, List
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException, Response, Query, Request
@@ -44,7 +46,8 @@ except Exception:
 
 def save_uploaded_file_persistently(uploaded_file: UploadFile, prefix: str) -> dict:
     """Saves file to local UPLOADS_DIR and persists Base64 in uploads_store for Vercel serverless persistence."""
-    safe_filename = f"{prefix}_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{uploaded_file.filename}"
+    clean_original_name = os.path.basename((uploaded_file.filename or "file").replace("\\", "/"))
+    safe_filename = f"{prefix}_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{clean_original_name}"
     file_path = os.path.join(UPLOADS_DIR, safe_filename)
     
     file_bytes = uploaded_file.file.read()
@@ -60,12 +63,13 @@ def save_uploaded_file_persistently(uploaded_file: UploadFile, prefix: str) -> d
         print(f"Disk write warning: {e}")
 
     b64_content = base64.b64encode(file_bytes).decode("utf-8")
-    content_type = uploaded_file.content_type or "application/octet-stream"
+    guessed_type, _ = mimetypes.guess_type(clean_original_name)
+    content_type = guessed_type or uploaded_file.content_type or "application/octet-stream"
 
     file_doc = {
         "id": safe_filename,
         "filename": safe_filename,
-        "original_name": uploaded_file.filename,
+        "original_name": clean_original_name,
         "content_type": content_type,
         "b64": b64_content,
         "created_at": datetime.now().isoformat()
@@ -2147,24 +2151,79 @@ async def sync_payment_to_tally(req: Request):
 
 
 # Dedicated Fallback Uploaded File Server (Serves from disk or Persistent Base64 Store)
-@app.get("/uploads/{filename}")
-@app.get("/api/uploads/{filename}")
+@app.get("/uploads/{filename:path}")
+@app.get("/api/uploads/{filename:path}")
 def serve_uploaded_file(filename: str):
-    disk_path = os.path.join(UPLOADS_DIR, filename)
-    if os.path.exists(disk_path):
-        return FileResponse(disk_path)
-    
-    rec = uploads_store.get(filename)
+    # Normalize input path (strip leading slashes, redundant uploads/ or api/uploads/ prefix)
+    raw_name = filename.lstrip("/")
+    if raw_name.startswith("uploads/"):
+        raw_name = raw_name[len("uploads/"):]
+    if raw_name.startswith("api/uploads/"):
+        raw_name = raw_name[len("api/uploads/"):]
+
+    unquoted_name = urllib.parse.unquote(raw_name)
+    base_name = os.path.basename(unquoted_name)
+    cleaned_name = base_name.split("_", 2)[-1] if "_" in base_name else base_name
+
+    # Determine accurate content type
+    guessed_type, _ = mimetypes.guess_type(base_name)
+    if not guessed_type:
+        lower = base_name.lower()
+        if lower.endswith(".pdf"):
+            guessed_type = "application/pdf"
+        elif lower.endswith((".jpg", ".jpeg")):
+            guessed_type = "image/jpeg"
+        elif lower.endswith(".png"):
+            guessed_type = "image/png"
+        elif lower.endswith(".webp"):
+            guessed_type = "image/webp"
+        elif lower.endswith(".svg"):
+            guessed_type = "image/svg+xml"
+        else:
+            guessed_type = "application/octet-stream"
+
+    cors_headers = {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, HEAD, OPTIONS",
+        "Access-Control-Allow-Headers": "*",
+        "Cache-Control": "public, max-age=86400"
+    }
+
+    # 1. Check local disk
+    for check_name in [raw_name, unquoted_name, base_name]:
+        disk_path = os.path.join(UPLOADS_DIR, check_name)
+        if os.path.exists(disk_path) and os.path.isfile(disk_path):
+            return FileResponse(
+                disk_path,
+                media_type=guessed_type,
+                content_disposition_type="inline",
+                filename=cleaned_name,
+                headers=cors_headers
+            )
+
+    # 2. Check uploads_store (MongoDB Atlas / persistent store)
+    lookup_keys = [raw_name, unquoted_name, base_name, urllib.parse.quote(base_name)]
+    rec = None
+    for key in lookup_keys:
+        rec = uploads_store.get(key)
+        if rec:
+            break
+
     if rec and rec.get("b64"):
         try:
             file_bytes = base64.b64decode(rec["b64"])
-            content_type = rec.get("content_type", "application/octet-stream")
-            return Response(content=file_bytes, media_type=content_type)
+            final_content_type = rec.get("content_type") or guessed_type
+            if final_content_type == "application/octet-stream" and guessed_type != "application/octet-stream":
+                final_content_type = guessed_type
+            headers = {
+                **cors_headers,
+                "Content-Disposition": f'inline; filename="{cleaned_name}"'
+            }
+            return Response(content=file_bytes, media_type=final_content_type, headers=headers)
         except Exception as e:
-            print(f"Error decoding base64 file {filename}: {e}")
+            print(f"Error decoding base64 file {raw_name}: {e}")
 
-    # Professional fallback document view for legacy files uploaded prior to cloud persistent storage
-    cleaned_name = filename.split("_", 2)[-1] if "_" in filename else filename
+    # 3. Professional fallback document view for legacy files
     fallback_html = f"""<!DOCTYPE html>
 <html>
 <head>
@@ -2193,7 +2252,7 @@ def serve_uploaded_file(filename: str):
     </div>
 </body>
 </html>"""
-    return Response(content=fallback_html, media_type="text/html")
+    return Response(content=fallback_html, media_type="text/html", headers=cors_headers)
 
 # Serve Frontend Static Files
 if os.path.exists(FRONTEND_DIR):
