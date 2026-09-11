@@ -98,15 +98,12 @@ def test_payment_calendar_scheduler_mongodb():
 
 
 def test_data_exporters_mongodb():
-    """Verify CSV, XLSX, and PDF export endpoints from MongoDB."""
-    res_csv = client.get("/api/receiving/export?format=csv")
-    assert res_csv.status_code == 200
-
-    res_xlsx = client.get("/api/receiving/export?format=xlsx")
-    assert res_xlsx.status_code == 200
-
-    res_pdf = client.get("/api/receiving/export?format=pdf")
-    assert res_pdf.status_code == 200
+    """Verify CSV, XLSX, and PDF export endpoints from MongoDB/stores."""
+    for ep in ["/api/receiving/export", "/api/dispatch/export", "/api/challans/export"]:
+        for fmt in ["csv", "xlsx", "pdf"]:
+            res = client.get(f"{ep}?format={fmt}")
+            assert res.status_code == 200, f"Failed {ep}?format={fmt}"
+            assert len(res.content) > 0
 
 
 def test_project_engineer_workflow():

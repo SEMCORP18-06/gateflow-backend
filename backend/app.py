@@ -991,6 +991,28 @@ def export_dispatch(format: str = Query("csv"), status: Optional[str] = None):
         return Response(content=data, media_type="application/pdf", headers={"Content-Disposition": f"attachment; filename=dispatch_records{title_suffix.lower().replace(' ', '_')}.pdf"})
 
 
+@app.get("/api/challans/export")
+@app.get("/api/receiving/challans/export")
+def export_challans(format: str = Query("csv"), status: Optional[str] = None):
+    records = challans_store.get_all(sort_key="created_at", reverse=True)
+    if status:
+        records = [r for r in records if r.get("status") == status or r.get("invoice_status") == status]
+
+    title_suffix = f" ({status})" if status else ""
+    if format == "csv":
+        data = export_to_csv(records)
+        return Response(content=data, media_type="text/csv", headers={"Content-Disposition": f"attachment; filename=delivery_challans{title_suffix.lower().replace(' ', '_')}.csv"})
+    elif format == "xlsx":
+        data = export_to_xlsx(records)
+        return Response(content=data, media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", headers={"Content-Disposition": f"attachment; filename=delivery_challans{title_suffix.lower().replace(' ', '_')}.xlsx"})
+    elif format == "pdf":
+        data = export_to_pdf(f"Delivery Challans Report{title_suffix}", records)
+        return Response(content=data, media_type="application/pdf", headers={"Content-Disposition": f"attachment; filename=delivery_challans{title_suffix.lower().replace(' ', '_')}.pdf"})
+    else:
+        data = export_to_csv(records)
+        return Response(content=data, media_type="text/csv", headers={"Content-Disposition": f"attachment; filename=delivery_challans{title_suffix.lower().replace(' ', '_')}.csv"})
+
+
 # ----------------------------------------------------
 # PURCHASE ORDERS (PO MASTER & PAYMENT TERMS SYNC)
 # ----------------------------------------------------

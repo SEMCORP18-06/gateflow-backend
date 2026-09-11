@@ -78,10 +78,16 @@ def export_to_pdf(title: str, records: list) -> bytes:
         elements.append(Paragraph("No records found.", styles['Normal']))
     else:
         sample = records[0]
-        cols = [k for k in sample.keys() if k in ['invoice_number', 'vendor_name', 'due_date', 'total_amount', 'status', 'dispatch_number', 'client_name', 'driver_name']]
-        
+        preferred = [
+            'invoice_number', 'challan_number', 'vendor_name', 'client_name',
+            'challan_date', 'due_date', 'total_amount', 'vehicle_number',
+            'transporter_name', 'items_summary', 'status', 'invoice_status'
+        ]
+        cols = [k for k in preferred if k in sample.keys()]
         if not cols:
-            cols = list(sample.keys())[:5]
+            cols = [k for k in sample.keys() if not k.startswith('_') and k not in ['custom_fields', 'raw_ocr_data', 'items_data', 'ocr_preview', 'id']][:6]
+        else:
+            cols = cols[:7]
 
         table_data = [[col.replace('_', ' ').title() for col in cols]]
         for r in records:
