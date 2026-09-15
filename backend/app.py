@@ -1132,9 +1132,15 @@ def get_last_taken_po():
         pass
 
     if not last_po:
-        stored_val = settings_store.get("last_taken_po_number")
-        if stored_val:
-            last_po = str(stored_val).strip()
+        try:
+            stored_val = settings_store.get("last_taken_po_number")
+            if stored_val:
+                if isinstance(stored_val, dict):
+                    last_po = str(stored_val.get("value", "")).strip()
+                else:
+                    last_po = str(stored_val).strip()
+        except Exception:
+            pass
 
     # 2. If not explicitly set, determine from all existing POs
     all_pos = []
@@ -1197,7 +1203,10 @@ async def set_last_taken_po(request: Request):
         )
     except Exception:
         pass
-    settings_store.set("last_taken_po_number", po_no)
+    try:
+        settings_store.insert("last_taken_po_number", {"id": "last_taken_po_number", "value": po_no})
+    except Exception:
+        pass
     return {"status": "success", "last_po_number": po_no}
 
 
@@ -1429,7 +1438,10 @@ async def save_po_builder(request: Request):
         )
     except Exception:
         pass
-    settings_store.set("last_taken_po_number", po_number)
+    try:
+        settings_store.insert("last_taken_po_number", {"id": "last_taken_po_number", "value": po_number})
+    except Exception:
+        pass
 
     log_audit_action(
         section="PURCHASE_ORDERS",
