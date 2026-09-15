@@ -38,6 +38,7 @@ try:
     vendor_payments_collection = db["vendor_payments"]
     customer_receivables_collection = db["customer_receivables"]
     file_uploads_collection = db["file_uploads"]
+    settings_collection = db["system_settings"]
 except Exception as e:
     logger.warning(f"MongoDB Atlas initialization skipped (Offline/Persistent Store Mode): {e}")
     db = None
@@ -51,6 +52,7 @@ except Exception as e:
     vendor_payments_collection = DummyCollection()
     customer_receivables_collection = DummyCollection()
     file_uploads_collection = DummyCollection()
+    settings_collection = DummyCollection()
 
 
 def format_doc(doc: dict) -> dict:

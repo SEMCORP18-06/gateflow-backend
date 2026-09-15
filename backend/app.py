@@ -1,4 +1,5 @@
 import os
+import re
 import shutil
 import json
 import uuid
@@ -13,7 +14,7 @@ from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
 
 from backend.database import (
-    init_db, format_doc, receiving_collection, challans_collection, dispatch_collection, notification_collection, users_collection, pos_collection, project_engineer_collection
+    init_db, format_doc, receiving_collection, challans_collection, dispatch_collection, notification_collection, users_collection, pos_collection, project_engineer_collection, settings_collection
 )
 from backend.persistent_store import (
     receiving_store, challans_store, dispatch_store, notifications_store, pos_store, project_engineer_store, vendor_payments_store, customer_receivables_store, PersistentStore
@@ -28,6 +29,7 @@ import tempfile
 
 # Initialize Persistent Store for Uploaded Files (Base64 Ephemeral Fallback for Vercel Serverless)
 uploads_store = PersistentStore("file_uploads", [])
+settings_store = PersistentStore("system_settings", {})
 
 # App directories
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -1113,6 +1115,92 @@ def get_external_portal_projects():
     }
 
 
+@app.get("/api/pos/last-taken")
+def get_last_taken_po():
+    """
+    Returns the last taken PO number across the system so users never lose track
+    of the previous PO after shutting down or opening the system the next day.
+    """
+    last_po = None
+
+    # 1. Check persistent settings store / MongoDB
+    try:
+        setting = settings_collection.find_one({"key": "last_taken_po_number"})
+        if setting and setting.get("value"):
+            last_po = str(setting.get("value")).strip()
+    except Exception:
+        pass
+
+    if not last_po:
+        stored_val = settings_store.get("last_taken_po_number")
+        if stored_val:
+            last_po = str(stored_val).strip()
+
+    # 2. If not explicitly set, determine from all existing POs
+    all_pos = []
+    try:
+        docs = list(pos_collection.find())
+        if docs:
+            all_pos = [format_doc(d) for d in docs]
+    except Exception:
+        pass
+    if not all_pos:
+        all_pos = pos_store.get_all(sort_key="created_at", reverse=True)
+
+    if not last_po and all_pos:
+        best_num = -1
+        best_po_str = None
+        for p in all_pos:
+            pn = (p.get("po_number") or "").strip()
+            if not pn:
+                continue
+            m = re.search(r'(\d+)$', pn)
+            if m:
+                n = int(m.group(1))
+                if n > best_num:
+                    best_num = n
+                    best_po_str = pn
+        last_po = best_po_str or (all_pos[0].get("po_number") if all_pos else None)
+
+    if not last_po:
+        last_po = "26/27 - 208"
+
+    # Compute next suggested number
+    next_suggested = "26/27 - 001"
+    m = re.search(r'^(.*?)(\d+)$', last_po)
+    if m:
+        prefix = m.group(1)
+        digits = m.group(2)
+        next_num = int(digits) + 1
+        padded = str(next_num).zfill(len(digits))
+        next_suggested = f"{prefix}{padded}"
+    else:
+        next_suggested = f"{last_po} - 01"
+
+    return {
+        "last_po_number": last_po,
+        "next_suggested_po_number": next_suggested
+    }
+
+
+@app.post("/api/pos/last-taken")
+async def set_last_taken_po(request: Request):
+    data = await request.json()
+    po_no = (data.get("po_number") or "").strip()
+    if not po_no:
+        raise HTTPException(status_code=400, detail="po_number is required")
+    try:
+        settings_collection.replace_one(
+            {"key": "last_taken_po_number"},
+            {"key": "last_taken_po_number", "value": po_no, "updated_at": datetime.now().isoformat()},
+            upsert=True
+        )
+    except Exception:
+        pass
+    settings_store.set("last_taken_po_number", po_no)
+    return {"status": "success", "last_po_number": po_no}
+
+
 @app.get("/api/pos")
 def get_purchase_orders():
     """Fetches all Purchase Orders, deduplicated by po_number (keeps latest)."""
@@ -1331,6 +1419,17 @@ async def save_po_builder(request: Request):
     except Exception:
         pass
     pos_store.insert(po_id, po_doc)
+
+    # Automatically persist the latest taken PO number across shutdowns
+    try:
+        settings_collection.replace_one(
+            {"key": "last_taken_po_number"},
+            {"key": "last_taken_po_number", "value": po_number, "updated_at": datetime.now().isoformat()},
+            upsert=True
+        )
+    except Exception:
+        pass
+    settings_store.set("last_taken_po_number", po_number)
 
     log_audit_action(
         section="PURCHASE_ORDERS",
