@@ -1269,6 +1269,14 @@ async def save_po_builder(request: Request):
             "date": datetime.now().strftime("%Y-%m-%d")
         }
 
+    def _to_float(v, default=0.0):
+        if v is None or v == "":
+            return default
+        try:
+            return float(v)
+        except (ValueError, TypeError):
+            return default
+
     po_doc = {
         "id": po_id,
         "po_number": po_number,
@@ -1286,19 +1294,19 @@ async def save_po_builder(request: Request):
         "ship_address": data.get("ship_address") or "Opposite Arya Industries, Gat No 63, Dehu-Alandi Road Talwade, Pune, 411062",
         "ship_gstin": data.get("ship_gstin") or "27ABRCS0246H1Z3",
         "line_items": data.get("line_items") or [],
-        "total_qty": data.get("total_qty") or 0,
-        "sub_total": data.get("sub_total") or 0.0,
-        "freight": data.get("freight") or 0.0,
-        "pf_charges": data.get("pf_charges") or 0.0,
+        "total_qty": _to_float(data.get("total_qty"), 0.0),
+        "sub_total": _to_float(data.get("sub_total"), 0.0),
+        "freight": _to_float(data.get("freight"), 0.0),
+        "pf_charges": _to_float(data.get("pf_charges"), 0.0),
         "tax_type": data.get("tax_type") or "IGST",
-        "igst_rate": data.get("igst_rate") or 18.0,
-        "igst_amount": data.get("igst_amount") or 0.0,
-        "cgst_rate": data.get("cgst_rate") or 9.0,
-        "cgst_amount": data.get("cgst_amount") or 0.0,
-        "sgst_rate": data.get("sgst_rate") or 9.0,
-        "sgst_amount": data.get("sgst_amount") or 0.0,
-        "total_amount": data.get("grand_total") or data.get("total_amount") or 0.0,
-        "grand_total": data.get("grand_total") or 0.0,
+        "igst_rate": _to_float(data.get("igst_rate"), 18.0),
+        "igst_amount": _to_float(data.get("igst_amount"), 0.0),
+        "cgst_rate": _to_float(data.get("cgst_rate"), 9.0),
+        "cgst_amount": _to_float(data.get("cgst_amount"), 0.0),
+        "sgst_rate": _to_float(data.get("sgst_rate"), 9.0),
+        "sgst_amount": _to_float(data.get("sgst_amount"), 0.0),
+        "total_amount": _to_float(data.get("grand_total") or data.get("total_amount"), 0.0),
+        "grand_total": _to_float(data.get("grand_total"), 0.0),
         "amount_in_words": data.get("amount_in_words") or "",
         "payment_terms": data.get("payment_terms") or "30 Days after Delivery",
         "credit_period_days": data.get("credit_period_days") or 30,
