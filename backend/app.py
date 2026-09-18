@@ -1333,13 +1333,22 @@ async def save_po_builder(request: Request):
 
     # Check if existing PO by id or po_number before creating a new one
     po_id = data.get("id")
-    if not po_id:
-        # Look up existing PO by po_number to avoid creating duplicates
-        existing_po = None
+    existing_po = None
+    if po_id:
         try:
-            existing_po = pos_collection.find_one({"po_number": po_number})
-            if existing_po:
-                existing_po = format_doc(existing_po)
+            doc = pos_collection.find_one({"id": po_id})
+            if doc:
+                existing_po = format_doc(doc)
+        except Exception:
+            pass
+        if not existing_po:
+            existing_po = pos_store.get(po_id)
+    else:
+        # Look up existing PO by po_number to avoid creating duplicates
+        try:
+            doc = pos_collection.find_one({"po_number": po_number})
+            if doc:
+                existing_po = format_doc(doc)
         except Exception:
             pass
         if not existing_po:
@@ -1352,9 +1361,9 @@ async def save_po_builder(request: Request):
         if not po_id:
             po_id = f"po_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{str(uuid.uuid4())[:4]}"
 
-    status = data.get("status") or "DRAFT"
-    action = data.get("action")  # "SUBMIT", "SAVE_DRAFT", or "SAVE_AND_APPROVE"
-    approved_by = data.get("approved_by") or None
+    status = data.get("status") or (existing_po.get("status") if existing_po else "DRAFT") or "DRAFT"
+    action = data.get("action")  # "SUBMIT", "SAVE_DRAFT", "UPDATE", or "SAVE_AND_APPROVE"
+    approved_by = data.get("approved_by") or (existing_po.get("approved_by") if existing_po else None)
 
     if action == "SUBMIT":
         status = "SUBMITTED_FOR_APPROVAL"
@@ -1365,6 +1374,10 @@ async def save_po_builder(request: Request):
             "email": "poappr@semco.com",
             "date": datetime.now().strftime("%Y-%m-%d")
         }
+    elif action == "UPDATE":
+        status = data.get("status") or (existing_po.get("status") if existing_po else "SUBMITTED_FOR_APPROVAL")
+    elif action == "SAVE_DRAFT":
+        status = "DRAFT"
 
     def _to_float(v, default=0.0):
         if v is None or v == "":
@@ -1420,7 +1433,8 @@ async def save_po_builder(request: Request):
         },
         "approved_by": approved_by,
         "rejection_notes": data.get("rejection_notes") or "",
-        "created_at": datetime.now().isoformat()
+        "created_at": data.get("created_at") or (existing_po.get("created_at") if existing_po else None) or datetime.now().isoformat(),
+        "updated_at": datetime.now().isoformat()
     }
 
     try:
