@@ -39,9 +39,16 @@ class PersistentStore:
         col = _get_mongo_collection(self.name)
         if col is not None:
             try:
-                docs = list(col.find({}, {"_id": 0}))
+                docs = list(col.find({}))
                 if docs:
-                    self.data = {str(d.get("id")): d for d in docs if d.get("id")}
+                    self.data = {}
+                    for d in docs:
+                        did = str(d.get("id") or d.get("_id") or "")
+                        if did:
+                            d["id"] = did
+                            if "_id" in d:
+                                del d["_id"]
+                            self.data[did] = d
                     self.save_local()
                     return
             except Exception as e:
@@ -88,9 +95,17 @@ class PersistentStore:
         col = _get_mongo_collection(self.name)
         if col is not None:
             try:
-                docs = list(col.find({}, {"_id": 0}))
+                docs = list(col.find({}))
                 if docs:
-                    self.data = {str(d.get("id")): d for d in docs if d.get("id")}
+                    new_data = {}
+                    for d in docs:
+                        did = str(d.get("id") or d.get("_id") or "")
+                        if did:
+                            d["id"] = did
+                            if "_id" in d:
+                                del d["_id"]
+                            new_data[did] = d
+                    self.data = new_data
                     self.save_local()
             except Exception:
                 pass
@@ -105,12 +120,27 @@ class PersistentStore:
         if sid in self.data:
             return self.data[sid]
 
+        for k, v in self.data.items():
+            if (v.get("id") == sid or 
+                v.get("invoice_number") == sid or 
+                v.get("challan_number") == sid or 
+                v.get("po_number") == sid):
+                return v
+
         col = _get_mongo_collection(self.name)
         if col is not None:
             try:
-                doc = col.find_one({"id": sid}, {"_id": 0})
+                from bson import ObjectId
+                q = [{"id": sid}, {"_id": sid}, {"invoice_number": sid}, {"challan_number": sid}, {"po_number": sid}]
+                if ObjectId.is_valid(sid):
+                    q.append({"_id": ObjectId(sid)})
+                doc = col.find_one({"$or": q})
                 if doc:
-                    self.data[sid] = doc
+                    did = str(doc.get("id") or doc.get("_id") or sid)
+                    doc["id"] = did
+                    if "_id" in doc:
+                        del doc["_id"]
+                    self.data[did] = doc
                     return doc
             except Exception:
                 pass
@@ -160,14 +190,28 @@ class PersistentStore:
 
     def delete(self, item_id: str):
         sid = str(item_id)
-        if sid in self.data:
-            del self.data[sid]
-            self.save_local()
+        keys_to_del = []
+        for k, v in self.data.items():
+            if (k == sid or 
+                v.get("id") == sid or 
+                v.get("invoice_number") == sid or 
+                v.get("challan_number") == sid or 
+                v.get("po_number") == sid):
+                keys_to_del.append(k)
+
+        for k in keys_to_del:
+            if k in self.data:
+                del self.data[k]
+        self.save_local()
 
         col = _get_mongo_collection(self.name)
         if col is not None:
             try:
-                col.delete_one({"id": sid})
+                from bson import ObjectId
+                q = [{"id": sid}, {"_id": sid}, {"invoice_number": sid}, {"challan_number": sid}, {"po_number": sid}]
+                if ObjectId.is_valid(sid):
+                    q.append({"_id": ObjectId(sid)})
+                col.delete_many({"$or": q})
             except Exception as e:
                 print(f"MongoDB delete error for {self.name}: {e}")
 

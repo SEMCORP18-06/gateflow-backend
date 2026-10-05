@@ -1,40 +1,29 @@
 {
-  "rec_20260811_145654_45c2": {
-    "id": "rec_20260811_145654_45c2",
-    "invoice_number": "TEST-DIRECT-100",
-    "vendor_name": "Direct Vendor",
-    "invoice_date": "2026-07-22",
-    "due_date": "2026-08-01",
-    "total_amount": 7500.0,
-    "po_number": "",
-    "challan_number": "",
-    "challan_doc_path": "",
-    "document_path": "",
-    "packing_list_doc": "",
-    "qc_comments": "Verified on Receival",
-    "extracted_fields": {
-      "Heading 1": "Details 1"
-    },
+  "rec_20260819_093938_36d7": {
+    "id": "rec_20260819_093938_36d7",
+    "invoice_number": "129/2026-27",
+    "vendor_name": "SEEMA FORGE",
+    "invoice_date": "2026-08-19",
+    "due_date": "2026-08-20",
+    "total_amount": 1234.0,
+    "challan_number": "93-TESTING",
+    "challan_doc_path": "/uploads/manual_20260819_093341_WhatsApp Image 2026-08-19 at 3.01.43 PM.jpeg",
+    "document_path": "/uploads/ocr_20260819_093428_WhatsApp Image 2026-08-19 at 3.01.43 PM (1).jpeg",
     "status": "Verified",
-    "created_at": "2026-08-11T14:56:54.066763"
+    "qc_comments": "Verified on Receival",
+    "created_at": "2026-08-19T09:39:38.609335"
   },
-  "rec_20260811_145800_50bc": {
-    "id": "rec_20260811_145800_50bc",
-    "invoice_number": "TEST-DIRECT-100",
-    "vendor_name": "Direct Vendor",
-    "invoice_date": "2026-07-22",
-    "due_date": "2026-08-01",
-    "total_amount": 7500.0,
-    "po_number": "",
-    "challan_number": "",
-    "challan_doc_path": "",
-    "document_path": "",
-    "packing_list_doc": "",
-    "qc_comments": "Verified on Receival",
-    "extracted_fields": {
-      "Heading 1": "Details 1"
-    },
+  "rec_20260819_094206_7775": {
+    "id": "rec_20260819_094206_7775",
+    "invoice_number": "93",
+    "vendor_name": "STEELIANS AND MATERIAL ENGINEERING",
+    "invoice_date": "2026-08-19",
+    "due_date": "2026-08-20",
+    "total_amount": 1234.0,
+    "challan_number": "88-TESTING",
+    "document_path": "/uploads/manual_20260819_063216_WhatsApp Image 2026-08-19 at 11.39.29 AM.jpeg",
     "status": "Verified",
-    "created_at": "2026-08-11T14:58:00.960087"
+    "qc_comments": "Verified on Receival",
+    "created_at": "2026-08-19T09:42:06.033367"
   }
 }

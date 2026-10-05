@@ -15,8 +15,8 @@
         "notes": "SMDKDMD"
       }
     ],
-    "status": "Pending QC",
-    "qc_comments": "Sent for Approval to QC Desk",
+    "status": "Needs Revision",
+    "qc_comments": "Revision requested by QC Desk",
     "created_at": "2026-08-11T12:44:31.314423"
   },
   "pe_20260811_124841_451c": {
@@ -41,8 +41,8 @@
     "engineer_name": "Umesh H. Patil",
     "notes": "Includes QAP compliance and MTC certificates.",
     "files": [],
-    "status": "QC Approved",
-    "qc_comments": "Approved by QC Desk — OK for Dispatch",
+    "status": "Pending QC",
+    "qc_comments": "Sent for Approval to QC Desk",
     "created_at": "2026-08-11T12:49:50.181801"
   },
   "pe_20260811_132010_ac64": {
@@ -54,15 +54,61 @@
     "engineer_name": "Rajesh Sharma",
     "notes": "Critical pressure valve package.",
     "files": [],
-    "status": "QC Approved",
-    "qc_comments": "Verified and cleared against ASME & QAP standards.",
-    "created_at": "2026-08-11T13:20:10.387872",
-    "custom_qc_fields": {
-      "QAP Certificate No.": "QAP/SEM/2026/8841",
-      "FAT Clearance ID": "FAT-PASSED-9921",
-      "Hydro Test Rating": "250 PSI / 4 Hours OK",
-      "Inspection Agency": "TUV Nord India Pvt Ltd"
-    }
+    "status": "Pending QC",
+    "qc_comments": "Sent for Approval to QC Desk",
+    "created_at": "2026-08-11T13:20:10.387872"
+  },
+  "pe_20260811_133554_b61f": {
+    "id": "pe_20260811_133554_b61f",
+    "package_name": "QC Flow Test Package",
+    "project_ref": "PRJ-TEST-2026-QC01",
+    "po_number": "PO/2026/QC-TEST-001",
+    "vendor_name": "Test Vendor Engineering Pvt Ltd",
+    "engineer_name": "Test Engineer",
+    "notes": "Testing QC approval flow",
+    "files": [],
+    "status": "Pending QC",
+    "qc_comments": "Sent for Approval to QC Desk",
+    "created_at": "2026-08-11T13:35:54.946237"
+  },
+  "pe_20260811_133555_4276": {
+    "id": "pe_20260811_133555_4276",
+    "package_name": "QC Rejection Test Package",
+    "project_ref": "PRJ-TEST-2026-REJ01",
+    "po_number": "PO/2026/REJ-TEST-001",
+    "vendor_name": "Rejection Test Vendor",
+    "engineer_name": "Test Engineer",
+    "notes": "Testing QC rejection flow",
+    "files": [],
+    "status": "Pending QC",
+    "qc_comments": "Sent for Approval to QC Desk",
+    "created_at": "2026-08-11T13:35:55.076875"
+  },
+  "pe_20260811_142444_cae0": {
+    "id": "pe_20260811_142444_cae0",
+    "package_name": "Steam Valve Assembly Drawings",
+    "project_ref": "PRJ-DISPATCH-TEST-001",
+    "po_number": "PO/2026/DT-001",
+    "vendor_name": "Royal Fabricators",
+    "engineer_name": "Mr. Engineer",
+    "notes": "",
+    "files": [],
+    "status": "Pending QC",
+    "qc_comments": "Sent for Approval to QC Desk",
+    "created_at": "2026-08-11T14:24:44.726676"
+  },
+  "pe_20260811_143235_ad40": {
+    "id": "pe_20260811_143235_ad40",
+    "package_name": "Boiler Assembly MTC Package",
+    "project_ref": "PRJ-BOILER-2026",
+    "po_number": "PO/2026/BLR-001",
+    "vendor_name": "Thermax Engineering",
+    "engineer_name": "Mr. Sharma",
+    "notes": "",
+    "files": [],
+    "status": "Pending QC",
+    "qc_comments": "Sent for Approval to QC Desk",
+    "created_at": "2026-08-11T14:32:35.946784"
   },
   "pe_20260811_145654_905a": {
     "id": "pe_20260811_145654_905a",
@@ -73,9 +119,166 @@
     "engineer_name": "Tester Engineer",
     "notes": "Testing multi-file upload",
     "files": [],
-    "status": "QC Approved",
-    "qc_comments": "Verified by QC Test",
-    "created_at": "2026-08-11T14:56:54.656253",
-    "custom_qc_fields": {}
+    "status": "Pending QC",
+    "qc_comments": "Sent for Approval to QC Desk",
+    "created_at": "2026-08-11T14:56:54.656253"
+  },
+  "pe_20260811_145801_623a": {
+    "id": "pe_20260811_145801_623a",
+    "package_name": "Test Engineering Package",
+    "project_ref": "PRJ-TEST-100",
+    "po_number": "PO-9900",
+    "vendor_name": "Test Vendor",
+    "engineer_name": "Tester Engineer",
+    "notes": "Testing multi-file upload",
+    "files": [],
+    "status": "Pending QC",
+    "qc_comments": "Sent for Approval to QC Desk",
+    "created_at": "2026-08-11T14:58:01.573313"
+  },
+  "pe_20260812_045145_a69a": {
+    "id": "pe_20260812_045145_a69a",
+    "package_name": "abc",
+    "project_ref": "009",
+    "po_number": "001",
+    "vendor_name": "acme",
+    "engineer_name": "Mr. Rajesh Sharma (Project Engineer)",
+    "notes": "abcxyz",
+    "files": [
+      {
+        "file_name": "669e4e24bf757e732296d8e2_delivery-challan- exel-1.png",
+        "document_path": "/uploads/pe_20260812_045145_669e4e24bf757e732296d8e2_delivery-challan- exel-1.png",
+        "category": "Material Test Certificate (MTC)",
+        "notes": "pqrst"
+      }
+    ],
+    "status": "Pending QC",
+    "qc_comments": "Sent for Approval to QC Desk",
+    "created_at": "2026-08-12T04:51:45.896225"
+  },
+  "pe_20260812_045704_460f": {
+    "id": "pe_20260812_045704_460f",
+    "package_name": "Test CLI Package",
+    "project_ref": "PRJ-CLI-001",
+    "po_number": "PO-CLI-100",
+    "vendor_name": "CLI Vendor",
+    "engineer_name": "CLI Engineer",
+    "notes": "Testing POST route",
+    "files": [
+      {
+        "file_name": "test_cli_file.pdf",
+        "document_path": "/uploads/pe_20260812_045704_test_cli_file.pdf",
+        "category": "Material Test Certificate (MTC)",
+        "notes": "Test note"
+      }
+    ],
+    "status": "Pending QC",
+    "qc_comments": "Sent for Approval to QC Desk",
+    "created_at": "2026-08-12T04:57:04.617573"
+  },
+  "pe_20260812_050125_96a1": {
+    "id": "pe_20260812_050125_96a1",
+    "package_name": "Live Verification Package",
+    "project_ref": "PRJ-LIVE-2026-99",
+    "po_number": "PO-LIVE-888",
+    "vendor_name": "SEMCO Engineering Partner",
+    "engineer_name": "Lead Project Engineer",
+    "notes": "Verifying persistent upload and file retrieval",
+    "files": [
+      {
+        "file_name": "live_mtc_cert.pdf",
+        "document_path": "/uploads/pe_20260812_050125_live_mtc_cert.pdf",
+        "category": "Material Test Certificate (MTC)",
+        "notes": "Grade 316L Heat #9901"
+      },
+      {
+        "file_name": "live_blueprint.dwg",
+        "document_path": "/uploads/pe_20260812_050125_live_blueprint.dwg",
+        "category": "Technical Drawing",
+        "notes": "ANSI Flange 150# Spec"
+      }
+    ],
+    "status": "Pending QC",
+    "qc_comments": "Sent for Approval to QC Desk",
+    "created_at": "2026-08-12T05:01:25.438276"
+  },
+  "pe_20260812_050323_5fa9": {
+    "id": "pe_20260812_050323_5fa9",
+    "package_name": "NEW TEST ",
+    "project_ref": "001",
+    "po_number": "090",
+    "vendor_name": "dfgh",
+    "engineer_name": "Mr. Rajesh Sharma (Project Engineer)",
+    "notes": "pqwet",
+    "files": [
+      {
+        "file_name": "669e4e24bf757e732296d8e2_delivery-challan- exel-1.png",
+        "document_path": "/uploads/pe_20260812_050323_669e4e24bf757e732296d8e2_delivery-challan- exel-1.png",
+        "category": "Material Test Certificate (MTC)",
+        "notes": "na"
+      }
+    ],
+    "status": "Pending QC",
+    "qc_comments": "Sent for Approval to QC Desk",
+    "created_at": "2026-08-12T05:03:23.968826"
+  },
+  "pe_20260812_050708_3c61": {
+    "id": "pe_20260812_050708_3c61",
+    "package_name": "Fresh Test Package",
+    "project_ref": "PRJ-FRESH-101",
+    "po_number": "N/A",
+    "vendor_name": "N/A",
+    "engineer_name": "Project Engineer",
+    "notes": "",
+    "files": [
+      {
+        "file_name": "fresh_mtc_cert.pdf",
+        "document_path": "/uploads/pe_20260812_050708_fresh_mtc_cert.pdf",
+        "category": "Material Test Certificate (MTC)",
+        "notes": ""
+      }
+    ],
+    "status": "Pending QC",
+    "qc_comments": "Sent for Approval to QC Desk",
+    "created_at": "2026-08-12T05:07:08.321964"
+  },
+  "pe_20260812_051528_422b": {
+    "id": "pe_20260812_051528_422b",
+    "package_name": "Permanent Cloud Record Test",
+    "project_ref": "PRJ-MONGO-2026",
+    "po_number": "PO-MONGO-999",
+    "vendor_name": "SEMCO Global Engineering",
+    "engineer_name": "Project Engineer",
+    "notes": "",
+    "files": [],
+    "status": "Pending QC",
+    "qc_comments": "Sent for Approval to QC Desk",
+    "created_at": "2026-08-12T05:15:28.950978"
+  },
+  "pe_20260821_015243_3475": {
+    "id": "pe_20260821_015243_3475",
+    "package_name": "Test Engineering Package",
+    "project_ref": "PRJ-TEST-100",
+    "po_number": "PO-9900",
+    "vendor_name": "Test Vendor",
+    "engineer_name": "Tester Engineer",
+    "notes": "Testing multi-file upload",
+    "files": [],
+    "status": "Pending QC",
+    "qc_comments": "Sent for Approval to QC Desk",
+    "created_at": "2026-08-21T01:52:43.963478"
+  },
+  "pe_20260918_191811_5f21": {
+    "id": "pe_20260918_191811_5f21",
+    "package_name": "Test Engineering Package",
+    "project_ref": "PRJ-TEST-100",
+    "po_number": "PO-9900",
+    "vendor_name": "Test Vendor",
+    "engineer_name": "Tester Engineer",
+    "notes": "Testing multi-file upload",
+    "files": [],
+    "status": "Pending QC",
+    "qc_comments": "Sent for Approval to QC Desk",
+    "created_at": "2026-09-18T19:18:11.150166"
   }
 }

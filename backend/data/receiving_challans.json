@@ -1,1 +1,50 @@
-{}
+{
+  "ch_20260819_062122_3fe4": {
+    "id": "ch_20260819_062122_3fe4",
+    "challan_number": "88-TESTING",
+    "vendor_name": "STEELIANS AND MATERIAL ENGINEERING",
+    "challan_date": "2026-08-19",
+    "transporter_name": "ROAD",
+    "vehicle_number": "MH44AD3441",
+    "po_number": "26/27/123",
+    "items_summary": "HARDWARE",
+    "challan_doc": "/uploads/manual_20260819_062121_WhatsApp Image 2026-08-19 at 11.49.05 AM.jpeg",
+    "document_path": "/uploads/manual_20260819_062121_WhatsApp Image 2026-08-19 at 11.49.05 AM.jpeg",
+    "invoice_status": "Awaiting Invoice",
+    "custom_fields": {},
+    "status": "Inward Verified",
+    "created_at": "2026-08-19T06:21:22.187604"
+  },
+  "ch_20260821_110116_56e6": {
+    "id": "ch_20260821_110116_56e6",
+    "challan_number": "1234",
+    "vendor_name": "ABCD",
+    "challan_date": "2026-08-21",
+    "transporter_name": "MNO",
+    "vehicle_number": "XYZ",
+    "po_number": "5678",
+    "items_summary": "Inward Material Goods",
+    "challan_doc": "/uploads/ocr_20260821_110034_WhatsApp Image 2026-08-19 at 3.01.43 PM (1).jpeg",
+    "document_path": "/uploads/ocr_20260821_110034_WhatsApp Image 2026-08-19 at 3.01.43 PM (1).jpeg",
+    "invoice_status": "Awaiting Invoice",
+    "custom_fields": {},
+    "status": "Inward Verified",
+    "created_at": "2026-08-21T11:01:16.928453"
+  },
+  "ch_20260911_050338_1a32": {
+    "id": "ch_20260911_050338_1a32",
+    "challan_number": "ertwtt",
+    "vendor_name": "rtewrtew",
+    "challan_date": "2026-09-11",
+    "transporter_name": "ertertwer",
+    "vehicle_number": "fdgsdfgsdg",
+    "po_number": "rtert",
+    "items_summary": "Inward Material Goods",
+    "challan_doc": "/uploads/ocr_20260911_045723_INNOVICE.jpeg",
+    "document_path": "/uploads/ocr_20260911_045723_INNOVICE.jpeg",
+    "invoice_status": "Awaiting Invoice",
+    "custom_fields": {},
+    "status": "Inward Verified",
+    "created_at": "2026-09-11T05:03:38.758965"
+  }
+}

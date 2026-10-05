@@ -485,21 +485,35 @@ def mark_receiving_paid(record_id: str):
 
 @app.delete("/api/receiving/{record_id}")
 def delete_receiving_record(record_id: str):
-    """Deletes a receiving invoice record from persistent store."""
+    """Deletes a receiving invoice record from persistent store and MongoDB Atlas."""
     rec = receiving_store.get(record_id)
-    inv_num = rec.get("invoice_number", record_id) if rec else record_id
-    receiving_store.delete(record_id)
+    target_id = record_id
+    if not rec:
+        for r in receiving_store.get_all():
+            if r.get("id") == record_id or r.get("invoice_number") == record_id:
+                rec = r
+                target_id = r.get("id", record_id)
+                break
+
+    inv_num = rec.get("invoice_number", target_id) if rec else target_id
+    receiving_store.delete(target_id)
     try:
-        receiving_collection.delete_one({"_id": record_id})
-    except Exception:
-        pass
+        from bson import ObjectId
+        q = [{"id": target_id}, {"_id": target_id}]
+        if ObjectId.is_valid(target_id):
+            q.append({"_id": ObjectId(target_id)})
+        if inv_num and inv_num != target_id:
+            q.append({"invoice_number": inv_num})
+        receiving_collection.delete_many({"$or": q})
+    except Exception as e:
+        logger.warning(f"Mongo delete receiving error: {e}")
 
     log_audit_action(
         section="RECEIVING",
         subject="Invoice Record Deleted",
         message_body=f"Invoice record #{inv_num} deleted from Receiving repository."
     )
-    return {"status": "deleted", "id": record_id}
+    return {"status": "deleted", "id": target_id}
 
 
 # ----------------------------------------------------
@@ -575,21 +589,35 @@ async def save_delivery_challan(
 
 @app.delete("/api/receiving/challans/{challan_id}")
 def delete_delivery_challan(challan_id: str):
-    """Deletes a delivery challan record from persistent store."""
+    """Deletes a delivery challan record from persistent store and MongoDB Atlas."""
     ch = challans_store.get(challan_id)
-    cnum = ch.get("challan_number", challan_id) if ch else challan_id
-    challans_store.delete(challan_id)
+    target_id = challan_id
+    if not ch:
+        for c in challans_store.get_all():
+            if c.get("id") == challan_id or c.get("challan_number") == challan_id:
+                ch = c
+                target_id = c.get("id", challan_id)
+                break
+
+    cnum = ch.get("challan_number", target_id) if ch else target_id
+    challans_store.delete(target_id)
     try:
-        challans_collection.delete_one({"_id": challan_id})
-    except Exception:
-        pass
+        from bson import ObjectId
+        q = [{"id": target_id}, {"_id": target_id}]
+        if ObjectId.is_valid(target_id):
+            q.append({"_id": ObjectId(target_id)})
+        if cnum and cnum != target_id:
+            q.append({"challan_number": cnum})
+        challans_collection.delete_many({"$or": q})
+    except Exception as e:
+        logger.warning(f"Mongo delete challan error: {e}")
 
     log_audit_action(
         section="RECEIVING",
         subject="Delivery Challan Deleted",
         message_body=f"Inward Delivery Challan #{cnum} deleted from Receiving repository."
     )
-    return {"status": "deleted", "id": challan_id}
+    return {"status": "deleted", "id": target_id}
 
 
 @app.post("/api/receiving/ocr-upload")

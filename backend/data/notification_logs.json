@@ -36,7 +36,6 @@
     "created_at": "2026-08-11T12:49:50.218738"
   },
   "1805d9e2-3c9b-4f60-9e63-4a5535d40d99": {
-    "_id": "1805d9e2-3c9b-4f60-9e63-4a5535d40d99",
     "id": "1805d9e2-3c9b-4f60-9e63-4a5535d40d99",
     "type": "EMAIL",
     "section": "RECEIVING",
@@ -75,7 +74,6 @@
     "created_at": "2026-08-11T13:20:10.429117"
   },
   "f2b8dab9-28b6-4720-b75b-24ff32f7c405": {
-    "_id": "f2b8dab9-28b6-4720-b75b-24ff32f7c405",
     "id": "f2b8dab9-28b6-4720-b75b-24ff32f7c405",
     "type": "EMAIL",
     "section": "RECEIVING",
@@ -114,7 +112,6 @@
     "created_at": "2026-08-11T13:35:55.038203"
   },
   "e10d1011-7e57-4001-a732-8a51876bda42": {
-    "_id": "e10d1011-7e57-4001-a732-8a51876bda42",
     "id": "e10d1011-7e57-4001-a732-8a51876bda42",
     "type": "EMAIL",
     "section": "RECEIVING",
@@ -189,7 +186,6 @@
     "created_at": "2026-08-11T14:24:44.772699"
   },
   "e7b25a7e-2115-4aa7-ac12-e1fcbb3100f7": {
-    "_id": "e7b25a7e-2115-4aa7-ac12-e1fcbb3100f7",
     "id": "e7b25a7e-2115-4aa7-ac12-e1fcbb3100f7",
     "type": "EMAIL",
     "section": "RECEIVING",
@@ -228,7 +224,6 @@
     "created_at": "2026-08-11T14:32:36.021635"
   },
   "a845fb52-c6c5-4e63-a292-ce8a077b83d1": {
-    "_id": "a845fb52-c6c5-4e63-a292-ce8a077b83d1",
     "id": "a845fb52-c6c5-4e63-a292-ce8a077b83d1",
     "type": "EMAIL",
     "section": "RECEIVING",
@@ -267,7 +262,6 @@
     "created_at": "2026-08-11T14:56:54.142146"
   },
   "90c6bf2c-4fb2-447f-aa1c-b805dc2fb154": {
-    "_id": "90c6bf2c-4fb2-447f-aa1c-b805dc2fb154",
     "id": "90c6bf2c-4fb2-447f-aa1c-b805dc2fb154",
     "type": "EMAIL",
     "section": "RECEIVING",
@@ -279,7 +273,6 @@
     "created_at": "2026-08-11T09:26:54.153985"
   },
   "e45b0b49-85c9-4f54-ba70-1529249164a8": {
-    "_id": "e45b0b49-85c9-4f54-ba70-1529249164a8",
     "id": "e45b0b49-85c9-4f54-ba70-1529249164a8",
     "type": "EMAIL",
     "section": "RECEIVING",
@@ -289,15 +282,6 @@
     "status": "SENT",
     "sent_at": "2026-08-11T09:26:54.182777",
     "created_at": "2026-08-11T09:26:54.182791"
-  },
-  "notif_audit_20260811_145654": {
-    "id": "notif_audit_20260811_145654",
-    "recipient": "receiving-desk@semco.com",
-    "subject": "Automated Financial Audit",
-    "message_body": "Daily audit completed: 1 overdue invoice(s), 0 upcoming invoice(s) in 7 days.",
-    "section": "RECEIVING",
-    "sent_at": "2026-08-11 14:56:54",
-    "created_at": "2026-08-11T14:56:54.195908"
   },
   "notif_20260811_145654_b9da": {
     "id": "notif_20260811_145654_b9da",
@@ -318,7 +302,6 @@
     "created_at": "2026-08-11T14:56:54.697986"
   },
   "5903e48f-e5d2-466f-a893-4cc2d590d70d": {
-    "_id": "5903e48f-e5d2-466f-a893-4cc2d590d70d",
     "id": "5903e48f-e5d2-466f-a893-4cc2d590d70d",
     "type": "EMAIL",
     "section": "RECEIVING",
@@ -348,7 +331,6 @@
     "created_at": "2026-08-11T14:58:01.060764"
   },
   "d0db0afe-eb9f-4358-af0f-faf628451f17": {
-    "_id": "d0db0afe-eb9f-4358-af0f-faf628451f17",
     "id": "d0db0afe-eb9f-4358-af0f-faf628451f17",
     "type": "EMAIL",
     "section": "RECEIVING",
@@ -369,7 +351,6 @@
     "created_at": "2026-08-11T14:58:01.109973"
   },
   "40976580-1e34-4bc0-8487-c934f5e42b81": {
-    "_id": "40976580-1e34-4bc0-8487-c934f5e42b81",
     "id": "40976580-1e34-4bc0-8487-c934f5e42b81",
     "type": "EMAIL",
     "section": "RECEIVING",
@@ -379,15 +360,6 @@
     "status": "SENT",
     "sent_at": "2026-08-11T09:28:01.207297",
     "created_at": "2026-08-11T09:28:01.207305"
-  },
-  "notif_audit_20260811_145801": {
-    "id": "notif_audit_20260811_145801",
-    "recipient": "receiving-desk@semco.com",
-    "subject": "Automated Financial Audit",
-    "message_body": "Daily audit completed: 2 overdue invoice(s), 0 upcoming invoice(s) in 7 days.",
-    "section": "RECEIVING",
-    "sent_at": "2026-08-11 14:58:01",
-    "created_at": "2026-08-11T14:58:01.228625"
   },
   "notif_20260811_145801_48ff": {
     "id": "notif_20260811_145801_48ff",
@@ -408,7 +380,6 @@
     "created_at": "2026-08-11T14:58:01.655784"
   },
   "03ab2043-52f9-406d-96a3-e254cf1bb49b": {
-    "_id": "03ab2043-52f9-406d-96a3-e254cf1bb49b",
     "id": "03ab2043-52f9-406d-96a3-e254cf1bb49b",
     "type": "EMAIL",
     "section": "RECEIVING",
@@ -427,5 +398,2568 @@
     "section": "PROJECT_ENGINEER",
     "sent_at": "2026-08-11 14:58:01",
     "created_at": "2026-08-11T14:58:01.748457"
+  },
+  "notif_20260812_045147_57dc": {
+    "id": "notif_20260812_045147_57dc",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Project Package Logged & Sent to QC Desk",
+    "message_body": "Project Engineer package 'abc' (Project Ref: 009) logged with 1 file(s) and sent for approval to QC Gate Desk.",
+    "section": "PROJECT_ENGINEER",
+    "sent_at": "2026-08-12 04:51:47",
+    "created_at": "2026-08-12T04:51:47.149426"
+  },
+  "notif_20260812_045704_8b0f": {
+    "id": "notif_20260812_045704_8b0f",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Project Package Logged & Sent to QC Desk",
+    "message_body": "Project Engineer package 'Test CLI Package' (Project Ref: PRJ-CLI-001) logged with 1 file(s) and sent for approval to QC Gate Desk.",
+    "section": "PROJECT_ENGINEER",
+    "sent_at": "2026-08-12 04:57:04",
+    "created_at": "2026-08-12T04:57:04.852860"
+  },
+  "notif_20260812_050126_2074": {
+    "id": "notif_20260812_050126_2074",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Project Package Logged & Sent to QC Desk",
+    "message_body": "Project Engineer package 'Live Verification Package' (Project Ref: PRJ-LIVE-2026-99) logged with 2 file(s) and sent for approval to QC Gate Desk.",
+    "section": "PROJECT_ENGINEER",
+    "sent_at": "2026-08-12 05:01:26",
+    "created_at": "2026-08-12T05:01:26.603622"
+  },
+  "notif_20260812_050324_aac0": {
+    "id": "notif_20260812_050324_aac0",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Project Package Logged & Sent to QC Desk",
+    "message_body": "Project Engineer package 'NEW TEST ' (Project Ref: 001) logged with 1 file(s) and sent for approval to QC Gate Desk.",
+    "section": "PROJECT_ENGINEER",
+    "sent_at": "2026-08-12 05:03:24",
+    "created_at": "2026-08-12T05:03:24.172730"
+  },
+  "notif_20260812_050548_0c3b": {
+    "id": "notif_20260812_050548_0c3b",
+    "recipient": "engineer@semco.com",
+    "subject": "Project Package Needs Revision",
+    "message_body": "Package 'abc ' (Project Ref: PRJ 992) returned for revision by QC Desk.",
+    "section": "QC_ADMIN",
+    "sent_at": "2026-08-12 05:05:48",
+    "created_at": "2026-08-12T05:05:48.787766"
+  },
+  "notif_20260812_050709_d2c4": {
+    "id": "notif_20260812_050709_d2c4",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Project Package Logged & Sent to QC Desk",
+    "message_body": "Project Engineer package 'Fresh Test Package' (Project Ref: PRJ-FRESH-101) logged with 1 file(s) and sent for approval to QC Gate Desk.",
+    "section": "PROJECT_ENGINEER",
+    "sent_at": "2026-08-12 05:07:09",
+    "created_at": "2026-08-12T05:07:09.475829"
+  },
+  "notif_20260812_050806_425c": {
+    "id": "notif_20260812_050806_425c",
+    "recipient": "engineer@semco.com",
+    "subject": "Project Package Needs Revision",
+    "message_body": "Package 'abc ' (Project Ref: PRJ 992) returned for revision by QC Desk.",
+    "section": "QC_ADMIN",
+    "sent_at": "2026-08-12 05:08:06",
+    "created_at": "2026-08-12T05:08:06.657580"
+  },
+  "notif_20260812_051138_bf8a": {
+    "id": "notif_20260812_051138_bf8a",
+    "recipient": "engineer@semco.com",
+    "subject": "Project Package Needs Revision",
+    "message_body": "Package 'abc ' (Project Ref: PRJ 992) returned for revision by QC Desk.",
+    "section": "QC_ADMIN",
+    "sent_at": "2026-08-12 05:11:38",
+    "created_at": "2026-08-12T05:11:38.052478"
+  },
+  "notif_20260812_051400_e139": {
+    "id": "notif_20260812_051400_e139",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - PRJ995",
+    "message_body": "Purchase Order #26/27 - PRJ995 for 'PneuTech Automation & Controls' (Grand Total: ₹162,840.00) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-08-12 05:14:00",
+    "created_at": "2026-08-12T05:14:00.320805"
+  },
+  "notif_20260812_051529_abf7": {
+    "id": "notif_20260812_051529_abf7",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Project Package Logged & Sent to QC Desk",
+    "message_body": "Project Engineer package 'Permanent Cloud Record Test' (Project Ref: PRJ-MONGO-2026) logged with 0 file(s) and sent for approval to QC Gate Desk.",
+    "section": "PROJECT_ENGINEER",
+    "sent_at": "2026-08-12 05:15:29",
+    "created_at": "2026-08-12T05:15:29.139354"
+  },
+  "notif_20260812_051918_79e8": {
+    "id": "notif_20260812_051918_79e8",
+    "recipient": "engineer@semco.com",
+    "subject": "Project Package Needs Revision",
+    "message_body": "Package 'abc ' (Project Ref: PRJ 992) returned for revision by QC Desk.",
+    "section": "QC_ADMIN",
+    "sent_at": "2026-08-12 05:19:18",
+    "created_at": "2026-08-12T05:19:18.901272"
+  },
+  "notif_20260812_052218_e919": {
+    "id": "notif_20260812_052218_e919",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Approved & Signed: #26/27 - PRJ995",
+    "message_body": "Purchase Order #26/27 - PRJ995 approved by Authorised Signatory.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-08-12 05:22:18",
+    "created_at": "2026-08-12T05:22:18.701942"
+  },
+  "notif_20260812_052236_9ccb": {
+    "id": "notif_20260812_052236_9ccb",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Deleted: #26/27 - PRJ995",
+    "message_body": "Purchase Order #26/27 - PRJ995 deleted from repository.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-08-12 05:22:36",
+    "created_at": "2026-08-12T05:22:36.062758"
+  },
+  "notif_20260812_052241_212d": {
+    "id": "notif_20260812_052241_212d",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Deleted: #26/27 - PRJ995",
+    "message_body": "Purchase Order #26/27 - PRJ995 deleted from repository.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-08-12 05:22:41",
+    "created_at": "2026-08-12T05:22:41.312451"
+  },
+  "notif_20260812_052249_143a": {
+    "id": "notif_20260812_052249_143a",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Deleted: #26/27 - PRJ995",
+    "message_body": "Purchase Order #26/27 - PRJ995 deleted from repository.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-08-12 05:22:49",
+    "created_at": "2026-08-12T05:22:49.429767"
+  },
+  "notif_20260812_052326_583f": {
+    "id": "notif_20260812_052326_583f",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - PRJ992",
+    "message_body": "Purchase Order #26/27 - PRJ992 for 'Precision Machined Components Ltd' (Grand Total: ₹382,320.00) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-08-12 05:23:26",
+    "created_at": "2026-08-12T05:23:26.240278"
+  },
+  "notif_20260812_052345_1d87": {
+    "id": "notif_20260812_052345_1d87",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Approved & Signed: #26/27 - PRJ992",
+    "message_body": "Purchase Order #26/27 - PRJ992 approved by Authorised Signatory.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-08-12 05:23:45",
+    "created_at": "2026-08-12T05:23:45.074277"
+  },
+  "notif_20260812_054431_fcb8": {
+    "id": "notif_20260812_054431_fcb8",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Deleted: #26/27 - PRJ992",
+    "message_body": "Purchase Order #26/27 - PRJ992 deleted from repository.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-08-12 05:44:31",
+    "created_at": "2026-08-12T05:44:31.919734"
+  },
+  "notif_20260812_054455_8649": {
+    "id": "notif_20260812_054455_8649",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Deleted: #26/27 - PRJ992",
+    "message_body": "Purchase Order #26/27 - PRJ992 deleted from repository.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-08-12 05:44:55",
+    "created_at": "2026-08-12T05:44:55.597747"
+  },
+  "notif_20260812_055043_bec2": {
+    "id": "notif_20260812_055043_bec2",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - PRJ995",
+    "message_body": "Purchase Order #26/27 - PRJ995 for 'PneuTech Automation & Controls' (Grand Total: ₹162,840.00) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-08-12 05:50:43",
+    "created_at": "2026-08-12T05:50:43.885102"
+  },
+  "notif_20260812_055112_6c54": {
+    "id": "notif_20260812_055112_6c54",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Approved & Signed: #26/27 - PRJ995",
+    "message_body": "Purchase Order #26/27 - PRJ995 approved by Authorised Signatory.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-08-12 05:51:12",
+    "created_at": "2026-08-12T05:51:12.421090"
+  },
+  "notif_20260819_055955_b582": {
+    "id": "notif_20260819_055955_b582",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & DRAFT: #26/27 - 001-Testing",
+    "message_body": "Purchase Order #26/27 - 001-Testing for 'Shree Ram & Co.' (Grand Total: ₹48,026.00) set to status 'DRAFT' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-08-19 05:59:55",
+    "created_at": "2026-08-19T05:59:55.536652"
+  },
+  "notif_20260819_061609_b122": {
+    "id": "notif_20260819_061609_b122",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Delivery Challan Logged",
+    "message_body": "Inward Delivery Challan #1234 logged from vendor 'ABCD' for goods 'HARDWARE'.",
+    "section": "RECEIVING",
+    "sent_at": "2026-08-19 06:16:09",
+    "created_at": "2026-08-19T06:16:09.897250"
+  },
+  "notif_20260819_061649_e5f4": {
+    "id": "notif_20260819_061649_e5f4",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Delivery Challan Deleted",
+    "message_body": "Inward Delivery Challan #1234 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-08-19 06:16:49",
+    "created_at": "2026-08-19T06:16:49.626903"
+  },
+  "notif_20260819_061654_7c18": {
+    "id": "notif_20260819_061654_7c18",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Delivery Challan Deleted",
+    "message_body": "Inward Delivery Challan #1234 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-08-19 06:16:54",
+    "created_at": "2026-08-19T06:16:54.888004"
+  },
+  "notif_20260819_061724_5be2": {
+    "id": "notif_20260819_061724_5be2",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Delivery Challan Logged",
+    "message_body": "Inward Delivery Challan #1234 logged from vendor 'ABCD' for goods 'HARDWARE'.",
+    "section": "RECEIVING",
+    "sent_at": "2026-08-19 06:17:24",
+    "created_at": "2026-08-19T06:17:24.555112"
+  },
+  "notif_20260819_061849_5919": {
+    "id": "notif_20260819_061849_5919",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Delivery Challan Deleted",
+    "message_body": "Inward Delivery Challan #1234 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-08-19 06:18:49",
+    "created_at": "2026-08-19T06:18:49.850532"
+  },
+  "notif_20260819_062114_1f4f": {
+    "id": "notif_20260819_062114_1f4f",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Delivery Challan Deleted",
+    "message_body": "Inward Delivery Challan #1234 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-08-19 06:21:14",
+    "created_at": "2026-08-19T06:21:14.757609"
+  },
+  "notif_20260819_062119_dde0": {
+    "id": "notif_20260819_062119_dde0",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Delivery Challan Logged",
+    "message_body": "Inward Delivery Challan #88-TESTING logged from vendor 'STEELIANS AND MATERIAL ENGINEERING' for goods 'HARDWARE'.",
+    "section": "RECEIVING",
+    "sent_at": "2026-08-19 06:21:19",
+    "created_at": "2026-08-19T06:21:19.447546"
+  },
+  "notif_20260819_062122_dec1": {
+    "id": "notif_20260819_062122_dec1",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Delivery Challan Logged",
+    "message_body": "Inward Delivery Challan #88-TESTING logged from vendor 'STEELIANS AND MATERIAL ENGINEERING' for goods 'HARDWARE'.",
+    "section": "RECEIVING",
+    "sent_at": "2026-08-19 06:21:22",
+    "created_at": "2026-08-19T06:21:22.392722"
+  },
+  "notif_20260819_062147_a2db": {
+    "id": "notif_20260819_062147_a2db",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Delivery Challan Deleted",
+    "message_body": "Inward Delivery Challan #88-TESTING deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-08-19 06:21:47",
+    "created_at": "2026-08-19T06:21:47.138947"
+  },
+  "notif_20260819_062219_5d9e": {
+    "id": "notif_20260819_062219_5d9e",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Delivery Challan Deleted",
+    "message_body": "Inward Delivery Challan #88-TESTING deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-08-19 06:22:19",
+    "created_at": "2026-08-19T06:22:19.089285"
+  },
+  "notif_20260819_063135_324b": {
+    "id": "notif_20260819_063135_324b",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Inward Invoice Saved",
+    "message_body": "Invoice #1234 from vendor 'STEELIANS AND MATERIAL ENGINEERING' (Amount: ₹1,234.00) logged into Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-08-19 06:31:35",
+    "created_at": "2026-08-19T06:31:35.854605"
+  },
+  "notif_20260819_065349_7210": {
+    "id": "notif_20260819_065349_7210",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #1234 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-08-19 06:53:49",
+    "created_at": "2026-08-19T06:53:49.837377"
+  },
+  "notif_20260819_093938_3142": {
+    "id": "notif_20260819_093938_3142",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Inward Invoice Saved",
+    "message_body": "Invoice #129/2026-27 from vendor 'SEEMA FORGE' (Amount: ₹1,234.00) logged into Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-08-19 09:39:38",
+    "created_at": "2026-08-19T09:39:38.829262"
+  },
+  "notif_20260819_094206_6e48": {
+    "id": "notif_20260819_094206_6e48",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Inward Invoice Saved",
+    "message_body": "Invoice #93 from vendor 'STEELIANS AND MATERIAL ENGINEERING' (Amount: ₹1,234.00) logged into Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-08-19 09:42:06",
+    "created_at": "2026-08-19T09:42:06.238617"
+  },
+  "notif_20260821_015241_41a2": {
+    "id": "notif_20260821_015241_41a2",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Inward Invoice Saved",
+    "message_body": "Invoice #TEST-DIRECT-100 from vendor 'Direct Vendor' (Amount: ₹7,500.00) logged into Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-08-21 01:52:41",
+    "created_at": "2026-08-21T01:52:41.318490"
+  },
+  "notif_20260821_015241_12f4": {
+    "id": "notif_20260821_015241_12f4",
+    "recipient": "dispatch@semco.com",
+    "subject": "QC Inspection Approved",
+    "message_body": "Dispatch Bundle #DISP-20260821015241 passed QC Gate Inspection. Sent to Dispatch Desk for final vehicle release & clearance.",
+    "section": "QC_ADMIN",
+    "sent_at": "2026-08-21 01:52:41",
+    "created_at": "2026-08-21T01:52:41.655755"
+  },
+  "994271a9-4038-4fd2-9e6e-22ce80b8ff02": {
+    "id": "994271a9-4038-4fd2-9e6e-22ce80b8ff02",
+    "type": "EMAIL",
+    "section": "RECEIVING",
+    "recipient": "dispatch@semco.com",
+    "subject": "[QC APPROVED] Dispatch Bundle #DISP-20260821015241 Ready for Final Clearance",
+    "message_body": "QC Gate Inspection approved for Bundle #DISP-20260821015241. Please grant final dispatch clearance in the Dispatch Module to release the vehicle.",
+    "status": "SENT",
+    "sent_at": "2026-08-20T20:22:42.250513",
+    "created_at": "2026-08-20T20:22:42.250541"
+  },
+  "notif_20260821_015242_cd3b": {
+    "id": "notif_20260821_015242_cd3b",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Client Collection (Collected)",
+    "message_body": "Client Collection for Dispatch #DISP-20260821015241 recorded: ₹85,000.00 (Collected). Remaining balance: ₹0.00.",
+    "section": "DISPATCH",
+    "sent_at": "2026-08-21 01:52:42",
+    "created_at": "2026-08-21T01:52:42.315933"
+  },
+  "f1f2036b-fd93-4bf5-bf2a-3e43e2f58498": {
+    "id": "f1f2036b-fd93-4bf5-bf2a-3e43e2f58498",
+    "type": "EMAIL",
+    "section": "RECEIVING",
+    "recipient": "admin@semco.com",
+    "subject": "[FINANCIAL CALENDAR AUDIT] 3 Actionable Items Needing Attention",
+    "message_body": "GateFlow Financial Calendar Summary (2026-08-21):\n\n💳 VENDOR PAYABLES (Receiving):\n- Overdue Payables (3):\n  • TEST-DIRECT-100 (Direct Vendor) - Amount: ₹7,500.00 - Due: 2026-08-01\n  • TEST-DIRECT-100 (Direct Vendor) - Amount: ₹7,500.00 - Due: 2026-08-01\n  • TEST-DIRECT-100 (Direct Vendor) - Amount: ₹7,500.00 - Due: 2026-08-01\n- Upcoming Payables (0):\n\n💰 CLIENT COLLECTIONS (Dispatch):\n- Overdue Collections (0):\n- Upcoming Collections (0):\n",
+    "status": "SENT",
+    "sent_at": "2026-08-20T20:22:42.696178",
+    "created_at": "2026-08-20T20:22:42.696198"
+  },
+  "notif_20260821_015244_d399": {
+    "id": "notif_20260821_015244_d399",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Project Package Logged & Sent to QC Desk",
+    "message_body": "Project Engineer package 'Test Engineering Package' (Project Ref: PRJ-TEST-100) logged with 0 file(s) and sent for approval to QC Gate Desk.",
+    "section": "PROJECT_ENGINEER",
+    "sent_at": "2026-08-21 01:52:44",
+    "created_at": "2026-08-21T01:52:44.019622"
+  },
+  "notif_20260821_015244_7018": {
+    "id": "notif_20260821_015244_7018",
+    "recipient": "engineer@semco.com",
+    "subject": "Engineering Package QC Approved (OK for Dispatch)",
+    "message_body": "QC Approval complete for Package 'Test Engineering Package' (Project Ref: PRJ-TEST-100). ",
+    "section": "QC_ADMIN",
+    "sent_at": "2026-08-21 01:52:44",
+    "created_at": "2026-08-21T01:52:44.182175"
+  },
+  "57fbb1e7-d6b7-4e70-83f4-204430370f13": {
+    "id": "57fbb1e7-d6b7-4e70-83f4-204430370f13",
+    "type": "EMAIL",
+    "section": "RECEIVING",
+    "recipient": "engineer@semco.com",
+    "subject": "[QC APPROVED — OK FOR DISPATCH] Project Package 'Test Engineering Package' Verified",
+    "message_body": "Your package 'Test Engineering Package' has been verified and approved by the QC Desk. It is now cleared OK for Dispatch. Comments: Verified by QC Test",
+    "status": "SENT",
+    "sent_at": "2026-08-20T20:22:44.540685",
+    "created_at": "2026-08-20T20:22:44.540710"
+  },
+  "notif_20260821_015244_fc47": {
+    "id": "notif_20260821_015244_fc47",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Project Package Deleted",
+    "message_body": "Project Engineer package 'Test Engineering Package' deleted.",
+    "section": "PROJECT_ENGINEER",
+    "sent_at": "2026-08-21 01:52:44",
+    "created_at": "2026-08-21T01:52:44.696568"
+  },
+  "notif_20260821_110117_0ee2": {
+    "id": "notif_20260821_110117_0ee2",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Delivery Challan Logged",
+    "message_body": "Inward Delivery Challan #1234 logged from vendor 'ABCD' for goods ''.",
+    "section": "RECEIVING",
+    "sent_at": "2026-08-21 11:01:17",
+    "created_at": "2026-08-21T11:01:17.120004"
+  },
+  "notif_20260821_110138_1a03": {
+    "id": "notif_20260821_110138_1a03",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Delivery Challan Deleted",
+    "message_body": "Inward Delivery Challan #1234 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-08-21 11:01:38",
+    "created_at": "2026-08-21T11:01:38.996783"
+  },
+  "notif_20260911_045042_170d": {
+    "id": "notif_20260911_045042_170d",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & DRAFT: #26/27 - 001",
+    "message_body": "Purchase Order #26/27 - 001 for 'ABC Engineering Solutions Pvt. Ltd.' (Grand Total: ₹112.00) set to status 'DRAFT' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-11 04:50:42",
+    "created_at": "2026-09-11T04:50:42.821370"
+  },
+  "notif_20260911_045105_b597": {
+    "id": "notif_20260911_045105_b597",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Deleted: #26/27 - 001",
+    "message_body": "Purchase Order #26/27 - 001 deleted from repository.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-11 04:51:05",
+    "created_at": "2026-09-11T04:51:05.606007"
+  },
+  "notif_20260911_050338_198d": {
+    "id": "notif_20260911_050338_198d",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Delivery Challan Logged",
+    "message_body": "Inward Delivery Challan #ertwtt logged from vendor 'rtewrtew' for goods ''.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-11 05:03:38",
+    "created_at": "2026-09-11T05:03:38.961636"
+  },
+  "notif_20260911_051039_4e7f": {
+    "id": "notif_20260911_051039_4e7f",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Delivery Challan Deleted",
+    "message_body": "Inward Delivery Challan #ertwtt deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-11 05:10:39",
+    "created_at": "2026-09-11T05:10:39.673624"
+  },
+  "notif_20260911_051705_f2c9": {
+    "id": "notif_20260911_051705_f2c9",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Deleted: #26/27 - PRJ995",
+    "message_body": "Purchase Order #26/27 - PRJ995 deleted from repository.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-11 05:17:05",
+    "created_at": "2026-09-11T05:17:05.544017"
+  },
+  "notif_20260911_051712_a781": {
+    "id": "notif_20260911_051712_a781",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Deleted: #26/27 - 001-Testing",
+    "message_body": "Purchase Order #26/27 - 001-Testing deleted from repository.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-11 05:17:12",
+    "created_at": "2026-09-11T05:17:12.575104"
+  },
+  "notif_20260911_051727_46c2": {
+    "id": "notif_20260911_051727_46c2",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Deleted: #26/27 - PRJ995",
+    "message_body": "Purchase Order #26/27 - PRJ995 deleted from repository.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-11 05:17:27",
+    "created_at": "2026-09-11T05:17:27.564668"
+  },
+  "notif_20260911_051745_1478": {
+    "id": "notif_20260911_051745_1478",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Deleted: #26/27 - 001-Testing",
+    "message_body": "Purchase Order #26/27 - 001-Testing deleted from repository.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-11 05:17:45",
+    "created_at": "2026-09-11T05:17:45.396271"
+  },
+  "notif_20260911_052049_28eb": {
+    "id": "notif_20260911_052049_28eb",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Deleted: #26/27 - PRJ995",
+    "message_body": "Purchase Order #26/27 - PRJ995 deleted from repository.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-11 05:20:49",
+    "created_at": "2026-09-11T05:20:49.963738"
+  },
+  "notif_20260911_052847_3c26": {
+    "id": "notif_20260911_052847_3c26",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 001",
+    "message_body": "Purchase Order #26/27 - 001 for 'ABC Engineering Solutions Pvt. Ltd.' (Grand Total: ₹112.00) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-11 05:28:47",
+    "created_at": "2026-09-11T05:28:47.937613"
+  },
+  "notif_20260911_052848_4e1a": {
+    "id": "notif_20260911_052848_4e1a",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 001",
+    "message_body": "Purchase Order #26/27 - 001 for 'ABC Engineering Solutions Pvt. Ltd.' (Grand Total: ₹112.00) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-11 05:28:48",
+    "created_at": "2026-09-11T05:28:48.965022"
+  },
+  "notif_20260911_052902_6673": {
+    "id": "notif_20260911_052902_6673",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Deleted: #26/27 - 001",
+    "message_body": "Purchase Order #26/27 - 001 deleted from repository.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-11 05:29:02",
+    "created_at": "2026-09-11T05:29:02.951397"
+  },
+  "notif_20260911_053009_225b": {
+    "id": "notif_20260911_053009_225b",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & DRAFT: #26/27 - 001",
+    "message_body": "Purchase Order #26/27 - 001 for 'ABC Engineering Solutions Pvt. Ltd.' (Grand Total: ₹112.00) set to status 'DRAFT' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-11 05:30:09",
+    "created_at": "2026-09-11T05:30:09.745292"
+  },
+  "notif_20260911_053053_94d0": {
+    "id": "notif_20260911_053053_94d0",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Deleted: #26/27 - 001",
+    "message_body": "Purchase Order #26/27 - 001 deleted from repository.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-11 05:30:53",
+    "created_at": "2026-09-11T05:30:53.953440"
+  },
+  "notif_20260911_060902_d04c": {
+    "id": "notif_20260911_060902_d04c",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & DRAFT: #26/27 - 002",
+    "message_body": "Purchase Order #26/27 - 002 for 'ABC Engineering Solutions Pvt. Ltd.' (Grand Total: ₹112.00) set to status 'DRAFT' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-11 06:09:02",
+    "created_at": "2026-09-11T06:09:02.208101"
+  },
+  "notif_20260911_060912_e723": {
+    "id": "notif_20260911_060912_e723",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & DRAFT: #26/27 - 003",
+    "message_body": "Purchase Order #26/27 - 003 for 'ABC Engineering Solutions Pvt. Ltd.' (Grand Total: ₹112.00) set to status 'DRAFT' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-11 06:09:12",
+    "created_at": "2026-09-11T06:09:12.634869"
+  },
+  "notif_20260911_083322_233b": {
+    "id": "notif_20260911_083322_233b",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & DRAFT: #26/27 - 001",
+    "message_body": "Purchase Order #26/27 - 001 for 'ABC Engineering Solutions Pvt. Ltd.' (Grand Total: ₹140,420.00) set to status 'DRAFT' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-11 08:33:22",
+    "created_at": "2026-09-11T08:33:22.240118"
+  },
+  "notif_20260911_083350_b0e3": {
+    "id": "notif_20260911_083350_b0e3",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Deleted: #26/27 - 001",
+    "message_body": "Purchase Order #26/27 - 001 deleted from repository.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-11 08:33:50",
+    "created_at": "2026-09-11T08:33:50.315713"
+  },
+  "notif_20260911_083355_3294": {
+    "id": "notif_20260911_083355_3294",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Deleted: #26/27 - 002",
+    "message_body": "Purchase Order #26/27 - 002 deleted from repository.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-11 08:33:55",
+    "created_at": "2026-09-11T08:33:55.628248"
+  },
+  "notif_20260911_083413_edcc": {
+    "id": "notif_20260911_083413_edcc",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Deleted: #26/27 - 003",
+    "message_body": "Purchase Order #26/27 - 003 deleted from repository.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-11 08:34:13",
+    "created_at": "2026-09-11T08:34:13.043891"
+  },
+  "notif_20260911_084325_958d": {
+    "id": "notif_20260911_084325_958d",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 208",
+    "message_body": "Purchase Order #26/27 - 208 for 'INFLUX AUTOMATION' (Grand Total: ₹1,982.40) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-11 08:43:25",
+    "created_at": "2026-09-11T08:43:25.522114"
+  },
+  "notif_20260911_085118_1f04": {
+    "id": "notif_20260911_085118_1f04",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Deleted: #26/27 - 208",
+    "message_body": "Purchase Order #26/27 - 208 deleted from repository.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-11 08:51:18",
+    "created_at": "2026-09-11T08:51:18.930429"
+  },
+  "notif_20260911_085130_0030": {
+    "id": "notif_20260911_085130_0030",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 208",
+    "message_body": "Purchase Order #26/27 - 208 for 'INFLUX AUTOMATION' (Grand Total: ₹1,982.40) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-11 08:51:30",
+    "created_at": "2026-09-11T08:51:30.518597"
+  },
+  "notif_20260911_085345_14dc": {
+    "id": "notif_20260911_085345_14dc",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Approved & Signed: #26/27 - 208",
+    "message_body": "Purchase Order #26/27 - 208 approved by Authorised Signatory.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-11 08:53:45",
+    "created_at": "2026-09-11T08:53:45.677457"
+  },
+  "notif_20260911_085454_a82f": {
+    "id": "notif_20260911_085454_a82f",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Deleted: #26/27 - 208",
+    "message_body": "Purchase Order #26/27 - 208 deleted from repository.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-11 08:54:54",
+    "created_at": "2026-09-11T08:54:54.921739"
+  },
+  "notif_20260911_085719_f8b7": {
+    "id": "notif_20260911_085719_f8b7",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 208",
+    "message_body": "Purchase Order #26/27 - 208 for 'INFLUX AUTOMATION' (Grand Total: ₹1,982.40) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-11 08:57:19",
+    "created_at": "2026-09-11T08:57:19.907202"
+  },
+  "notif_20260912_041304_ce9f": {
+    "id": "notif_20260912_041304_ce9f",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Approved & Signed: #26/27 - 208",
+    "message_body": "Purchase Order #26/27 - 208 approved by Authorised Signatory.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-12 04:13:04",
+    "created_at": "2026-09-12T04:13:04.649188"
+  },
+  "notif_20260912_041350_3287": {
+    "id": "notif_20260912_041350_3287",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & DRAFT: #26/27 - 208",
+    "message_body": "Purchase Order #26/27 - 208 for 'INFLUX AUTOMATION' (Grand Total: ₹1,982.40) set to status 'DRAFT' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-12 04:13:50",
+    "created_at": "2026-09-12T04:13:50.590360"
+  },
+  "notif_20260912_043047_e976": {
+    "id": "notif_20260912_043047_e976",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & DRAFT: #26/27 - 001",
+    "message_body": "Purchase Order #26/27 - 001 for 'ABC Engineering Solutions Pvt. Ltd.' (Grand Total: ₹140,420.00) set to status 'DRAFT' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-12 04:30:47",
+    "created_at": "2026-09-12T04:30:47.034392"
+  },
+  "notif_20260915_045921_fecb": {
+    "id": "notif_20260915_045921_fecb",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & DRAFT: #26/27 - 001",
+    "message_body": "Purchase Order #26/27 - 001 for 'ABC Engineering Solutions Pvt. Ltd.' (Grand Total: ₹140,420.00) set to status 'DRAFT' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-15 04:59:21",
+    "created_at": "2026-09-15T04:59:21.970503"
+  },
+  "notif_20260915_095417_3481": {
+    "id": "notif_20260915_095417_3481",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & DRAFT: #TEST-PO-ZERO-FREIGHT-1372087397",
+    "message_body": "Purchase Order #TEST-PO-ZERO-FREIGHT-1372087397 for 'Test Zero Charges Vendor' (Grand Total: ₹1,180.00) set to status 'DRAFT' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-15 09:54:17",
+    "created_at": "2026-09-15T09:54:17.968240"
+  },
+  "notif_20260915_095501_3fe2": {
+    "id": "notif_20260915_095501_3fe2",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Deleted: #TEST-PO-ZERO-FREIGHT-1372087397",
+    "message_body": "Purchase Order #TEST-PO-ZERO-FREIGHT-1372087397 deleted from repository.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-15 09:55:01",
+    "created_at": "2026-09-15T09:55:01.565478"
+  },
+  "notif_20260915_110039_f93e": {
+    "id": "notif_20260915_110039_f93e",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Deleted: #26/27 - 208",
+    "message_body": "Purchase Order #26/27 - 208 deleted from repository.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-15 11:00:39",
+    "created_at": "2026-09-15T11:00:39.333666"
+  },
+  "notif_20260915_110101_10f8": {
+    "id": "notif_20260915_110101_10f8",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Deleted: #26/27 - 001",
+    "message_body": "Purchase Order #26/27 - 001 deleted from repository.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-15 11:01:01",
+    "created_at": "2026-09-15T11:01:01.574000"
+  },
+  "notif_20260915_111809_28f0": {
+    "id": "notif_20260915_111809_28f0",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Deleted: #26/27 - 001",
+    "message_body": "Purchase Order #26/27 - 001 deleted from repository.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-15 11:18:09",
+    "created_at": "2026-09-15T11:18:09.198754"
+  },
+  "notif_20260915_111813_b546": {
+    "id": "notif_20260915_111813_b546",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & DRAFT: #26/27 - 001",
+    "message_body": "Purchase Order #26/27 - 001 for 'ABC Engineering Solutions Pvt. Ltd.' (Grand Total: ₹118.00) set to status 'DRAFT' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-15 11:18:13",
+    "created_at": "2026-09-15T11:18:13.509671"
+  },
+  "notif_20260915_111824_c891": {
+    "id": "notif_20260915_111824_c891",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Deleted: #26/27 - 001",
+    "message_body": "Purchase Order #26/27 - 001 deleted from repository.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-15 11:18:24",
+    "created_at": "2026-09-15T11:18:24.446396"
+  },
+  "notif_20260915_111855_c060": {
+    "id": "notif_20260915_111855_c060",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & DRAFT: #26/27 - 001",
+    "message_body": "Purchase Order #26/27 - 001 for 'ABC Engineering Solutions Pvt. Ltd.' (Grand Total: ₹118.00) set to status 'DRAFT' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-15 11:18:55",
+    "created_at": "2026-09-15T11:18:55.831459"
+  },
+  "notif_20260915_111904_29b0": {
+    "id": "notif_20260915_111904_29b0",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 001",
+    "message_body": "Purchase Order #26/27 - 001 for 'ABC Engineering Solutions Pvt. Ltd.' (Grand Total: ₹118.00) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-15 11:19:04",
+    "created_at": "2026-09-15T11:19:04.033901"
+  },
+  "notif_20260916_093143_fb84": {
+    "id": "notif_20260916_093143_fb84",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & DRAFT: #26/27 - 001",
+    "message_body": "Purchase Order #26/27 - 001 for 'ABC Engineering Solutions Pvt. Ltd.' (Grand Total: ₹118.00) set to status 'DRAFT' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-16 09:31:43",
+    "created_at": "2026-09-16T09:31:43.442006"
+  },
+  "notif_20260916_093326_f31f": {
+    "id": "notif_20260916_093326_f31f",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Deleted: #26/27 - 001",
+    "message_body": "Purchase Order #26/27 - 001 deleted from repository.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-16 09:33:26",
+    "created_at": "2026-09-16T09:33:26.435396"
+  },
+  "notif_20260916_093337_5ed0": {
+    "id": "notif_20260916_093337_5ed0",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & DRAFT: #26/27 - 214",
+    "message_body": "Purchase Order #26/27 - 214 for 'ABC Engineering Solutions Pvt. Ltd.' (Grand Total: ₹118.00) set to status 'DRAFT' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-16 09:33:37",
+    "created_at": "2026-09-16T09:33:37.165020"
+  },
+  "notif_20260916_093415_1d8b": {
+    "id": "notif_20260916_093415_1d8b",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Deleted: #26/27 - 214",
+    "message_body": "Purchase Order #26/27 - 214 deleted from repository.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-16 09:34:15",
+    "created_at": "2026-09-16T09:34:15.406410"
+  },
+  "notif_20260918_112549_d409": {
+    "id": "notif_20260918_112549_d409",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 215",
+    "message_body": "Purchase Order #26/27 - 215 for 'YESHODHA ENTERRISES' (Grand Total: ₹6,938.40) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-18 11:25:49",
+    "created_at": "2026-09-18T11:25:49.644643"
+  },
+  "notif_20260918_113704_a231": {
+    "id": "notif_20260918_113704_a231",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 216",
+    "message_body": "Purchase Order #26/27 - 216 for 'SHREE SALES CORPORATION' (Grand Total: ₹3,669.80) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-18 11:37:04",
+    "created_at": "2026-09-18T11:37:04.565530"
+  },
+  "notif_20260918_114308_0989": {
+    "id": "notif_20260918_114308_0989",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 217",
+    "message_body": "Purchase Order #26/27 - 217 for 'KARTIK ENTERPRISES AND TRADING' (Grand Total: ₹14,160.00) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-18 11:43:08",
+    "created_at": "2026-09-18T11:43:08.874611"
+  },
+  "notif_20260918_115831_6318": {
+    "id": "notif_20260918_115831_6318",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 218",
+    "message_body": "Purchase Order #26/27 - 218 for 'SEEMA FORGE INDUSTRIES' (Grand Total: ₹39,326.45) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-18 11:58:31",
+    "created_at": "2026-09-18T11:58:31.789453"
+  },
+  "notif_20260918_120440_6cb2": {
+    "id": "notif_20260918_120440_6cb2",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Deleted: #26/27 - 218",
+    "message_body": "Purchase Order #26/27 - 218 deleted from repository.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-18 12:04:40",
+    "created_at": "2026-09-18T12:04:40.979023"
+  },
+  "notif_20260918_120445_bd31": {
+    "id": "notif_20260918_120445_bd31",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 218",
+    "message_body": "Purchase Order #26/27 - 218 for 'SEEMA FORGE INDUSTRIES' (Grand Total: ₹39,326.45) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-18 12:04:45",
+    "created_at": "2026-09-18T12:04:45.318959"
+  },
+  "notif_20260918_120457_8f66": {
+    "id": "notif_20260918_120457_8f66",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Deleted: #26/27 - 217",
+    "message_body": "Purchase Order #26/27 - 217 deleted from repository.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-18 12:04:57",
+    "created_at": "2026-09-18T12:04:57.888206"
+  },
+  "notif_20260918_120832_7ffe": {
+    "id": "notif_20260918_120832_7ffe",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 217",
+    "message_body": "Purchase Order #26/27 - 217 for 'KARTIK ENTERPRISES AND TRADING' (Grand Total: ₹14,160.00) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-18 12:08:32",
+    "created_at": "2026-09-18T12:08:32.370940"
+  },
+  "notif_20260918_120944_c181": {
+    "id": "notif_20260918_120944_c181",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Deleted: #26/27 - 216",
+    "message_body": "Purchase Order #26/27 - 216 deleted from repository.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-18 12:09:44",
+    "created_at": "2026-09-18T12:09:44.030293"
+  },
+  "notif_20260918_121505_7b94": {
+    "id": "notif_20260918_121505_7b94",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 216",
+    "message_body": "Purchase Order #26/27 - 216 for 'SHREE SALES CORPORATION' (Grand Total: ₹3,669.80) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-18 12:15:05",
+    "created_at": "2026-09-18T12:15:05.900165"
+  },
+  "notif_20260918_121526_941c": {
+    "id": "notif_20260918_121526_941c",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Deleted: #26/27 - 215",
+    "message_body": "Purchase Order #26/27 - 215 deleted from repository.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-18 12:15:26",
+    "created_at": "2026-09-18T12:15:26.555737"
+  },
+  "notif_20260918_122114_654e": {
+    "id": "notif_20260918_122114_654e",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 215",
+    "message_body": "Purchase Order #26/27 - 215 for 'YASHODHA ENTERPRISES' (Grand Total: ₹6,938.40) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-18 12:21:14",
+    "created_at": "2026-09-18T12:21:14.999821"
+  },
+  "notif_20260918_122429_4045": {
+    "id": "notif_20260918_122429_4045",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Deleted: #26/27 - 218",
+    "message_body": "Purchase Order #26/27 - 218 deleted from repository.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-18 12:24:29",
+    "created_at": "2026-09-18T12:24:29.078098"
+  },
+  "notif_20260918_122433_cfd3": {
+    "id": "notif_20260918_122433_cfd3",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Approved & Signed: #26/27 - 217",
+    "message_body": "Purchase Order #26/27 - 217 approved by Authorised Signatory.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-18 12:24:33",
+    "created_at": "2026-09-18T12:24:33.738200"
+  },
+  "notif_20260918_122511_d820": {
+    "id": "notif_20260918_122511_d820",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Approved & Signed: #26/27 - 216",
+    "message_body": "Purchase Order #26/27 - 216 approved by Authorised Signatory.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-18 12:25:11",
+    "created_at": "2026-09-18T12:25:11.455978"
+  },
+  "notif_20260918_122533_1373": {
+    "id": "notif_20260918_122533_1373",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Approved & Signed: #26/27 - 215",
+    "message_body": "Purchase Order #26/27 - 215 approved by Authorised Signatory.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-18 12:25:33",
+    "created_at": "2026-09-18T12:25:33.984248"
+  },
+  "85939541-343a-4fda-ac79-eb55b519d65c": {
+    "id": "85939541-343a-4fda-ac79-eb55b519d65c",
+    "type": "EMAIL",
+    "section": "RECEIVING",
+    "recipient": "admin@semco.com",
+    "subject": "[FINANCIAL CALENDAR AUDIT] 10 Actionable Items Needing Attention",
+    "message_body": "GateFlow Financial Calendar Summary (2026-09-18):\n\n💳 VENDOR PAYABLES (Receiving):\n- Overdue Payables (5):\n  • TEST-DIRECT-100 (Direct Vendor) - Amount: ₹7,500.00 - Due: 2026-08-01\n  • 93 (STEELIANS AND MATERIAL ENGINEERING) - Amount: ₹1,234.00 - Due: 2026-08-20\n  • 129/2026-27 (SEEMA FORGE) - Amount: ₹1,234.00 - Due: 2026-08-20\n  • TEST-DIRECT-100 (Direct Vendor) - Amount: ₹7,500.00 - Due: 2026-08-01\n  • TEST-DIRECT-100 (Direct Vendor) - Amount: ₹7,500.00 - Due: 2026-08-01\n- Upcoming Payables (0):\n\n💰 CLIENT COLLECTIONS (Dispatch):\n- Overdue Collections (5):\n  • DISP-20260821015241 (Testing Dynamic Client) - Amount: ₹85,000.00 - Due: 2026-08-10\n  • DISP-20260811145801 (Testing Dynamic Client) - Amount: ₹85,000.00 - Due: 2026-08-10\n  • DISP-20260811145654 (Testing Dynamic Client) - Amount: ₹85,000.00 - Due: 2026-08-10\n  • DISP-20260811143236 (Client Corp) - Amount: ₹100,000.00 - Due: 2026-08-26\n  • DISP-20260811142444 (Titan Industries) - Amount: ₹150,000.00 - Due: 2026-08-26\n- Upcoming Collections (0):\n",
+    "status": "SENT",
+    "sent_at": "2026-09-18T12:27:12.010557",
+    "created_at": "2026-09-18T12:27:12.010571"
+  },
+  "notif_audit_20260918_122712": {
+    "id": "notif_audit_20260918_122712",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Automated Financial Audit",
+    "message_body": "Daily audit completed: 5 overdue invoice(s), 0 upcoming invoice(s) in 7 days.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-18 12:27:12",
+    "created_at": "2026-09-18T12:27:12.400464"
+  },
+  "notif_20260918_122948_b2d7": {
+    "id": "notif_20260918_122948_b2d7",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 218",
+    "message_body": "Purchase Order #26/27 - 218 for 'SEEMA FORGE INDUSTRIES' (Grand Total: ₹39,680.45) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-18 12:29:48",
+    "created_at": "2026-09-18T12:29:48.674078"
+  },
+  "notif_20260918_191809_e548": {
+    "id": "notif_20260918_191809_e548",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Inward Invoice Saved",
+    "message_body": "Invoice #TEST-DIRECT-100 from vendor 'Direct Vendor' (Amount: ₹7,500.00) logged into Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-18 19:18:09",
+    "created_at": "2026-09-18T19:18:09.764287"
+  },
+  "notif_20260918_191809_248e": {
+    "id": "notif_20260918_191809_248e",
+    "recipient": "dispatch@semco.com",
+    "subject": "QC Inspection Approved",
+    "message_body": "Dispatch Bundle #DISP-20260918191809 passed QC Gate Inspection by QC Inspector. Sent to Dispatch Desk for final vehicle release & clearance.",
+    "section": "QC_ADMIN",
+    "sent_at": "2026-09-18 19:18:09",
+    "created_at": "2026-09-18T19:18:09.916610"
+  },
+  "1032632b-804c-4fe4-8c68-06c3f230fd1e": {
+    "id": "1032632b-804c-4fe4-8c68-06c3f230fd1e",
+    "type": "EMAIL",
+    "section": "RECEIVING",
+    "recipient": "dispatch@semco.com",
+    "subject": "[QC APPROVED] Dispatch Bundle #DISP-20260918191809 Ready for Final Clearance",
+    "message_body": "QC Gate Inspection approved for Bundle #DISP-20260918191809 by QC Inspector. Please grant final dispatch clearance in the Dispatch Module to release the vehicle.",
+    "status": "SENT",
+    "sent_at": "2026-09-18T13:48:09.950707",
+    "created_at": "2026-09-18T13:48:09.950727"
+  },
+  "notif_20260918_191810_6d85": {
+    "id": "notif_20260918_191810_6d85",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Client Collection (Collected)",
+    "message_body": "Client Collection for Dispatch #DISP-20260918191809 recorded: ₹85,000.00 (Collected). Remaining balance: ₹0.00.",
+    "section": "DISPATCH",
+    "sent_at": "2026-09-18 19:18:10",
+    "created_at": "2026-09-18T19:18:10.098220"
+  },
+  "636932e7-de0d-4acc-9427-a2b922b24349": {
+    "id": "636932e7-de0d-4acc-9427-a2b922b24349",
+    "type": "EMAIL",
+    "section": "RECEIVING",
+    "recipient": "admin@semco.com",
+    "subject": "[FINANCIAL CALENDAR AUDIT] 12 Actionable Items Needing Attention",
+    "message_body": "GateFlow Financial Calendar Summary (2026-09-18):\n\n💳 VENDOR PAYABLES (Receiving):\n- Overdue Payables (6):\n  • TEST-DIRECT-100 (Direct Vendor) - Amount: ₹7,500.00 - Due: 2026-08-01\n  • TEST-DIRECT-100 (Direct Vendor) - Amount: ₹7,500.00 - Due: 2026-08-01\n  • 93 (STEELIANS AND MATERIAL ENGINEERING) - Amount: ₹1,234.00 - Due: 2026-08-20\n  • 129/2026-27 (SEEMA FORGE) - Amount: ₹1,234.00 - Due: 2026-08-20\n  • TEST-DIRECT-100 (Direct Vendor) - Amount: ₹7,500.00 - Due: 2026-08-01\n  • TEST-DIRECT-100 (Direct Vendor) - Amount: ₹7,500.00 - Due: 2026-08-01\n- Upcoming Payables (0):\n\n💰 CLIENT COLLECTIONS (Dispatch):\n- Overdue Collections (6):\n  • DISP-20260918191809 (Testing Dynamic Client) - Amount: ₹85,000.00 - Due: 2026-08-10\n  • DISP-20260821015241 (Testing Dynamic Client) - Amount: ₹85,000.00 - Due: 2026-08-10\n  • DISP-20260811145801 (Testing Dynamic Client) - Amount: ₹85,000.00 - Due: 2026-08-10\n  • DISP-20260811145654 (Testing Dynamic Client) - Amount: ₹85,000.00 - Due: 2026-08-10\n  • DISP-20260811143236 (Client Corp) - Amount: ₹100,000.00 - Due: 2026-08-26\n  • DISP-20260811142444 (Titan Industries) - Amount: ₹150,000.00 - Due: 2026-08-26\n- Upcoming Collections (0):\n",
+    "status": "SENT",
+    "sent_at": "2026-09-18T13:48:10.478543",
+    "created_at": "2026-09-18T13:48:10.478555"
+  },
+  "notif_audit_20260918_191810": {
+    "id": "notif_audit_20260918_191810",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Automated Financial Audit",
+    "message_body": "Daily audit completed: 6 overdue invoice(s), 0 upcoming invoice(s) in 7 days.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-18 19:18:10",
+    "created_at": "2026-09-18T19:18:10.509253"
+  },
+  "notif_20260918_191811_5b30": {
+    "id": "notif_20260918_191811_5b30",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Project Package Logged & Sent to QC Desk",
+    "message_body": "Project Engineer package 'Test Engineering Package' (Project Ref: PRJ-TEST-100) logged with 0 file(s) and sent for approval to QC Gate Desk.",
+    "section": "PROJECT_ENGINEER",
+    "sent_at": "2026-09-18 19:18:11",
+    "created_at": "2026-09-18T19:18:11.187194"
+  },
+  "notif_20260918_191811_35ae": {
+    "id": "notif_20260918_191811_35ae",
+    "recipient": "engineer@semco.com",
+    "subject": "Engineering Package QC Approved (OK for Dispatch)",
+    "message_body": "QC Approval complete for Package 'Test Engineering Package' (Project Ref: PRJ-TEST-100) by QC Inspector. ",
+    "section": "QC_ADMIN",
+    "sent_at": "2026-09-18 19:18:11",
+    "created_at": "2026-09-18T19:18:11.243921"
+  },
+  "a16f175a-d0ce-403e-a477-9b33c2553367": {
+    "id": "a16f175a-d0ce-403e-a477-9b33c2553367",
+    "type": "EMAIL",
+    "section": "RECEIVING",
+    "recipient": "engineer@semco.com",
+    "subject": "[QC APPROVED — OK FOR DISPATCH] Project Package 'Test Engineering Package' Verified",
+    "message_body": "Your package 'Test Engineering Package' has been verified and approved by the QC Desk (QC Inspector). It is now cleared OK for Dispatch. Comments: Verified by QC Test",
+    "status": "SENT",
+    "sent_at": "2026-09-18T13:48:11.268976",
+    "created_at": "2026-09-18T13:48:11.268985"
+  },
+  "notif_20260918_191811_a462": {
+    "id": "notif_20260918_191811_a462",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Project Package Deleted",
+    "message_body": "Project Engineer package 'Test Engineering Package' deleted.",
+    "section": "PROJECT_ENGINEER",
+    "sent_at": "2026-09-18 19:18:11",
+    "created_at": "2026-09-18T19:18:11.327613"
+  },
+  "notif_20260918_191911_b7db": {
+    "id": "notif_20260918_191911_b7db",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & DRAFT: #TEST-EDIT-PO-001",
+    "message_body": "Purchase Order #TEST-EDIT-PO-001 for 'Original Vendor' (Grand Total: ₹11,800.00) set to status 'DRAFT' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-18 19:19:11",
+    "created_at": "2026-09-18T19:19:11.016785"
+  },
+  "notif_20260918_191911_1e2e": {
+    "id": "notif_20260918_191911_1e2e",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & DRAFT: #TEST-EDIT-PO-001",
+    "message_body": "Purchase Order #TEST-EDIT-PO-001 for 'Updated Vendor Solutions Pvt Ltd' (Grand Total: ₹126,260.00) set to status 'DRAFT' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-18 19:19:11",
+    "created_at": "2026-09-18T19:19:11.101170"
+  },
+  "notif_20260918_192155_bbb5": {
+    "id": "notif_20260918_192155_bbb5",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Deleted: #TEST-EDIT-PO-001",
+    "message_body": "Purchase Order #TEST-EDIT-PO-001 deleted from repository.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-18 19:21:55",
+    "created_at": "2026-09-18T19:21:55.452471"
+  },
+  "notif_20260919_053724_ecb5": {
+    "id": "notif_20260919_053724_ecb5",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 219",
+    "message_body": "Purchase Order #26/27 - 219 for '  SMART TEKLOG LLP ' (Grand Total: ₹120,390.68) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-19 05:37:24",
+    "created_at": "2026-09-19T05:37:24.140511"
+  },
+  "notif_20260919_055923_131b": {
+    "id": "notif_20260919_055923_131b",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 218",
+    "message_body": "Purchase Order #26/27 - 218 for 'SEEMA FORGE INDUSTRIES' (Grand Total: ₹39,680.45) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-19 05:59:23",
+    "created_at": "2026-09-19T05:59:23.428164"
+  },
+  "notif_20260919_060006_15da": {
+    "id": "notif_20260919_060006_15da",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Approved & Signed: #26/27 - 218",
+    "message_body": "Purchase Order #26/27 - 218 approved by Authorised Signatory.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-19 06:00:06",
+    "created_at": "2026-09-19T06:00:06.166954"
+  },
+  "notif_20260919_060053_4489": {
+    "id": "notif_20260919_060053_4489",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Approved & Signed: #26/27 - 219",
+    "message_body": "Purchase Order #26/27 - 219 approved by Authorised Signatory.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-19 06:00:53",
+    "created_at": "2026-09-19T06:00:53.545929"
+  },
+  "notif_20260919_071125_8079": {
+    "id": "notif_20260919_071125_8079",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 220",
+    "message_body": "Purchase Order #26/27 - 220 for 'NAVKAR STEEL' (Grand Total: ₹151,742.56) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-19 07:11:25",
+    "created_at": "2026-09-19T07:11:25.587987"
+  },
+  "notif_20260919_071247_d17c": {
+    "id": "notif_20260919_071247_d17c",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 220",
+    "message_body": "Purchase Order #26/27 - 220 for 'NAVKAR STEEL' (Grand Total: ₹151,742.56) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-19 07:12:47",
+    "created_at": "2026-09-19T07:12:47.299518"
+  },
+  "notif_20260919_071401_2f72": {
+    "id": "notif_20260919_071401_2f72",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 220",
+    "message_body": "Purchase Order #26/27 - 220 for 'NAVKAR STEEL' (Grand Total: ₹153,382.76) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-19 07:14:01",
+    "created_at": "2026-09-19T07:14:01.250139"
+  },
+  "notif_20260919_071748_c0cd": {
+    "id": "notif_20260919_071748_c0cd",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 220",
+    "message_body": "Purchase Order #26/27 - 220 for 'NAVKAR STEEL' (Grand Total: ₹153,382.76) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-19 07:17:48",
+    "created_at": "2026-09-19T07:17:48.430362"
+  },
+  "notif_20260919_072008_6a15": {
+    "id": "notif_20260919_072008_6a15",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & APPROVED: #26/27 - 217",
+    "message_body": "Purchase Order #26/27 - 217 for 'KARTIK ENTERPRISES AND TRADING' (Grand Total: ₹14,160.00) set to status 'APPROVED' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-19 07:20:08",
+    "created_at": "2026-09-19T07:20:08.718756"
+  },
+  "notif_20260919_072029_c9e0": {
+    "id": "notif_20260919_072029_c9e0",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & APPROVED: #26/27 - 215",
+    "message_body": "Purchase Order #26/27 - 215 for 'YASHODHA ENTERPRISES' (Grand Total: ₹6,938.40) set to status 'APPROVED' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-19 07:20:29",
+    "created_at": "2026-09-19T07:20:29.781851"
+  },
+  "notif_20260919_072412_20e7": {
+    "id": "notif_20260919_072412_20e7",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 221",
+    "message_body": "Purchase Order #26/27 - 221 for 'SHREE SALES CORPORATION' (Grand Total: ₹18,644.00) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-19 07:24:12",
+    "created_at": "2026-09-19T07:24:12.158897"
+  },
+  "notif_20260919_072643_10dc": {
+    "id": "notif_20260919_072643_10dc",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #TEST-DIRECT-100 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-19 07:26:43",
+    "created_at": "2026-09-19T07:26:43.542698"
+  },
+  "notif_20260919_072649_413f": {
+    "id": "notif_20260919_072649_413f",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #TEST-DIRECT-100 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-19 07:26:49",
+    "created_at": "2026-09-19T07:26:49.263837"
+  },
+  "notif_20260919_072653_dedf": {
+    "id": "notif_20260919_072653_dedf",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #TEST-DIRECT-100 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-19 07:26:53",
+    "created_at": "2026-09-19T07:26:53.441085"
+  },
+  "notif_20260919_072656_023e": {
+    "id": "notif_20260919_072656_023e",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #TEST-DIRECT-100 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-19 07:26:56",
+    "created_at": "2026-09-19T07:26:56.945773"
+  },
+  "notif_20260919_072703_f11a": {
+    "id": "notif_20260919_072703_f11a",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #93 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-19 07:27:03",
+    "created_at": "2026-09-19T07:27:03.076322"
+  },
+  "notif_20260919_072707_b106": {
+    "id": "notif_20260919_072707_b106",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #129/2026-27 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-19 07:27:07",
+    "created_at": "2026-09-19T07:27:07.120800"
+  },
+  "notif_20260919_072712_9b45": {
+    "id": "notif_20260919_072712_9b45",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #129/2026-27 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-19 07:27:12",
+    "created_at": "2026-09-19T07:27:12.858289"
+  },
+  "notif_20260919_072716_cd6b": {
+    "id": "notif_20260919_072716_cd6b",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #93 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-19 07:27:16",
+    "created_at": "2026-09-19T07:27:16.935297"
+  },
+  "notif_20260919_072726_abb8": {
+    "id": "notif_20260919_072726_abb8",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Approved & Signed: #26/27 - 220",
+    "message_body": "Purchase Order #26/27 - 220 approved by Authorised Signatory.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-19 07:27:26",
+    "created_at": "2026-09-19T07:27:26.272504"
+  },
+  "notif_20260919_072835_9e27": {
+    "id": "notif_20260919_072835_9e27",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 221",
+    "message_body": "Purchase Order #26/27 - 221 for 'SHREE SALES CORPORATION' (Grand Total: ₹18,644.00) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-19 07:28:35",
+    "created_at": "2026-09-19T07:28:35.260846"
+  },
+  "notif_20260919_072851_4f30": {
+    "id": "notif_20260919_072851_4f30",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Approved & Signed: #26/27 - 221",
+    "message_body": "Purchase Order #26/27 - 221 approved by Authorised Signatory.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-19 07:28:51",
+    "created_at": "2026-09-19T07:28:51.152352"
+  },
+  "notif_20260919_072852_4ea0": {
+    "id": "notif_20260919_072852_4ea0",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #rec_20260819_093938_36d7 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-19 07:28:52",
+    "created_at": "2026-09-19T07:28:52.449943"
+  },
+  "notif_20260919_072857_d07e": {
+    "id": "notif_20260919_072857_d07e",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #rec_20260918_191809_4a73 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-19 07:28:57",
+    "created_at": "2026-09-19T07:28:57.307665"
+  },
+  "notif_20260919_072901_6f87": {
+    "id": "notif_20260919_072901_6f87",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #rec_20260918_191809_4a73 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-19 07:29:01",
+    "created_at": "2026-09-19T07:29:01.827541"
+  },
+  "notif_20260919_073549_eab4": {
+    "id": "notif_20260919_073549_eab4",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & APPROVED: #26/27 - 220",
+    "message_body": "Purchase Order #26/27 - 220 for 'NAVKAR STEEL' (Grand Total: ₹153,382.76) set to status 'APPROVED' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-19 07:35:49",
+    "created_at": "2026-09-19T07:35:49.035579"
+  },
+  "notif_20260919_073823_e43b": {
+    "id": "notif_20260919_073823_e43b",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #129/2026-27 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-19 07:38:23",
+    "created_at": "2026-09-19T07:38:23.667536"
+  },
+  "notif_20260919_073827_eca4": {
+    "id": "notif_20260919_073827_eca4",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #rec_20260819_094206_7775 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-19 07:38:27",
+    "created_at": "2026-09-19T07:38:27.734791"
+  },
+  "notif_20260919_074145_f519": {
+    "id": "notif_20260919_074145_f519",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #93 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-19 07:41:45",
+    "created_at": "2026-09-19T07:41:45.536169"
+  },
+  "notif_20260919_094259_090e": {
+    "id": "notif_20260919_094259_090e",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Delivery Challan Deleted",
+    "message_body": "Inward Delivery Challan #88-TESTING deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-19 09:42:59",
+    "created_at": "2026-09-19T09:42:59.532758"
+  },
+  "notif_20260919_094304_0121": {
+    "id": "notif_20260919_094304_0121",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Delivery Challan Deleted",
+    "message_body": "Inward Delivery Challan #1234 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-19 09:43:04",
+    "created_at": "2026-09-19T09:43:04.980839"
+  },
+  "notif_20260919_094306_0009": {
+    "id": "notif_20260919_094306_0009",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Delivery Challan Deleted",
+    "message_body": "Inward Delivery Challan #ertwtt deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-19 09:43:06",
+    "created_at": "2026-09-19T09:43:06.787831"
+  },
+  "notif_20260919_094319_2c27": {
+    "id": "notif_20260919_094319_2c27",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Delivery Challan Deleted",
+    "message_body": "Inward Delivery Challan #88-TESTING deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-19 09:43:19",
+    "created_at": "2026-09-19T09:43:19.121989"
+  },
+  "notif_20260919_094324_1457": {
+    "id": "notif_20260919_094324_1457",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Delivery Challan Deleted",
+    "message_body": "Inward Delivery Challan #ertwtt deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-19 09:43:24",
+    "created_at": "2026-09-19T09:43:24.945975"
+  },
+  "notif_20260919_094326_d925": {
+    "id": "notif_20260919_094326_d925",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Delivery Challan Deleted",
+    "message_body": "Inward Delivery Challan #1234 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-19 09:43:26",
+    "created_at": "2026-09-19T09:43:26.325204"
+  },
+  "notif_20260919_094514_e8d8": {
+    "id": "notif_20260919_094514_e8d8",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #TEST-DIRECT-100 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-19 09:45:14",
+    "created_at": "2026-09-19T09:45:14.809365"
+  },
+  "notif_20260919_094534_7534": {
+    "id": "notif_20260919_094534_7534",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #TEST-DIRECT-100 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-19 09:45:34",
+    "created_at": "2026-09-19T09:45:34.596029"
+  },
+  "notif_20260919_094554_c95a": {
+    "id": "notif_20260919_094554_c95a",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #TEST-DIRECT-100 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-19 09:45:54",
+    "created_at": "2026-09-19T09:45:54.276649"
+  },
+  "notif_20260919_094652_416d": {
+    "id": "notif_20260919_094652_416d",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #TEST-DIRECT-100 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-19 09:46:52",
+    "created_at": "2026-09-19T09:46:52.318730"
+  },
+  "notif_20260919_094656_d61b": {
+    "id": "notif_20260919_094656_d61b",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #TEST-DIRECT-100 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-19 09:46:56",
+    "created_at": "2026-09-19T09:46:56.508669"
+  },
+  "notif_20260919_094703_fb74": {
+    "id": "notif_20260919_094703_fb74",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #rec_20260811_145654_45c2 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-19 09:47:03",
+    "created_at": "2026-09-19T09:47:03.043961"
+  },
+  "notif_20260919_094724_c5c1": {
+    "id": "notif_20260919_094724_c5c1",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #rec_20260811_145654_45c2 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-19 09:47:24",
+    "created_at": "2026-09-19T09:47:24.244175"
+  },
+  "notif_20260919_094740_bc14": {
+    "id": "notif_20260919_094740_bc14",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #rec_20260811_145800_50bc deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-19 09:47:40",
+    "created_at": "2026-09-19T09:47:40.207874"
+  },
+  "notif_20260919_094807_d8c2": {
+    "id": "notif_20260919_094807_d8c2",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #TEST-DIRECT-100 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-19 09:48:07",
+    "created_at": "2026-09-19T09:48:07.838488"
+  },
+  "notif_20260921_054446_33ee": {
+    "id": "notif_20260921_054446_33ee",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #TEST-DIRECT-100 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-21 05:44:46",
+    "created_at": "2026-09-21T05:44:46.491492"
+  },
+  "notif_20260921_054458_1039": {
+    "id": "notif_20260921_054458_1039",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #TEST-DIRECT-100 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-21 05:44:58",
+    "created_at": "2026-09-21T05:44:58.351163"
+  },
+  "notif_20260921_054519_457a": {
+    "id": "notif_20260921_054519_457a",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #TEST-DIRECT-100 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-21 05:45:19",
+    "created_at": "2026-09-21T05:45:19.428787"
+  },
+  "notif_20260921_054919_9284": {
+    "id": "notif_20260921_054919_9284",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #TEST-DIRECT-100 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-21 05:49:19",
+    "created_at": "2026-09-21T05:49:19.976787"
+  },
+  "a337638e-c859-4a80-91ef-f6417e910953": {
+    "id": "a337638e-c859-4a80-91ef-f6417e910953",
+    "type": "EMAIL",
+    "section": "RECEIVING",
+    "recipient": "admin@semco.com",
+    "subject": "[FINANCIAL CALENDAR AUDIT] 7 Actionable Items Needing Attention",
+    "message_body": "GateFlow Financial Calendar Summary (2026-09-21):\n\n💳 VENDOR PAYABLES (Receiving):\n- Overdue Payables (1):\n  • TEST-DIRECT-100 (Direct Vendor) - Amount: ₹7,500.00 - Due: 2026-08-01\n- Upcoming Payables (0):\n\n💰 CLIENT COLLECTIONS (Dispatch):\n- Overdue Collections (6):\n  • DISP-20260918191809 (Testing Dynamic Client) - Amount: ₹85,000.00 - Due: 2026-08-10\n  • DISP-20260821015241 (Testing Dynamic Client) - Amount: ₹85,000.00 - Due: 2026-08-10\n  • DISP-20260811145801 (Testing Dynamic Client) - Amount: ₹85,000.00 - Due: 2026-08-10\n  • DISP-20260811145654 (Testing Dynamic Client) - Amount: ₹85,000.00 - Due: 2026-08-10\n  • DISP-20260811143236 (Client Corp) - Amount: ₹100,000.00 - Due: 2026-08-26\n  • DISP-20260811142444 (Titan Industries) - Amount: ₹150,000.00 - Due: 2026-08-26\n- Upcoming Collections (0):\n",
+    "status": "SENT",
+    "sent_at": "2026-09-21T05:50:26.319408",
+    "created_at": "2026-09-21T05:50:26.319422"
+  },
+  "notif_audit_20260921_055026": {
+    "id": "notif_audit_20260921_055026",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Automated Financial Audit",
+    "message_body": "Daily audit completed: 1 overdue invoice(s), 0 upcoming invoice(s) in 7 days.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-21 05:50:26",
+    "created_at": "2026-09-21T05:50:26.699878"
+  },
+  "notif_20260921_055108_7312": {
+    "id": "notif_20260921_055108_7312",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #TEST-DIRECT-100 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-21 05:51:08",
+    "created_at": "2026-09-21T05:51:08.579720"
+  },
+  "notif_20260921_055109_74ff": {
+    "id": "notif_20260921_055109_74ff",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #TEST-DIRECT-100 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-21 05:51:09",
+    "created_at": "2026-09-21T05:51:09.853067"
+  },
+  "notif_20260921_090246_8860": {
+    "id": "notif_20260921_090246_8860",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 222",
+    "message_body": "Purchase Order #26/27 - 222 for 'NAVKAR STEEL' (Grand Total: ₹36,907.83) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-21 09:02:46",
+    "created_at": "2026-09-21T09:02:46.488491"
+  },
+  "notif_20260921_101308_e458": {
+    "id": "notif_20260921_101308_e458",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 222",
+    "message_body": "Purchase Order #26/27 - 222 for 'NAVKAR STEEL' (Grand Total: ₹37,092.12) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-21 10:13:08",
+    "created_at": "2026-09-21T10:13:08.346863"
+  },
+  "notif_20260921_101314_4282": {
+    "id": "notif_20260921_101314_4282",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Approved & Signed: #26/27 - 222",
+    "message_body": "Purchase Order #26/27 - 222 approved by Authorised Signatory.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-21 10:13:14",
+    "created_at": "2026-09-21T10:13:14.808680"
+  },
+  "notif_20260921_101845_9ec4": {
+    "id": "notif_20260921_101845_9ec4",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & APPROVED: #26/27 - 222",
+    "message_body": "Purchase Order #26/27 - 222 for 'NAVKAR STEEL' (Grand Total: ₹36,907.83) set to status 'APPROVED' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-21 10:18:45",
+    "created_at": "2026-09-21T10:18:45.286874"
+  },
+  "notif_20260921_102501_20ab": {
+    "id": "notif_20260921_102501_20ab",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & APPROVED: #26/27 - 222",
+    "message_body": "Purchase Order #26/27 - 222 for 'NAVKAR STEEL' (Grand Total: ₹20,106.61) set to status 'APPROVED' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-21 10:25:01",
+    "created_at": "2026-09-21T10:25:01.315290"
+  },
+  "notif_20260921_135015_f260": {
+    "id": "notif_20260921_135015_f260",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 223",
+    "message_body": "Purchase Order #26/27 - 223 for 'SEEMA FORGE INDUSTRIES' (Grand Total: ₹73,027.84) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-21 13:50:15",
+    "created_at": "2026-09-21T13:50:15.157836"
+  },
+  "notif_20260921_135411_05e4": {
+    "id": "notif_20260921_135411_05e4",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 223",
+    "message_body": "Purchase Order #26/27 - 223 for 'SEEMA FORGE INDUSTRIES' (Grand Total: ₹74,204.30) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-21 13:54:11",
+    "created_at": "2026-09-21T13:54:11.950388"
+  },
+  "notif_20260921_135622_850a": {
+    "id": "notif_20260921_135622_850a",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 223",
+    "message_body": "Purchase Order #26/27 - 223 for 'SEEMA FORGE INDUSTRIES' (Grand Total: ₹74,204.30) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-21 13:56:22",
+    "created_at": "2026-09-21T13:56:22.554993"
+  },
+  "notif_20260921_135644_af56": {
+    "id": "notif_20260921_135644_af56",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Approved & Signed: #26/27 - 223",
+    "message_body": "Purchase Order #26/27 - 223 approved by Authorised Signatory.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-21 13:56:44",
+    "created_at": "2026-09-21T13:56:44.395396"
+  },
+  "notif_20260921_143358_dd9a": {
+    "id": "notif_20260921_143358_dd9a",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & APPROVED: #26/27 - 223",
+    "message_body": "Purchase Order #26/27 - 223 for 'SEEMA FORGE INDUSTRIES' (Grand Total: ₹74,204.30) set to status 'APPROVED' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-21 14:33:58",
+    "created_at": "2026-09-21T14:33:58.539426"
+  },
+  "notif_20260922_103455_ac61": {
+    "id": "notif_20260922_103455_ac61",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 224",
+    "message_body": "Purchase Order #26/27 - 224 for 'H. K. INDUSTRIES' (Grand Total: ₹106,200.00) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-22 10:34:55",
+    "created_at": "2026-09-22T10:34:55.204047"
+  },
+  "notif_20260922_103512_a38f": {
+    "id": "notif_20260922_103512_a38f",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Deleted: #26/27 - 224",
+    "message_body": "Purchase Order #26/27 - 224 deleted from repository.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-22 10:35:12",
+    "created_at": "2026-09-22T10:35:12.178247"
+  },
+  "notif_20260922_103541_4f8f": {
+    "id": "notif_20260922_103541_4f8f",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 224",
+    "message_body": "Purchase Order #26/27 - 224 for 'H. K. INDUSTRIES' (Grand Total: ₹106,200.00) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-22 10:35:41",
+    "created_at": "2026-09-22T10:35:41.838161"
+  },
+  "notif_20260922_103553_0a80": {
+    "id": "notif_20260922_103553_0a80",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Deleted: #26/27 - 224",
+    "message_body": "Purchase Order #26/27 - 224 deleted from repository.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-22 10:35:53",
+    "created_at": "2026-09-22T10:35:53.043611"
+  },
+  "notif_20260922_105026_653d": {
+    "id": "notif_20260922_105026_653d",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 224",
+    "message_body": "Purchase Order #26/27 - 224 for 'H. K. INDUSTRIES' (Grand Total: ₹159,300.00) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-22 10:50:26",
+    "created_at": "2026-09-22T10:50:26.087048"
+  },
+  "notif_20260922_105111_e324": {
+    "id": "notif_20260922_105111_e324",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 224",
+    "message_body": "Purchase Order #26/27 - 224 for 'H. K. INDUSTRIES' (Grand Total: ₹0.00) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-22 10:51:11",
+    "created_at": "2026-09-22T10:51:11.810160"
+  },
+  "notif_20260922_105439_f826": {
+    "id": "notif_20260922_105439_f826",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 224",
+    "message_body": "Purchase Order #26/27 - 224 for 'H. K. INDUSTRIES' (Grand Total: ₹826,000.00) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-22 10:54:39",
+    "created_at": "2026-09-22T10:54:39.471572"
+  },
+  "notif_20260922_105506_ab33": {
+    "id": "notif_20260922_105506_ab33",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 224",
+    "message_body": "Purchase Order #26/27 - 224 for 'H. K. INDUSTRIES' (Grand Total: ₹826,000.00) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-22 10:55:06",
+    "created_at": "2026-09-22T10:55:06.954008"
+  },
+  "notif_20260923_063038_84b1": {
+    "id": "notif_20260923_063038_84b1",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #TEST-DIRECT-100 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-23 06:30:38",
+    "created_at": "2026-09-23T06:30:38.505288"
+  },
+  "notif_20260923_063106_e6df": {
+    "id": "notif_20260923_063106_e6df",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #TEST-DIRECT-100 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-23 06:31:06",
+    "created_at": "2026-09-23T06:31:06.844925"
+  },
+  "notif_20260923_112348_6370": {
+    "id": "notif_20260923_112348_6370",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 224",
+    "message_body": "Purchase Order #26/27 - 224 for 'SHRISHA ENTERPRISES' (Grand Total: ₹1,270.00) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-23 11:23:48",
+    "created_at": "2026-09-23T11:23:48.112417"
+  },
+  "notif_20260923_112651_e91c": {
+    "id": "notif_20260923_112651_e91c",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 225",
+    "message_body": "Purchase Order #26/27 - 225 for 'SHRISHA ENTERPRISES' (Grand Total: ₹7,716.00) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-23 11:26:51",
+    "created_at": "2026-09-23T11:26:51.017299"
+  },
+  "notif_20260923_112812_ac4e": {
+    "id": "notif_20260923_112812_ac4e",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 226",
+    "message_body": "Purchase Order #26/27 - 226 for 'SHRISHA ENTERPRISES' (Grand Total: ₹2,152.00) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-23 11:28:12",
+    "created_at": "2026-09-23T11:28:12.193969"
+  },
+  "notif_20260923_113917_af09": {
+    "id": "notif_20260923_113917_af09",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 227",
+    "message_body": "Purchase Order #26/27 - 227 for 'H. K. INDUSTRIES' (Grand Total: ₹826,002.36) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-23 11:39:17",
+    "created_at": "2026-09-23T11:39:17.392444"
+  },
+  "notif_20260923_114014_0d90": {
+    "id": "notif_20260923_114014_0d90",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 227",
+    "message_body": "Purchase Order #26/27 - 227 for 'H. K. INDUSTRIES' (Grand Total: ₹826,002.36) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-23 11:40:14",
+    "created_at": "2026-09-23T11:40:14.166465"
+  },
+  "notif_20260923_114100_90fb": {
+    "id": "notif_20260923_114100_90fb",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 227",
+    "message_body": "Purchase Order #26/27 - 227 for 'H. K. INDUSTRIES' (Grand Total: ₹826,002.36) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-23 11:41:00",
+    "created_at": "2026-09-23T11:41:00.147452"
+  },
+  "notif_20260923_114409_797c": {
+    "id": "notif_20260923_114409_797c",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 227",
+    "message_body": "Purchase Order #26/27 - 227 for 'H. K. INDUSTRIES' (Grand Total: ₹826,002.36) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-23 11:44:09",
+    "created_at": "2026-09-23T11:44:09.848687"
+  },
+  "notif_20260924_072242_b310": {
+    "id": "notif_20260924_072242_b310",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 224",
+    "message_body": "Purchase Order #26/27 - 224 for 'SHRISHA ENTERPRISES' (Grand Total: ₹1,270.00) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-24 07:22:42",
+    "created_at": "2026-09-24T07:22:42.521476"
+  },
+  "notif_20260924_072250_3c82": {
+    "id": "notif_20260924_072250_3c82",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Approved & Signed: #26/27 - 224",
+    "message_body": "Purchase Order #26/27 - 224 approved by Authorised Signatory.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-24 07:22:50",
+    "created_at": "2026-09-24T07:22:50.726505"
+  },
+  "notif_20260924_072325_f6bf": {
+    "id": "notif_20260924_072325_f6bf",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 225",
+    "message_body": "Purchase Order #26/27 - 225 for 'SHRISHA ENTERPRISES' (Grand Total: ₹7,716.00) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-24 07:23:25",
+    "created_at": "2026-09-24T07:23:25.114388"
+  },
+  "notif_20260924_072338_2f59": {
+    "id": "notif_20260924_072338_2f59",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Approved & Signed: #26/27 - 225",
+    "message_body": "Purchase Order #26/27 - 225 approved by Authorised Signatory.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-24 07:23:38",
+    "created_at": "2026-09-24T07:23:38.541449"
+  },
+  "notif_20260924_072427_ecc2": {
+    "id": "notif_20260924_072427_ecc2",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 226",
+    "message_body": "Purchase Order #26/27 - 226 for 'SHRISHA ENTERPRISES' (Grand Total: ₹2,152.00) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-24 07:24:27",
+    "created_at": "2026-09-24T07:24:27.490904"
+  },
+  "notif_20260924_072435_c34d": {
+    "id": "notif_20260924_072435_c34d",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Approved & Signed: #26/27 - 226",
+    "message_body": "Purchase Order #26/27 - 226 approved by Authorised Signatory.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-24 07:24:35",
+    "created_at": "2026-09-24T07:24:35.956186"
+  },
+  "notif_20260924_072627_2713": {
+    "id": "notif_20260924_072627_2713",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 227",
+    "message_body": "Purchase Order #26/27 - 227 for 'H. K. INDUSTRIES' (Grand Total: ₹826,002.36) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-24 07:26:27",
+    "created_at": "2026-09-24T07:26:27.489850"
+  },
+  "notif_20260925_121549_d2ba": {
+    "id": "notif_20260925_121549_d2ba",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 228",
+    "message_body": "Purchase Order #26/27 - 228 for 'NAVKAR STEEL' (Grand Total: ₹262,267.92) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-25 12:15:49",
+    "created_at": "2026-09-25T12:15:49.039207"
+  },
+  "notif_20260925_123110_205d": {
+    "id": "notif_20260925_123110_205d",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Approved & Signed: #26/27 - 228",
+    "message_body": "Purchase Order #26/27 - 228 approved by Authorised Signatory.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-25 12:31:10",
+    "created_at": "2026-09-25T12:31:10.002174"
+  },
+  "notif_20260925_124652_030e": {
+    "id": "notif_20260925_124652_030e",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 229",
+    "message_body": "Purchase Order #26/27 - 229 for 'SHIVNERI TRADINGS' (Grand Total: ₹31,317.20) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-25 12:46:52",
+    "created_at": "2026-09-25T12:46:52.549877"
+  },
+  "notif_20260925_130551_0f2b": {
+    "id": "notif_20260925_130551_0f2b",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 229",
+    "message_body": "Purchase Order #26/27 - 229 for 'SHIVNERI TRADINGS' (Grand Total: ₹31,317.20) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-25 13:05:51",
+    "created_at": "2026-09-25T13:05:51.810416"
+  },
+  "notif_20260925_130559_fe11": {
+    "id": "notif_20260925_130559_fe11",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Approved & Signed: #26/27 - 229",
+    "message_body": "Purchase Order #26/27 - 229 approved by Authorised Signatory.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-25 13:05:59",
+    "created_at": "2026-09-25T13:05:59.710846"
+  },
+  "notif_20260926_051535_ca72": {
+    "id": "notif_20260926_051535_ca72",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 230",
+    "message_body": "Purchase Order #26/27 - 230 for 'SEEMA FORGE INDUSTRIES' (Grand Total: ₹472,678.50) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-26 05:15:35",
+    "created_at": "2026-09-26T05:15:35.433660"
+  },
+  "notif_20260926_051701_c746": {
+    "id": "notif_20260926_051701_c746",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 230",
+    "message_body": "Purchase Order #26/27 - 230 for 'SEEMA FORGE INDUSTRIES' (Grand Total: ₹470,613.50) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-26 05:17:01",
+    "created_at": "2026-09-26T05:17:01.685913"
+  },
+  "notif_20260926_051821_0e61": {
+    "id": "notif_20260926_051821_0e61",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Approved & Signed: #26/27 - 230",
+    "message_body": "Purchase Order #26/27 - 230 approved by Authorised Signatory.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-26 05:18:21",
+    "created_at": "2026-09-26T05:18:21.069076"
+  },
+  "notif_20260928_054442_c966": {
+    "id": "notif_20260928_054442_c966",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 227",
+    "message_body": "Purchase Order #26/27 - 227 for 'H. K. INDUSTRIES' (Grand Total: ₹826,002.36) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-28 05:44:42",
+    "created_at": "2026-09-28T05:44:42.522181"
+  },
+  "notif_20260928_054531_1b34": {
+    "id": "notif_20260928_054531_1b34",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 227",
+    "message_body": "Purchase Order #26/27 - 227 for 'H. K. INDUSTRIES' (Grand Total: ₹826,000.00) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-28 05:45:31",
+    "created_at": "2026-09-28T05:45:31.738366"
+  },
+  "notif_20260928_064333_0b7a": {
+    "id": "notif_20260928_064333_0b7a",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 231",
+    "message_body": "Purchase Order #26/27 - 231 for 'PYRO PIPING SOLUTION LLP' (Grand Total: ₹7,174.40) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-28 06:43:33",
+    "created_at": "2026-09-28T06:43:33.911484"
+  },
+  "notif_20260928_084420_c443": {
+    "id": "notif_20260928_084420_c443",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Approved & Signed: #26/27 - 227",
+    "message_body": "Purchase Order #26/27 - 227 approved by Authorised Signatory.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-28 08:44:20",
+    "created_at": "2026-09-28T08:44:20.286608"
+  },
+  "notif_20260928_084518_b0ec": {
+    "id": "notif_20260928_084518_b0ec",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Approved & Signed: #26/27 - 231",
+    "message_body": "Purchase Order #26/27 - 231 approved by Authorised Signatory.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-28 08:45:18",
+    "created_at": "2026-09-28T08:45:18.203882"
+  },
+  "notif_20260928_092522_ca66": {
+    "id": "notif_20260928_092522_ca66",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #TEST-DIRECT-100 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-28 09:25:22",
+    "created_at": "2026-09-28T09:25:22.957324"
+  },
+  "notif_20260928_092527_c242": {
+    "id": "notif_20260928_092527_c242",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #TEST-DIRECT-100 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-09-28 09:25:27",
+    "created_at": "2026-09-28T09:25:27.436456"
+  },
+  "notif_20260929_094002_0359": {
+    "id": "notif_20260929_094002_0359",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 232",
+    "message_body": "Purchase Order #26/27 - 232 for 'Rambert System Engineers Pvt . Ltd' (Grand Total: ₹43,027.52) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-29 09:40:02",
+    "created_at": "2026-09-29T09:40:02.262266"
+  },
+  "notif_20260929_105850_fb84": {
+    "id": "notif_20260929_105850_fb84",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 233",
+    "message_body": "Purchase Order #26/27 - 233 for 'FARANI ENTERPRISES' (Grand Total: ₹4,094.60) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-29 10:58:50",
+    "created_at": "2026-09-29T10:58:50.760589"
+  },
+  "notif_20260929_110054_ac27": {
+    "id": "notif_20260929_110054_ac27",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 232",
+    "message_body": "Purchase Order #26/27 - 232 for 'Rambert System Engineers Pvt . Ltd' (Grand Total: ₹44,837.64) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-29 11:00:54",
+    "created_at": "2026-09-29T11:00:54.770009"
+  },
+  "notif_20260929_110522_996b": {
+    "id": "notif_20260929_110522_996b",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Approved & Signed: #26/27 - 232",
+    "message_body": "Purchase Order #26/27 - 232 approved by Authorised Signatory.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-29 11:05:22",
+    "created_at": "2026-09-29T11:05:22.150110"
+  },
+  "notif_20260929_110545_d0c6": {
+    "id": "notif_20260929_110545_d0c6",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Approved & Signed: #26/27 - 233",
+    "message_body": "Purchase Order #26/27 - 233 approved by Authorised Signatory.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-29 11:05:45",
+    "created_at": "2026-09-29T11:05:45.218845"
+  },
+  "notif_20260929_113204_ae59": {
+    "id": "notif_20260929_113204_ae59",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & APPROVED: #26/27 - 219",
+    "message_body": "Purchase Order #26/27 - 219 for '  SMART FLOW LLP ' (Grand Total: ₹120,390.68) set to status 'APPROVED' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-29 11:32:04",
+    "created_at": "2026-09-29T11:32:04.537197"
+  },
+  "notif_20260930_091337_c7d0": {
+    "id": "notif_20260930_091337_c7d0",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 232",
+    "message_body": "Purchase Order #26/27 - 232 for 'ABC Engineering  S PLUS TUBE TECH Solutions Pvt. Ltd.' (Grand Total: ₹312,228.00) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-30 09:13:37",
+    "created_at": "2026-09-30T09:13:37.806055"
+  },
+  "notif_20260930_091339_5f8f": {
+    "id": "notif_20260930_091339_5f8f",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 232",
+    "message_body": "Purchase Order #26/27 - 232 for 'ABC Engineering  S PLUS TUBE TECH Solutions Pvt. Ltd.' (Grand Total: ₹312,228.00) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-30 09:13:39",
+    "created_at": "2026-09-30T09:13:39.512939"
+  },
+  "notif_20260930_091441_eba4": {
+    "id": "notif_20260930_091441_eba4",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 232",
+    "message_body": "Purchase Order #26/27 - 232 for 'S PLUS TUBE TECH Solutions Pvt. Ltd.' (Grand Total: ₹312,228.00) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-30 09:14:41",
+    "created_at": "2026-09-30T09:14:41.124979"
+  },
+  "notif_20260930_092311_21a2": {
+    "id": "notif_20260930_092311_21a2",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 232",
+    "message_body": "Purchase Order #26/27 - 232 for 'S PLUS TUBE TECH Solutions Pvt. Ltd.' (Grand Total: ₹301,077.00) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-30 09:23:11",
+    "created_at": "2026-09-30T09:23:11.256977"
+  },
+  "notif_20260930_092959_7fe2": {
+    "id": "notif_20260930_092959_7fe2",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Approved & Signed: #26/27 - 232",
+    "message_body": "Purchase Order #26/27 - 232 approved by Authorised Signatory.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-30 09:29:59",
+    "created_at": "2026-09-30T09:29:59.620222"
+  },
+  "notif_20260930_093023_4ae9": {
+    "id": "notif_20260930_093023_4ae9",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & APPROVED: #26/27 - 232",
+    "message_body": "Purchase Order #26/27 - 232 for 'S PLUS TUBE TECH Solutions Pvt. Ltd.' (Grand Total: ₹312,228.00) set to status 'APPROVED' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-30 09:30:23",
+    "created_at": "2026-09-30T09:30:23.551284"
+  },
+  "notif_20260930_093137_93c5": {
+    "id": "notif_20260930_093137_93c5",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & APPROVED: #26/27 - 232",
+    "message_body": "Purchase Order #26/27 - 232 for 'S PLUS TUBE TECH Solutions Pvt. Ltd.' (Grand Total: ₹301,077.00) set to status 'APPROVED' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-09-30 09:31:37",
+    "created_at": "2026-09-30T09:31:37.941349"
+  },
+  "notif_20261003_100325_06a2": {
+    "id": "notif_20261003_100325_06a2",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & APPROVED: #26/27 - 221",
+    "message_body": "Purchase Order #26/27 - 221 for 'SHREE SALES CORPORATION' (Grand Total: ₹18,644.00) set to status 'APPROVED' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-10-03 10:03:25",
+    "created_at": "2026-10-03T10:03:25.376061"
+  },
+  "notif_20261003_101713_b05d": {
+    "id": "notif_20261003_101713_b05d",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 234",
+    "message_body": "Purchase Order #26/27 - 234 for 'P.A. ENGINEERING' (Grand Total: ₹21,240.00) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-10-03 10:17:13",
+    "created_at": "2026-10-03T10:17:13.844789"
+  },
+  "notif_20261003_113245_b33f": {
+    "id": "notif_20261003_113245_b33f",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 235",
+    "message_body": "Purchase Order #26/27 - 235 for 'STEELFAB ENGINEERING AND MFG CO.' (Grand Total: ₹182,494.08) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-10-03 11:32:45",
+    "created_at": "2026-10-03T11:32:45.521080"
+  },
+  "notif_20261003_113318_49b9": {
+    "id": "notif_20261003_113318_49b9",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Approved & Signed: #26/27 - 235",
+    "message_body": "Purchase Order #26/27 - 235 approved by Authorised Signatory.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-10-03 11:33:18",
+    "created_at": "2026-10-03T11:33:18.718120"
+  },
+  "notif_20261004_042816_b178": {
+    "id": "notif_20261004_042816_b178",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #TEST-DIRECT-100 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-10-04 04:28:16",
+    "created_at": "2026-10-04T04:28:16.250009"
+  },
+  "notif_20261004_042841_e503": {
+    "id": "notif_20261004_042841_e503",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #TEST-DIRECT-100 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-10-04 04:28:41",
+    "created_at": "2026-10-04T04:28:41.895770"
+  },
+  "notif_20261005_051422_b30e": {
+    "id": "notif_20261005_051422_b30e",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 236",
+    "message_body": "Purchase Order #26/27 - 236 for 'GARUDA PUMPS PRIVATE LIMITED' (Grand Total: ₹318,600.00) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-10-05 05:14:22",
+    "created_at": "2026-10-05T05:14:22.694393"
+  },
+  "notif_20261005_052657_7287": {
+    "id": "notif_20261005_052657_7287",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 237",
+    "message_body": "Purchase Order #26/27 - 237 for 'NAVKAR STEEL' (Grand Total: ₹715,585.04) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-10-05 05:26:57",
+    "created_at": "2026-10-05T05:26:57.972179"
+  },
+  "notif_20261005_053426_40d3": {
+    "id": "notif_20261005_053426_40d3",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Approved & Signed: #26/27 - 237",
+    "message_body": "Purchase Order #26/27 - 237 approved by Authorised Signatory.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-10-05 05:34:26",
+    "created_at": "2026-10-05T05:34:26.154432"
+  },
+  "notif_20261005_053610_2716": {
+    "id": "notif_20261005_053610_2716",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Approved & Signed: #26/27 - 236",
+    "message_body": "Purchase Order #26/27 - 236 approved by Authorised Signatory.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-10-05 05:36:10",
+    "created_at": "2026-10-05T05:36:10.986949"
+  },
+  "notif_20261005_053628_ec5f": {
+    "id": "notif_20261005_053628_ec5f",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Approved & Signed: #26/27 - 234",
+    "message_body": "Purchase Order #26/27 - 234 approved by Authorised Signatory.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-10-05 05:36:28",
+    "created_at": "2026-10-05T05:36:28.151733"
+  },
+  "notif_20261005_053951_eddb": {
+    "id": "notif_20261005_053951_eddb",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #TEST-DIRECT-100 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-10-05 05:39:51",
+    "created_at": "2026-10-05T05:39:51.274537"
+  },
+  "notif_20261005_053953_2416": {
+    "id": "notif_20261005_053953_2416",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #TEST-DIRECT-100 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-10-05 05:39:53",
+    "created_at": "2026-10-05T05:39:53.202656"
+  },
+  "notif_20261005_054012_7659": {
+    "id": "notif_20261005_054012_7659",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #rec_20260811_145654_45c2 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-10-05 05:40:12",
+    "created_at": "2026-10-05T05:40:12.516871"
+  },
+  "notif_20261005_054022_3071": {
+    "id": "notif_20261005_054022_3071",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #rec_20260811_145800_50bc deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-10-05 05:40:22",
+    "created_at": "2026-10-05T05:40:22.487987"
+  },
+  "notif_20261005_054054_2a90": {
+    "id": "notif_20261005_054054_2a90",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #TEST-DIRECT-100 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-10-05 05:40:54",
+    "created_at": "2026-10-05T05:40:54.468029"
+  },
+  "notif_20261005_054215_b556": {
+    "id": "notif_20261005_054215_b556",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #TEST-DIRECT-100 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-10-05 05:42:15",
+    "created_at": "2026-10-05T05:42:15.732268"
+  },
+  "notif_20261005_054217_5adc": {
+    "id": "notif_20261005_054217_5adc",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #TEST-DIRECT-100 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-10-05 05:42:17",
+    "created_at": "2026-10-05T05:42:17.943257"
+  },
+  "notif_20261005_054308_cd3f": {
+    "id": "notif_20261005_054308_cd3f",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #TEST-DIRECT-100 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-10-05 05:43:08",
+    "created_at": "2026-10-05T05:43:08.175502"
+  },
+  "notif_20261005_054312_a5de": {
+    "id": "notif_20261005_054312_a5de",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "Invoice Record Deleted",
+    "message_body": "Invoice record #TEST-DIRECT-100 deleted from Receiving repository.",
+    "section": "RECEIVING",
+    "sent_at": "2026-10-05 05:43:12",
+    "created_at": "2026-10-05T05:43:12.077264"
+  },
+  "notif_20261005_060351_d764": {
+    "id": "notif_20261005_060351_d764",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 238",
+    "message_body": "Purchase Order #26/27 - 238 for 'RAJLAXMI HARDWARE & TOOLS' (Grand Total: ₹12,489.12) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-10-05 06:03:51",
+    "created_at": "2026-10-05T06:03:51.247561"
+  },
+  "notif_20261005_060605_6eef": {
+    "id": "notif_20261005_060605_6eef",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 238",
+    "message_body": "Purchase Order #26/27 - 238 for 'RAJLAXMI HARDWARE & TOOLS' (Grand Total: ₹12,489.12) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-10-05 06:06:05",
+    "created_at": "2026-10-05T06:06:05.071455"
+  },
+  "notif_20261005_062118_1a28": {
+    "id": "notif_20261005_062118_1a28",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & DRAFT: #26/27 - 239",
+    "message_body": "Purchase Order #26/27 - 239 for 'SHIVANI PICKLING WORKS' (Grand Total: ₹37,002.00) set to status 'DRAFT' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-10-05 06:21:18",
+    "created_at": "2026-10-05T06:21:18.544538"
+  },
+  "notif_20261005_062342_c160": {
+    "id": "notif_20261005_062342_c160",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & DRAFT: #26/27 - 239",
+    "message_body": "Purchase Order #26/27 - 239 for 'SHIVANI PICKLING WORKS' (Grand Total: ₹37,002.00) set to status 'DRAFT' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-10-05 06:23:42",
+    "created_at": "2026-10-05T06:23:42.185602"
+  },
+  "notif_20261005_064510_62a8": {
+    "id": "notif_20261005_064510_62a8",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & DRAFT: #26/27 - 240",
+    "message_body": "Purchase Order #26/27 - 240 for 'AHAD HEALTHCARE ' (Grand Total: ₹3,022.00) set to status 'DRAFT' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-10-05 06:45:10",
+    "created_at": "2026-10-05T06:45:10.226948"
+  },
+  "notif_20261005_073407_537b": {
+    "id": "notif_20261005_073407_537b",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 241",
+    "message_body": "Purchase Order #26/27 - 241 for 'ROHITOX INDUSTRIAL GASES' (Grand Total: ₹33,122.60) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-10-05 07:34:07",
+    "created_at": "2026-10-05T07:34:07.856086"
+  },
+  "notif_20261005_073924_563f": {
+    "id": "notif_20261005_073924_563f",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & DRAFT: #26/27 - 240",
+    "message_body": "Purchase Order #26/27 - 240 for 'AHAD HEALTHCARE ' (Grand Total: ₹2,266.50) set to status 'DRAFT' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-10-05 07:39:24",
+    "created_at": "2026-10-05T07:39:24.815013"
+  },
+  "notif_20261005_074002_e13e": {
+    "id": "notif_20261005_074002_e13e",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & DRAFT: #26/27 - 240",
+    "message_body": "Purchase Order #26/27 - 240 for 'AHAD HEALTHCARE ' (Grand Total: ₹2,266.50) set to status 'DRAFT' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-10-05 07:40:02",
+    "created_at": "2026-10-05T07:40:02.273359"
+  },
+  "notif_20261005_101746_7c79": {
+    "id": "notif_20261005_101746_7c79",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 242",
+    "message_body": "Purchase Order #26/27 - 242 for 'HOTEL HARSH' (Grand Total: ₹130.00) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-10-05 10:17:46",
+    "created_at": "2026-10-05T10:17:46.255770"
+  },
+  "notif_20261005_101946_8ae4": {
+    "id": "notif_20261005_101946_8ae4",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 242",
+    "message_body": "Purchase Order #26/27 - 242 for 'HOTEL HARSH' (Grand Total: ₹149.00) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-10-05 10:19:46",
+    "created_at": "2026-10-05T10:19:46.316629"
+  },
+  "notif_20261005_102308_8569": {
+    "id": "notif_20261005_102308_8569",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 242",
+    "message_body": "Purchase Order #26/27 - 242 for 'HOTEL HARSH' (Grand Total: ₹149.00) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-10-05 10:23:08",
+    "created_at": "2026-10-05T10:23:08.338628"
+  },
+  "notif_20261005_102402_ad0a": {
+    "id": "notif_20261005_102402_ad0a",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 242",
+    "message_body": "Purchase Order #26/27 - 242 for 'HOTEL HARSH' (Grand Total: ₹149.00) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-10-05 10:24:02",
+    "created_at": "2026-10-05T10:24:02.785573"
+  },
+  "notif_20261005_102440_59cc": {
+    "id": "notif_20261005_102440_59cc",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 242",
+    "message_body": "Purchase Order #26/27 - 242 for 'HOTEL HARSH' (Grand Total: ₹149.00) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-10-05 10:24:40",
+    "created_at": "2026-10-05T10:24:40.663794"
+  },
+  "notif_20261005_102951_0cb3": {
+    "id": "notif_20261005_102951_0cb3",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & DRAFT: #26/27 - 239",
+    "message_body": "Purchase Order #26/27 - 239 for 'SHIVANI PICKLING WORKS' (Grand Total: ₹37,002.00) set to status 'DRAFT' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-10-05 10:29:51",
+    "created_at": "2026-10-05T10:29:51.905597"
+  },
+  "notif_20261005_113013_ee94": {
+    "id": "notif_20261005_113013_ee94",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Approved & Signed: #26/27 - 238",
+    "message_body": "Purchase Order #26/27 - 238 approved by Authorised Signatory.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-10-05 11:30:13",
+    "created_at": "2026-10-05T11:30:13.476799"
+  },
+  "notif_20261005_113040_9e97": {
+    "id": "notif_20261005_113040_9e97",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Approved & Signed: #26/27 - 241",
+    "message_body": "Purchase Order #26/27 - 241 approved by Authorised Signatory.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-10-05 11:30:40",
+    "created_at": "2026-10-05T11:30:40.311916"
+  },
+  "notif_20261005_113234_788e": {
+    "id": "notif_20261005_113234_788e",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & DRAFT: #26/27 - 239",
+    "message_body": "Purchase Order #26/27 - 239 for 'SHIVANI PICKLING WORKS' (Grand Total: ₹37,002.00) set to status 'DRAFT' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-10-05 11:32:34",
+    "created_at": "2026-10-05T11:32:34.362304"
+  },
+  "notif_20261005_113326_9084": {
+    "id": "notif_20261005_113326_9084",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 244",
+    "message_body": "Purchase Order #26/27 - 244 for 'RK SALES & SERVICES' (Grand Total: ₹39,706.04) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-10-05 11:33:26",
+    "created_at": "2026-10-05T11:33:26.833966"
+  },
+  "notif_20261005_113401_f94f": {
+    "id": "notif_20261005_113401_f94f",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Approved & Signed: #26/27 - 239",
+    "message_body": "Purchase Order #26/27 - 239 approved by Authorised Signatory.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-10-05 11:34:01",
+    "created_at": "2026-10-05T11:34:01.169568"
+  },
+  "notif_20261005_114633_df70": {
+    "id": "notif_20261005_114633_df70",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & DRAFT: #26/27 - 240",
+    "message_body": "Purchase Order #26/27 - 240 for 'AHAD HEALTHCARE ' (Grand Total: ₹2,266.50) set to status 'DRAFT' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-10-05 11:46:33",
+    "created_at": "2026-10-05T11:46:33.080419"
+  },
+  "notif_20261005_115147_05da": {
+    "id": "notif_20261005_115147_05da",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Approved & Signed: #26/27 - 240",
+    "message_body": "Purchase Order #26/27 - 240 approved by Authorised Signatory.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-10-05 11:51:47",
+    "created_at": "2026-10-05T11:51:47.183997"
+  },
+  "notif_20261005_115202_630b": {
+    "id": "notif_20261005_115202_630b",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Approved & Signed: #26/27 - 242",
+    "message_body": "Purchase Order #26/27 - 242 approved by Authorised Signatory.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-10-05 11:52:02",
+    "created_at": "2026-10-05T11:52:02.821411"
+  },
+  "notif_20261005_115306_965c": {
+    "id": "notif_20261005_115306_965c",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Approved & Signed: #26/27 - 244",
+    "message_body": "Purchase Order #26/27 - 244 approved by Authorised Signatory.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-10-05 11:53:06",
+    "created_at": "2026-10-05T11:53:06.415437"
+  },
+  "notif_20261005_120538_9c5f": {
+    "id": "notif_20261005_120538_9c5f",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 245",
+    "message_body": "Purchase Order #26/27 - 245 for 'TUFFCRAFT LIMPER WORKS (OPC) PRIVATE LIMITED' (Grand Total: ₹217,221.48) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-10-05 12:05:38",
+    "created_at": "2026-10-05T12:05:38.492900"
+  },
+  "notif_20261005_122208_8ea3": {
+    "id": "notif_20261005_122208_8ea3",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 246",
+    "message_body": "Purchase Order #26/27 - 246 for 'VAISHNAVI ENTERPRISES' (Grand Total: ₹9,558.00) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-10-05 12:22:08",
+    "created_at": "2026-10-05T12:22:08.186607"
+  },
+  "notif_20261005_122344_8526": {
+    "id": "notif_20261005_122344_8526",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Prepared & SUBMITTED_FOR_APPROVAL: #26/27 - 246",
+    "message_body": "Purchase Order #26/27 - 246 for 'VAISHNAVI ENTERPRISES' (Grand Total: ₹12,508.00) set to status 'SUBMITTED_FOR_APPROVAL' by Mr. Umesh H. Patil.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-10-05 12:23:44",
+    "created_at": "2026-10-05T12:23:44.948079"
+  },
+  "notif_20261005_122926_499a": {
+    "id": "notif_20261005_122926_499a",
+    "recipient": "receiving-desk@semco.com",
+    "subject": "PO Deleted: #26/27 - 246",
+    "message_body": "Purchase Order #26/27 - 246 deleted from repository.",
+    "section": "PURCHASE_ORDERS",
+    "sent_at": "2026-10-05 12:29:26",
+    "created_at": "2026-10-05T12:29:26.759849"
   }
 }
